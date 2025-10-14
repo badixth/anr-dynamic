@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import gsap from "gsap";
 
+import Image from "next/image";
 import Icons from "@/src/component/Icons";
 import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
@@ -108,7 +109,7 @@ export default function Testimonials() {
           </p>
 
           <div className="mt-[48px] md:mt-[64px] flex flex-col md:flex-row items-center justify-center gap-[12px] md:gap-[20px]">
-            <img
+            <Image
               src={current.avatar}
               alt={current.name}
               className="w-11 md:w-13 h-11 md:h-13 rounded-full object-cover"
