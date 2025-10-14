@@ -24,8 +24,8 @@ export default function Hero() {
                         <Typography color="#fff" noDarkMode className="md:hidden">Client Worldwide</Typography>
                     </div>
                     <Typography as="div" color="#fff" size={72} sizeTablet={52} sizeMobile={40} weight={600} lineHeight={85} lineHeightTablet={64} lineHeightMobile={52} letterSpacing={-2.16} letterSpacingMobile={-1.2} noDarkMode>
-                        Connect With Us – Let's
-                        Elevate Your Brand!
+                        {`Connect With Us – Let's
+                        Elevate Your Brand!`}
                     </Typography>
                     <Typography color="#fff" noDarkMode size={18} className="md:w-[80%]">
                         Choose a plan that fits your goals and budget, offering scalable solutions with transparent pricing and no hidden fees

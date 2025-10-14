@@ -4,7 +4,7 @@ import React, { useEffect, useState, JSX } from "react";
 import clsx from "clsx";
 
 interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
-  as?: keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>;
+  as?: keyof JSX.IntrinsicElements | React.ComponentType<Record<string, unknown>>;
   size?: number;
   sizeTablet?: number;
   sizeMobile?: number;

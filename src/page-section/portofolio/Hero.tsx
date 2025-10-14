@@ -74,10 +74,10 @@ export default function Hero() {
             <div className="flex flex-col lg:flex-row justify-between items-start self-stretch">
                 <div className="w-full order-2 lg:w-[70%] lg:order-1">
                     <Typography as="div" color="#fff" size={72} sizeTablet={52} sizeMobile={40} weight={600} lineHeight={85} lineHeightTablet={64} lineHeightMobile={52} letterSpacing={-2.16} letterSpacingMobile={-1.2} noDarkMode>
-                        Creative Strategies, Powerful Results, Your Brand’s Success Story.
+                        {`Creative Strategies, Powerful Results, Your Brand’s Success Story.`}
                     </Typography>
                     <Typography color="#fff" noDarkMode size={18} className="mt-[24px] w-full lg:w-[70%]">
-                        Transforming ideas into digital success with innovative strategies, data-driven solutions, and creative marketing that elevate your brand's impact
+                        {`Transforming ideas into digital success with innovative strategies, data-driven solutions, and creative marketing that elevate your brand's impact`}
                     </Typography>
                     <Link href="/contact">
                         <Button variant="primary" className="mt-[32px]">GET STARTED</Button>
