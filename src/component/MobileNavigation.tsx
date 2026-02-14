@@ -34,8 +34,8 @@ export default function MobileNavigation({ open = false, handleOpen }: MobileNav
     >
       {open && (
         <>
-          <div className="w-[1453.467px] h-[1367px] rounded-[1453.467px] bg-[#873AE3] blur-[150px] z-1 absolute left-[-100%] md:left-0 top-[95%]" />
-          <div className="w-[1537.615px] h-[1444px] rounded-[1537.615px] bg-[#F2B611] blur-[180px] z-1 absolute left-[-290%] md:left-[-90%] top-[95%]" />
+          <div className="w-[400px] md:w-[1453.467px] h-[300px] md:h-[1367px] rounded-[400px] md:rounded-[1453.467px] bg-[#873AE3] blur-[50px] md:blur-[150px] z-1 absolute left-[-100%] md:left-0 top-[95%]" />
+          <div className="w-[400px] md:w-[1537.615px] h-[300px] md:h-[1444px] rounded-[400px] md:rounded-[1537.615px] bg-[#F2B611] blur-[50px] md:blur-[180px] z-1 absolute left-[-290%] md:left-[-90%] top-[95%]" />
         </>
       )}
 

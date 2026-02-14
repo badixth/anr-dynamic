@@ -18,20 +18,23 @@ export default function AboutUs() {
     const descAboutUs = "We are a specialized accounting, audit, and tax advisory firm dedicated to helping Malaysian businesses navigate complex regulatory requirements and resolve critical financial compliance issues with accuracy, integrity, and expert guidance.";
 
     const descAboutUsRef = useRef<HTMLDivElement>(null);
+    const triggersRef = useRef<ScrollTrigger[]>([]);
 
     useEffect(() => {
         if (!descAboutUsRef.current) return
 
-        const chars = descAboutUsRef.current.querySelectorAll("span")
+        const words = descAboutUsRef.current.querySelectorAll("span")
 
-        ScrollTrigger.getAll().forEach(t => t.kill())
+        // Only kill ScrollTriggers that belong to this component
+        triggersRef.current.forEach(t => t.kill());
+        triggersRef.current = [];
 
-        gsap.set(chars, { opacity: 1, color: "#8D8D8D" })
+        gsap.set(words, { opacity: 1, color: "#8D8D8D" })
 
-        gsap.to(chars, {
+        const tween = gsap.to(words, {
             opacity: 1,
             color: theme === "light" ? "#070707" : "#fff",
-            stagger: 0.05,
+            stagger: 0.08,
             scrollTrigger: {
                 trigger: descAboutUsRef.current,
                 start: "top 70%",
@@ -40,11 +43,20 @@ export default function AboutUs() {
             },
         })
 
+        if (tween.scrollTrigger) {
+            triggersRef.current.push(tween.scrollTrigger);
+        }
+
         ScrollTrigger.refresh()
 
+        return () => {
+            triggersRef.current.forEach(t => t.kill());
+            triggersRef.current = [];
+        };
     }, [theme])
 
-
+    // Split by word instead of character to reduce DOM elements (~40 vs 232)
+    const words = descAboutUs.split(" ");
 
     return (
         <div className="bg-white dark:bg-[#070707] w-full px-[20px] md:px-[72px] py-[48px] md:py-[80px] flex flex-col md:flex-row justify-between items-start gap-[24px]">
@@ -53,9 +65,9 @@ export default function AboutUs() {
             </Tag>
             <div className="w-full md:w-[65%] flex flex-col gap-[48px] md:gap-[80px]">
                 <div ref={descAboutUsRef} className="text-[28px] md:text-[40px] font-semibold leading-[36.8px] md:leading-[48px]" style={{ whiteSpace: "pre-wrap" }}>
-                    {descAboutUs.split("").map((char, index) => (
-                        <span key={index} className="inline-block">
-                            {char}
+                    {words.map((word, index) => (
+                        <span key={index} className="inline-block mr-[0.3em]">
+                            {word}
                         </span>
                     ))}
                 </div>

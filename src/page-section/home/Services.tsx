@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useCallback } from "react";
 import gsap from "gsap";
 import { useTheme } from "@/src/context/ThemeProvider";
 import Link from "next/link";
@@ -19,6 +19,55 @@ import Services5 from '@/src/assets/images/service-5.png';
 export default function Services() {
     const { theme } = useTheme();
     const cardsRef = useRef<HTMLDivElement[]>([]);
+    const themeRef = useRef(theme);
+
+    useEffect(() => {
+        themeRef.current = theme;
+    }, [theme]);
+
+    const handleMouseEnter = useCallback((card: HTMLDivElement) => {
+        gsap.to(card, {
+            backgroundColor: themeRef.current === "light" ? "#1D1D1D" : "#393939",
+            padding: "24px 32px",
+            borderRadius: "12px",
+            duration: 0.5,
+            ease: "power2.out",
+        });
+    }, []);
+
+    const handleMouseLeave = useCallback((card: HTMLDivElement) => {
+        gsap.to(card, {
+            backgroundColor: "transparent",
+            padding: "0px",
+            borderRadius: "12px",
+            duration: 0.5,
+            ease: "power2.out",
+        });
+    }, []);
+
+    useEffect(() => {
+        const cards = cardsRef.current.filter(Boolean);
+        const enterHandlers = new Map<HTMLDivElement, () => void>();
+        const leaveHandlers = new Map<HTMLDivElement, () => void>();
+
+        cards.forEach((card) => {
+            const onEnter = () => handleMouseEnter(card);
+            const onLeave = () => handleMouseLeave(card);
+            enterHandlers.set(card, onEnter);
+            leaveHandlers.set(card, onLeave);
+            card.addEventListener("mouseenter", onEnter);
+            card.addEventListener("mouseleave", onLeave);
+        });
+
+        return () => {
+            cards.forEach((card) => {
+                const onEnter = enterHandlers.get(card);
+                const onLeave = leaveHandlers.get(card);
+                if (onEnter) card.removeEventListener("mouseenter", onEnter);
+                if (onLeave) card.removeEventListener("mouseleave", onLeave);
+            });
+        };
+    }, [handleMouseEnter, handleMouseLeave]);
 
     const services = [
         {
@@ -53,31 +102,6 @@ export default function Services() {
         },
     ];
 
-    useEffect(() => {
-        cardsRef.current.forEach((card) => {
-            if (!card) return;
-
-            card.addEventListener("mouseenter", () => {
-                gsap.to(card, {
-                    backgroundColor: theme === "light" ? "#1D1D1D" : "#393939",
-                    padding: "24px 32px",
-                    borderRadius: "12px",
-                    duration: 0.5,
-                    ease: "power2.out",
-                });
-            });
-
-            card.addEventListener("mouseleave", () => {
-                gsap.to(card, {
-                    backgroundColor: "transparent",
-                    padding: "0px",
-                    borderRadius: "12px",
-                    duration: 0.5,
-                    ease: "power2.out",
-                });
-            });
-        });
-    }, [theme]);
     return (
         <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[8px] md:px-[12px] w-full">
             <div className="bg-[#070707] dark:bg-[#1D1D1D] rounded-[20px] py-[64px] px-[16px] md:p-[60px]">

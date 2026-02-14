@@ -4,7 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
 import { useGSAP } from '@gsap/react';
-import React, { useRef, Suspense } from "react";
+import React, { useRef, Suspense, useContext } from "react";
+import { LenisContext } from "@/src/context/LenisContext";
 
 const Hero = React.lazy(() => import("@/src/page-section/home/Hero"));
 const AboutUs = React.lazy(() => import("@/src/page-section/about/AboutUs"));
@@ -21,26 +22,35 @@ gsap.registerPlugin(ScrollToPlugin);
 
 export default function Home() {
   const testimonialRef = useRef<HTMLDivElement | null>(null);
+  const lenis = useContext(LenisContext);
 
   const scrollToTestimonials = () => {
-    if (testimonialRef.current) {
-      gsap.to(window, {
-        duration: 1.2,
-        scrollTo: { y: testimonialRef.current, offsetY: 50 },
-        ease: "power2.inOut",
-      });
+    if (testimonialRef.current && lenis) {
+      lenis.scrollTo(testimonialRef.current, { offset: -50, duration: 1.2 });
     }
   };
 
   return (
     <div className="">
-      <Suspense>
+      <Suspense fallback={<div className="min-h-screen" />}>
         <Hero onScrollToTestimonials={scrollToTestimonials} />
+      </Suspense>
+      <Suspense fallback={null}>
         <AboutUs />
+      </Suspense>
+      <Suspense fallback={null}>
         <LogoPartners />
+      </Suspense>
+      <Suspense fallback={null}>
         <Services />
+      </Suspense>
+      <Suspense fallback={null}>
         <Partnership />
+      </Suspense>
+      <Suspense fallback={null}>
         <Faq />
+      </Suspense>
+      <Suspense fallback={null}>
         <div ref={testimonialRef}>
           <Testimonials />
         </div>

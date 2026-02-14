@@ -15,9 +15,9 @@ export default function Footer() {
     <div className="relative overflow-hidden bg-[#070707]">
       {/* Background Blur Elements */}
       <div className="absolute w-full z-0">
-        <div className="absolute right-[-90%] mt-[-15%] md:mt-[20%] lg:mt-[-3%] md:right-[-15%] bg-[#873AE3] blur-[45px] lg:blur-[96px] w-[570.659px] lg:w-[1242px] h-[120.38px] lg:h-[262px] rounded-[570.659px] lg:rounded-[1242px] rotate-[170.318deg]" />
-        <div className="absolute left-[-50%] md:left-[-10%] lg:left-10 mt-[-15%] lg:mt-[-3%] bg-[#F2B611] blur-[45px] md:blur-[96px] w-[678.357px] md:w-[1475px] h-[141.516px] md:h-[308px] rounded-[678.357px] md:rounded-[1475px] rotate-[170.318deg]" />
-        <div className="ml-[-20%] mt-[-33%] md:mt-[-40%] lg:mt-[-17%] bg-[#fff] dark:bg-[#070707] blur-[35px] md:blur-[74px] w-[1589.28px] md:w-[3459px] h-[202.956px] md:h-[448px] rounded-[1589.28px] md:rounded-[448px] rotate-[177.318deg]" />
+        <div className="absolute right-[-90%] mt-[-15%] md:mt-[20%] lg:mt-[-3%] md:right-[-15%] bg-[#873AE3] blur-[30px] lg:blur-[96px] w-[300px] lg:w-[1242px] h-[80px] lg:h-[262px] rounded-[300px] lg:rounded-[1242px] rotate-[170.318deg]" />
+        <div className="absolute left-[-50%] md:left-[-10%] lg:left-10 mt-[-15%] lg:mt-[-3%] bg-[#F2B611] blur-[30px] md:blur-[96px] w-[350px] md:w-[1475px] h-[80px] md:h-[308px] rounded-[350px] md:rounded-[1475px] rotate-[170.318deg]" />
+        <div className="ml-[-20%] mt-[-33%] md:mt-[-40%] lg:mt-[-17%] bg-[#fff] dark:bg-[#070707] blur-[25px] md:blur-[74px] w-[500px] md:w-[3459px] h-[120px] md:h-[448px] rounded-[500px] md:rounded-[448px] rotate-[177.318deg]" />
       </div>
 
       {/* Main Footer Content */}

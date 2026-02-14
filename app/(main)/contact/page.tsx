@@ -7,9 +7,13 @@ const Testimonials = React.lazy(() => import("@/src/page-section/Testimonials"))
 export default function Contact() {
     return (
         <div>
-            <Suspense>
+            <Suspense fallback={<div className="min-h-screen" />}>
                 <Hero />
+            </Suspense>
+            <Suspense fallback={null}>
                 <Form />
+            </Suspense>
+            <Suspense fallback={null}>
                 <Testimonials />
             </Suspense>
         </div>

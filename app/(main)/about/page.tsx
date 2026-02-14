@@ -23,17 +23,37 @@ gsap.registerPlugin(useGSAP);
 export default function About() {
     return (
         <div>
-            <Suspense>
+            <Suspense fallback={<div className="min-h-screen" />}>
                 <Hero />
+            </Suspense>
+            <Suspense fallback={null}>
                 <AboutUs />
+            </Suspense>
+            <Suspense fallback={null}>
                 <MissionVision />
+            </Suspense>
+            <Suspense fallback={null}>
                 <Values />
+            </Suspense>
+            <Suspense fallback={null}>
                 <CoreFocus />
+            </Suspense>
+            <Suspense fallback={null}>
                 <Teams />
+            </Suspense>
+            <Suspense fallback={null}>
                 <Approach />
+            </Suspense>
+            <Suspense fallback={null}>
                 <WhyChooseUs />
+            </Suspense>
+            <Suspense fallback={null}>
                 <WhoWeWorkWith />
+            </Suspense>
+            <Suspense fallback={null}>
                 <Faq />
+            </Suspense>
+            <Suspense fallback={null}>
                 <Testimonials />
             </Suspense>
         </div>

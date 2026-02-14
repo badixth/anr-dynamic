@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, JSX } from "react";
+import React, { useSyncExternalStore, JSX } from "react";
 import clsx from "clsx";
 
 interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
@@ -24,6 +24,24 @@ interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
 
 const MOBILE_BP = 480;
 const TABLET_BP = 1024;
+
+// Shared width subscription — one listener for ALL Typography instances
+let sharedWidth: number | null = typeof window !== "undefined" ? window.innerWidth : null;
+const listeners = new Set<() => void>();
+
+if (typeof window !== "undefined") {
+  window.addEventListener("resize", () => {
+    sharedWidth = window.innerWidth;
+    listeners.forEach((l) => l());
+  });
+}
+
+function subscribe(callback: () => void) {
+  listeners.add(callback);
+  return () => listeners.delete(callback);
+}
+function getSnapshot() { return sharedWidth; }
+function getServerSnapshot() { return null; }
 
 function pickResponsiveValue(
   desktop?: number,
@@ -57,16 +75,7 @@ const Typography: React.FC<TypographyProps> = ({
   children,
   ...props
 }) => {
-  const [width, setWidth] = useState<number | null>(
-    typeof window !== "undefined" ? window.innerWidth : null
-  );
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const onResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, []);
+  const width = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const fontSize = pickResponsiveValue(size, sizeTablet, sizeMobile, width);
   const fontWeight = pickResponsiveValue(weight, weightTablet, weightMobile, width);

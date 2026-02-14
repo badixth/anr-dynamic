@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import Navigation from "./Navigation";
@@ -15,10 +15,10 @@ interface HeaderProps {
 
 export default function Header({ mobileOpen = false, onOpenMobileNav }: HeaderProps) {
   const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [isIdle, setIsIdle] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
 
+  const lastScrollYRef = useRef(0);
   const topBar = useRef<HTMLDivElement>(null);
   const midBar = useRef<HTMLDivElement>(null);
   const botBar = useRef<HTMLDivElement>(null);
@@ -35,17 +35,20 @@ export default function Header({ mobileOpen = false, onOpenMobileNav }: HeaderPr
     }
   }, [mobileOpen]);
 
+  const handleScroll = useCallback(() => {
+    const currentScrollY = window.scrollY;
+    const lastY = lastScrollYRef.current;
+
+    setShowNavbar(currentScrollY < lastY || currentScrollY === 0);
+    lastScrollYRef.current = currentScrollY;
+    setHasScrolled(currentScrollY > 10);
+  }, []);
+
   useEffect(() => {
     let timeoutId: ReturnType<typeof setTimeout>;
 
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      setShowNavbar(currentScrollY < lastScrollY || currentScrollY === 0);
-      setLastScrollY(currentScrollY);
-
-      setHasScrolled(currentScrollY > 10);
-
+    const onScroll = () => {
+      handleScroll();
       setIsIdle(false);
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
@@ -53,13 +56,13 @@ export default function Header({ mobileOpen = false, onOpenMobileNav }: HeaderPr
       }, 3000);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", onScroll);
       clearTimeout(timeoutId);
     };
-  }, [lastScrollY]);
+  }, [handleScroll]);
 
   return (
     <div

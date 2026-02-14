@@ -16,10 +16,16 @@ gsap.registerPlugin(useGSAP);
 export default function Services() {
     return (
         <div>
-            <Suspense>
+            <Suspense fallback={<div className="min-h-screen" />}>
                 <Hero />
+            </Suspense>
+            <Suspense fallback={null}>
                 <OurServices />
+            </Suspense>
+            <Suspense fallback={null}>
                 <Faq />
+            </Suspense>
+            <Suspense fallback={null}>
                 <Testimonials />
             </Suspense>
         </div>
