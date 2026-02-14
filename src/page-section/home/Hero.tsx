@@ -11,7 +11,6 @@ import Avatar1 from "@/src/assets/images/avatar-1.png";
 import Avatar2 from "@/src/assets/images/avatar-2.png";
 import Avatar3 from "@/src/assets/images/avatar-3.png";
 import Avatar4 from "@/src/assets/images/avatar-4.png";
-import Givenchy from "@/src/assets/images/givenchy.png";
 
 interface HeroProps {
   onScrollToTestimonials?: () => void;
@@ -37,11 +36,17 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
             letterSpacingMobile={-1.2}
             noDarkMode
           >
-            We Crafting Real Results
+            Leading Full-Suite
             <br />
-            More Traffic, More Leads,
-            <br />
-            More Growth!
+            <span
+              className="bg-gradient-to-r from-[#FFD700] via-[#FFC700] to-[#FFB300] bg-clip-text text-transparent"
+              style={{
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Business Advisory
+            </span>
           </Typography>
 
           <Typography
@@ -50,47 +55,37 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
             size={18}
             className="mt-[24px] lg:w-[60%]"
           >
-            Your success is our mission. We create custom digital marketing
-            strategies that increase brand awareness, engagement, and revenue.
+            Expert accounting, audit, and tax advisory services for Malaysian
+            businesses facing compliance issues, authority engagements, and
+            complex financial requirements.
           </Typography>
 
           <Link href="/contact">
             <Button variant="primary" className="mt-[32px]">
-              GET STARTED
+              SCHEDULE CONSULTATION
             </Button>
           </Link>
         </div>
 
         {/* Avatar Section */}
-        <div className="flex flex-col items-start lg:items-end gap-[12px] pt-[24px] order-1 lg:order-2">
-          <div className="flex items-center">
-            <Image src={Avatar1} alt="Avatar1" className="w-[32px]" />
-            <Image src={Avatar2} alt="Avatar2" className="w-[32px] ml-[-8px]" />
-            <Image src={Avatar3} alt="Avatar3" className="w-[32px] ml-[-8px]" />
-            <Image src={Avatar4} alt="Avatar4" className="w-[32px] ml-[-8px]" />
-          </div>
-          <Typography color="#fff" noDarkMode>
-            Client Worldwide
-          </Typography>
-        </div>
       </div>
 
       {/* Stats for Mobile */}
       <div className="flex items-center gap-[40px] mt-[48px] lg:hidden">
         <div className="w-[180px]">
           <Typography color="#070707" size={40} weight={600} lineHeight={48}>
-            23K
+            100+
           </Typography>
           <Typography color="#070707" className="mt-[8px]">
-            Year of experiences
+            Companies Served
           </Typography>
         </div>
         <div className="w-[180px]">
           <Typography color="#070707" size={40} weight={600} lineHeight={48}>
-            8+
+            15+
           </Typography>
           <Typography color="#070707" className="mt-[8px]">
-            Year of experiences
+            Years Combined Experience
           </Typography>
         </div>
       </div>
@@ -110,92 +105,59 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
           {/* Desktop Stats */}
           <div className="hidden absolute left-0 top-[-650%] lg:flex items-center gap-[80px]">
             <div className="w-[180px]">
-              <Typography color="#070707" size={40} weight={600} lineHeight={48}>
-                23K
+              <Typography
+                color="#070707"
+                size={40}
+                weight={600}
+                lineHeight={48}
+              >
+                100+
               </Typography>
               <Typography color="#070707" className="mt-[8px]">
-                Year of experiences
+                Companies Served
               </Typography>
             </div>
             <div className="w-[180px]">
-              <Typography color="#070707" size={40} weight={600} lineHeight={48}>
-                8+
+              <Typography
+                color="#070707"
+                size={40}
+                weight={600}
+                lineHeight={48}
+              >
+                15+
               </Typography>
               <Typography color="#070707" className="mt-[8px]">
-                Year of experiences
+                Years Combined Experience
               </Typography>
             </div>
           </div>
 
-          {/* Link to Portfolio */}
-          <Link href="/portofolio">
+          {/* Service Highlight */}
+          <Link href="/services">
             <div className="flex justify-between items-center gap-[8px] text-[#070707] text-[14px] dark:text-[#fff] cursor-pointer">
-              SEE OUR PORTFOLIO <Icons name="arrowUpRight" className="w-5" />
+              LEARN MORE <Icons name="arrowUpRight" className="w-5" />
             </div>
           </Link>
-
-          <Typography
-            as="div"
-            className="lg:hidden"
-            color="#070707"
-            size={28}
-            weight={500}
-            lineHeight={24}
-          >
-            <Typography
-              as="span"
-              color="#8D8D8D"
-              size={28}
-              weight={500}
-              lineHeight={24}
-              noDarkMode
-            >
-              3
-            </Typography>
-            /5
-          </Typography>
         </div>
 
-        {/* Image + Project */}
+        {/* Service Highlight Card */}
         <div className="flex items-end gap-[24px] w-[50%] md:w-auto">
-          <Typography
-            as="div"
-            className="hidden lg:inline-block"
-            color="#070707"
-            size={28}
-            weight={500}
-            lineHeight={24}
-          >
-            <Typography
-              as="span"
-              color="#8D8D8D"
-              size={28}
-              weight={500}
-              lineHeight={24}
-              noDarkMode
-            >
-              3
+          <div className="bg-white dark:bg-[#1D1D1D] p-[24px] rounded-[8px] w-full md:w-[270px]">
+            <Typography color="#8D8D8D" noDarkMode size={12}>
+              Critical Issue?
             </Typography>
-            /5
-          </Typography>
-
-          <div>
-            <div className="flex justify-between items-start self-stretch">
-              <div>
-                <Typography color="#8D8D8D" noDarkMode>
-                  Product Design
-                </Typography>
-                <Typography color="#070707" weight={600} className="mt-[4px]">
-                  GIVENCHY
-                </Typography>
-              </div>
-              <Typography color="#070707">24 Feb</Typography>
-            </div>
-            <Image
-              src={Givenchy}
-              alt="Givenchy"
-              className="w-full md:w-[270px] rounded mt-[12px]"
-            />
+            <Typography
+              color="#070707"
+              weight={600}
+              className="mt-[8px]"
+              size={18}
+            >
+              Authority Engagement Support
+            </Typography>
+            <Typography color="#8D8D8D" className="mt-[12px]" size={14}>
+              We represent and support clients in engagements with SSM, LHDN,
+              and regulatory bodies.
+            </Typography>
           </div>
         </div>
       </div>

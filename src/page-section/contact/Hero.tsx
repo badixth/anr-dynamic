@@ -21,16 +21,15 @@ export default function Hero() {
                             <Image src={Avatar3} alt="Avatar3" className="w-[32px] ml-[-8px]" />
                             <Image src={Avatar4} alt="Avatar4" className="w-[32px] ml-[-8px]" />
                         </div>
-                        <Typography color="#fff" noDarkMode className="md:hidden">Client Worldwide</Typography>
+                        <Typography color="#fff" noDarkMode className="md:hidden">100+ Companies Served</Typography>
                     </div>
                     <Typography as="div" color="#fff" size={72} sizeTablet={52} sizeMobile={40} weight={600} lineHeight={85} lineHeightTablet={64} lineHeightMobile={52} letterSpacing={-2.16} letterSpacingMobile={-1.2} noDarkMode>
-                        {`Connect With Us – Let's
-                        Elevate Your Brand!`}
+                        Get Expert Financial & Compliance Advisory Support
                     </Typography>
                     <Typography color="#fff" noDarkMode size={18} className="md:w-[80%]">
-                        Choose a plan that fits your goals and budget, offering scalable solutions with transparent pricing and no hidden fees
+                        Facing a regulatory challenge, tax issue, or audit requirement? Our team is ready to provide immediate guidance and representation for Malaysian businesses needing expert financial advisory.
                     </Typography>
-                    <Button variant="primary" className="mt-[32px]">GET STARTED</Button>
+                    <Button variant="primary" className="mt-[32px]">CONTACT US NOW</Button>
                 </div>
                 <div className="flex flex-col lg:flex-row items-start justify-between gap-[32px] w-full lg:w-[90%]">
                     <div className="flex items-center gap-[24px]">
@@ -38,8 +37,8 @@ export default function Hero() {
                             <Icons name="chats" className="w-[24px] h-[24px]" color="#fff" />
                         </div>
                         <div className="flex flex-col items-start gap-[4px]">
-                            <Typography color="#070707" size={20} weight={700}>Live Chat</Typography>
-                            <Typography color="#070707" size={14} weight={400} className="underline">sales@adverza.com</Typography>
+                            <Typography color="#070707" size={20} weight={700}>Email Us</Typography>
+                            <Typography color="#070707" size={14} weight={400} className="underline">anrdynamic@gmail.com</Typography>
                         </div>
                     </div>
                     <div className="flex items-center gap-[24px]">
@@ -48,7 +47,7 @@ export default function Hero() {
                         </div>
                         <div className="flex flex-col items-start gap-[4px]">
                             <Typography color="#070707" size={20} weight={700}>Visit Us</Typography>
-                            <Typography color="#070707" size={14} weight={400} className="underline">Worldwide 87 adibas</Typography>
+                            <Typography color="#070707" size={14} weight={400} className="underline">Jalan Pengaturcara U1/51A, Shah Alam, Selangor</Typography>
                         </div>
                     </div>
                     <div className="flex items-center gap-[24px]">
@@ -57,7 +56,7 @@ export default function Hero() {
                         </div>
                         <div className="flex flex-col items-start gap-[4px]">
                             <Typography color="#070707" size={20} weight={700}>Call Us</Typography>
-                            <Typography color="#070707" size={14} weight={400} className="underline">+1 234 5678978</Typography>
+                            <Typography color="#070707" size={14} weight={400} className="underline">+603-96237617 / +6011-21698236</Typography>
                         </div>
                     </div>
                 </div>

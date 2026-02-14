@@ -83,7 +83,7 @@ export default function Header({ mobileOpen = false, onOpenMobileNav }: HeaderPr
           href="/contact"
           className="flex justify-between items-center gap-[8px] text-white cursor-pointer"
         >
-          CONTACT US <Icons name="arrowRight" className="w-5" />
+          SCHEDULE CONSULTATION <Icons name="arrowRight" className="w-5" />
         </Link>
       </div>
 

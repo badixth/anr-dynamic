@@ -12,6 +12,7 @@ export type member = {
     experience: string;
     image: StaticImageData;
     position: string;
+    description?: string;
 };
 
 interface CarouselProps {
@@ -74,19 +75,33 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                     {items.map((member, index) => (
                         <div
                             key={`member_${index}`}
-                            className="flex flex-col items-start gap-[12px] w-[290px] md:w-[310px] flex-shrink-0"
+                            className="flex flex-col items-start gap-[12px] w-[290px] md:w-[310px] flex-shrink-0 group"
                         >
-                            <div className="relative bg-[#EEE] dark:bg-[#1D1D1D] rounded-[12px]">
-                                <div className="absolute left-3 top-3 flex items-center gap-[4px] bg-gradient-to-r from-blue-500 to-purple-500 text-white text-[12px] px-[10px] py-[6px] rounded-full">
+                            <div className="relative bg-[#EEE] dark:bg-[#1D1D1D] rounded-[12px] overflow-hidden">
+                                <div className="absolute left-3 top-3 flex items-center gap-[4px] bg-gradient-to-r from-[#F2B611] to-[#D4A017] text-white text-[12px] px-[10px] py-[6px] rounded-full z-10 transition-opacity duration-300 group-hover:opacity-0">
                                     <Icons name="starsSparkle" className="w-3" /> {member.position}
                                 </div>
-                                <Image src={member.image} alt={`member_${index}`} />
+                                <Image src={member.image} alt={`member_${index}`} className="transition-transform duration-500 group-hover:scale-110" />
+
+                                {/* Hover Overlay */}
+                                {member.description && (
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#F2B611] via-[#F2B611]/95 to-[#F2B611]/80 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-[20px] translate-y-full group-hover:translate-y-0">
+                                        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                                            <Typography size={14} weight={600} color="#fff" noDarkMode className="mb-[8px]">
+                                                {member.position}
+                                            </Typography>
+                                            <Typography size={12} lineHeight={18} color="#fff" noDarkMode className="opacity-90">
+                                                {member.description}
+                                            </Typography>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                             <div>
                                 <Typography size={20} weight={700}>
                                     {member.name}
                                 </Typography>
-                                <Typography weight={500}>{member.experience}</Typography>
+                                <Typography weight={500} className="text-[#8D8D8D] dark:text-[#8D8D8D]">{member.experience}</Typography>
                             </div>
                         </div>
                     ))}
@@ -97,14 +112,14 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                 <button
                     onClick={handlePrev}
                     disabled={currentIndex === 0}
-                    className="transform -translate-y-1/2 bg-white border border-[#1146F2] rounded-full w-[32px] md:w-[48px] h-[32px] md:h-[48px] p-[8px] md:p-[10px] flex items-center justify-center dark:bg-[#070707] dark:text-[#fff] disabled:opacity-30"
+                    className="transform -translate-y-1/2 bg-white border border-[#F2B611] rounded-full w-[32px] md:w-[48px] h-[32px] md:h-[48px] p-[8px] md:p-[10px] flex items-center justify-center dark:bg-[#070707] dark:text-[#fff] disabled:opacity-30"
                 >
                     <Icons name="arrowLeft" />
                 </button>
                 <button
                     onClick={handleNext}
                     disabled={currentIndex === totalItems - visibleCount}
-                    className="transform -translate-y-1/2 bg-white border border-[#1146F2] rounded-full w-[32px] md:w-[48px] h-[32px] md:h-[48px] p-[8px] md:p-[10px] flex items-center justify-center dark:bg-[#070707] dark:text-[#fff] disabled:opacity-30"
+                    className="transform -translate-y-1/2 bg-white border border-[#F2B611] rounded-full w-[32px] md:w-[48px] h-[32px] md:h-[48px] p-[8px] md:p-[10px] flex items-center justify-center dark:bg-[#070707] dark:text-[#fff] disabled:opacity-30"
                 >
                     <Icons name="arrowRight" />
                 </button>

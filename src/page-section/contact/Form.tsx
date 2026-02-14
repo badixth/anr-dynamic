@@ -8,11 +8,11 @@ export default function Form() {
             <div className="w-full lg:w-[35%] flex flex-col items-start gap-[48px]">
                 <div className="flex flex-col items-start gap-[24px]">
                     <Typography size={32} weight={600}>
-                        Chat Our Team
+                        Schedule a Consultation
                     </Typography>
                     <Typography size={16}>
-                        Get Instant Support – Chat with Our Team for Quick Assistance and
-                        Expert Guidance Anytime!
+                        Share your compliance challenge and we'll provide an initial
+                        assessment and recommend the best path forward.
                     </Typography>
                 </div>
                 <div className="w-full flex flex-col gap-[24px]">
@@ -23,11 +23,11 @@ export default function Form() {
                     <Input type="email" isRequired label="Email" placeholder="Email" />
                     <Input type="textarea" isRequired label="Message" placeholder="Message" />
                     <Button variant="form" className="px-[32px] py-[16px]">
-                        Sent to Us
+                        SUBMIT INQUIRY
                     </Button>
                     <Typography size={14} weight={500} className="text-center">
-                        By Contacting us, you agree to our <span className="text-[#873AE3]">Terms</span> of service <br />
-                        and <span className="text-[#873AE3]">privacy Policy</span>
+                        By contacting us, you agree to our <span className="text-[#873AE3]">Terms of Service</span> <br />
+                        and <span className="text-[#873AE3]">Privacy Policy</span>. We will respond to your inquiry within 24 business hours.
                     </Typography>
                 </div>
             </div>

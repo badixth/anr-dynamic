@@ -8,10 +8,9 @@ import React, { useRef, Suspense } from "react";
 
 const Hero = React.lazy(() => import("@/src/page-section/home/Hero"));
 const AboutUs = React.lazy(() => import("@/src/page-section/about/AboutUs"));
-const LatestProject = React.lazy(() => import("@/src/page-section/home/LatestProject"));
 const LogoPartners = React.lazy(() => import("@/src/page-section/home/LogoPartners"));
 const Services = React.lazy(() => import("@/src/page-section/home/Services"));
-const Pricing = React.lazy(() => import("@/src/page-section/PricingSection"));
+const Partnership = React.lazy(() => import("@/src/page-section/home/Partnership"));
 const Faq = React.lazy(() => import("@/src/page-section/Faq"));
 const Testimonials = React.lazy(() => import("@/src/page-section/Testimonials"));
 
@@ -38,10 +37,9 @@ export default function Home() {
       <Suspense>
         <Hero onScrollToTestimonials={scrollToTestimonials} />
         <AboutUs />
-        <LatestProject />
         <LogoPartners />
         <Services />
-        <Pricing />
+        <Partnership />
         <Faq />
         <div ref={testimonialRef}>
           <Testimonials />

@@ -15,7 +15,7 @@ import Target from '@/src/assets/images/target.png';
 
 export default function AboutUs() {
     const { theme } = useTheme();
-    const descAboutUs = "We are a digital marketing agency committed to delivering innovative strategies that elevate your brand, increase engagement, and drive measurable growth. With data-driven solutions and creative expertise.";
+    const descAboutUs = "We are a specialized accounting, audit, and tax advisory firm dedicated to helping Malaysian businesses navigate complex regulatory requirements and resolve critical financial compliance issues with accuracy, integrity, and expert guidance.";
 
     const descAboutUsRef = useRef<HTMLDivElement>(null);
 
@@ -64,10 +64,10 @@ export default function AboutUs() {
                         <Image src={Group} alt="group" className="w-12" />
                         <div>
                             <Typography size={20} weight={700} lineHeight={32}>
-                                ROI Increased by 300%
+                                100+ Companies Assisted
                             </Typography>
                             <Typography sizeMobile={14} className="mt-[4px]">
-                                Data-backed performance marketing
+                                Across diverse industries including F&B, retail, trading, and Islamic finance
                             </Typography>
                         </div>
                     </div>
@@ -75,10 +75,10 @@ export default function AboutUs() {
                         <Image src={Cash} alt="Cash" className="w-12" />
                         <div>
                             <Typography size={20} weight={700} lineHeight={32}>
-                                1M+ Leads Generated
+                                SSM & LHDN Expertise
                             </Typography>
                             <Typography className="mt-[4px]">
-                                High-quality prospects for your business
+                                Specialized support for SSM registration, conversions, and LHDN compliance
                             </Typography>
                         </div>
                     </div>
@@ -86,10 +86,10 @@ export default function AboutUs() {
                         <Image src={Target} alt="Target" className="w-12" />
                         <div>
                             <Typography size={20} weight={700} lineHeight={32}>
-                                10+ Years of Experience
+                                Rapid Response Team
                             </Typography>
                             <Typography className="mt-[4px]">
-                                A decade of driving digital success.
+                                Immediate support for audit issues, tax inquiries, and authority engagements
                             </Typography>
                         </div>
                     </div>

@@ -7,37 +7,7 @@ import Image from "next/image";
 import Icons from "@/src/component/Icons";
 import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
-
-type Testimonial = {
-  name: string;
-  role: string;
-  message: string;
-  avatar: string;
-};
-
-const testimonials: Testimonial[] = [
-  {
-    name: "Amanda Holly",
-    role: "Nursing Assistant",
-    message:
-      "Our business experienced a significant transformation thanks to this team’s digital marketing expertise. They delivered tangible improvements in our online visibility.",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-  },
-  {
-    name: "John Doe",
-    role: "Marketing Manager",
-    message:
-      "Their innovative strategies and attention to detail made a huge difference in our campaign performance. Truly outstanding work!",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-  },
-  {
-    name: "Lina Kusuma",
-    role: "Founder @StartupID",
-    message:
-      "Pelayanan cepat, profesional, dan sangat membantu bisnis kami berkembang di dunia digital.",
-    avatar: "https://randomuser.me/api/portraits/women/68.jpg",
-  },
-];
+import { testimonials } from "@/src/data/testimonials";
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -91,14 +61,14 @@ export default function Testimonials() {
       <div className="relative w-full md:px-[32px] text-center">
         <button
           onClick={prev}
-          className="hidden md:inline absolute left-4 top-1/2 transform -translate-y-1/2 bg-white border border-[#1146F2] rounded-full w-[48px] h-[48px] p-[10px] flex items-center justify-center dark:bg-[#070707] dark:text-[#fff]"
+          className="hidden md:inline absolute left-4 top-1/2 transform -translate-y-1/2 bg-white border border-[#F2B611] rounded-full w-[48px] h-[48px] p-[10px] flex items-center justify-center dark:bg-[#070707] dark:text-[#fff]"
         >
           <Icons name="arrowLeft" />
         </button>
 
         <button
           onClick={next}
-          className="hidden md:inline absolute right-4 top-1/2 transform -translate-y-1/2 bg-white border border-[#1146F2] rounded-full w-[48px] h-[48px] p-[10px] flex items-center justify-center dark:bg-[#070707] dark:text-[#fff]"
+          className="hidden md:inline absolute right-4 top-1/2 transform -translate-y-1/2 bg-white border border-[#F2B611] rounded-full w-[48px] h-[48px] p-[10px] flex items-center justify-center dark:bg-[#070707] dark:text-[#fff]"
         >
           <Icons name="arrowRight" />
         </button>
@@ -112,27 +82,29 @@ export default function Testimonials() {
             <Image
               src={current.avatar}
               alt={current.name}
+              width={52}
+              height={52}
               className="w-11 md:w-13 h-11 md:h-13 rounded-full object-cover"
             />
             <div className="text-center md:text-left">
               <p className="font-bold text-[#070707] dark:text-[#fff] text-[16px] md:text-[20px]">
                 {current.name}
               </p>
-              <p className="text-[14px] md:text-[16px] text-[#070707] dark:text-[#fff]">{current.role}</p>
+              <p className="text-[14px] md:text-[16px] text-[#070707] dark:text-[#fff]">{current.role}, {current.company}</p>
             </div>
           </div>
 
           <div className="w-full flex justify-center items-center gap-[24px] mt-[48px] md:hidden">
             <button
               onClick={prev}
-              className="bg-white border border-[#1146F2] rounded-full w-[32px] h-[32px] p-[8px] flex items-center justify-center dark:bg-[#070707] dark:text-[#fff]"
+              className="bg-white border border-[#F2B611] rounded-full w-[32px] h-[32px] p-[8px] flex items-center justify-center dark:bg-[#070707] dark:text-[#fff]"
             >
               <Icons name="arrowLeft" />
             </button>
 
             <button
               onClick={next}
-              className="bg-white border border-[#1146F2] rounded-full w-[32px] h-[32px] p-[8px] flex items-center justify-center dark:bg-[#070707] dark:text-[#fff]"
+              className="bg-white border border-[#F2B611] rounded-full w-[32px] h-[32px] p-[8px] flex items-center justify-center dark:bg-[#070707] dark:text-[#fff]"
             >
               <Icons name="arrowRight" />
             </button>

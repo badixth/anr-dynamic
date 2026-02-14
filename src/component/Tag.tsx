@@ -21,7 +21,7 @@ const Tag: React.FC<TagProps> = ({
     const { theme } = useTheme()
     return (
         <div className={clsx(
-            "px-[12px] py-[6px] inline-flex items-center gap-[6px] border border-[#1146F2] rounded-full",
+            "px-[12px] py-[6px] inline-flex items-center gap-[6px] border border-[#F2B611] rounded-full",
             `text-[${color}]`,
             !noDarkMode && "dark:text-white",
             className,

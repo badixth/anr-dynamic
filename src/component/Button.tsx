@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
                 {
                     "flex bg-[#070707] text-white items-center gap-[24px] p-[6px] pl-[24px]": variant === "primary",
                     "flex bg-[#fff] text-[#070707] items-center gap-[16px] md:gap-[24px] p-[6px] pl-[20px] md:pl-[24px] ": variant === "secondary",
-                    "flex bg-[#1146F2] text-white items-center justify-center": variant === "form",
+                    "flex bg-[#F2B611] text-white items-center justify-center": variant === "form",
                     "inline-flex bg-[#070707] text-white items-center justify-center py-[12px] px-[24px]": variant === "back",
                 },
                 className

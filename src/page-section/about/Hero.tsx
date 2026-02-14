@@ -56,13 +56,13 @@ export default function Hero() {
             <div className="flex flex-col lg:flex-row justify-between items-start self-stretch ">
                 <div className="w-full order-2 lg:w-[70%] lg:order-1">
                     <Typography as="div" color="#fff" size={72} sizeTablet={52} sizeMobile={40} weight={600} lineHeight={85} lineHeightTablet={64} lineHeightMobile={52} letterSpacing={-2.16} letterSpacingMobile={-1.2} className="text-[72px]" noDarkMode>
-                        Creative Strategies, Impactful Results, Digital Excellence
+                        Professional Financial Advisory Built on Integrity & Expertise
                     </Typography>
                     <Typography color="#fff" size={18} noDarkMode className="mt-[24px] lg:w-[65%]">
-                        We craft innovative digital strategies that drive engagement, enhance brand visibility, and deliver measurable results for your business growth.
+                        We provide accurate, reliable, and actionable financial services that empower Malaysian businesses to make confident decisions and achieve long-term success through expert accounting, audit, and tax advisory.
                     </Typography>
                     <Link href="/contact">
-                        <Button variant="primary" className="mt-[32px]">GET STARTED</Button>
+                        <Button variant="primary" className="mt-[32px]">MEET OUR TEAM</Button>
                     </Link>
                 </div>
                 <div className="flex flex-col items-start lg:items-end gap-[12px] pt-[24px] order-1 lg:order-2">
@@ -72,11 +72,11 @@ export default function Hero() {
                         <Image src={Avatar3} alt="Avatar3" className="w-[32px] ml-[-8px]" />
                         <Image src={Avatar4} alt="Avatar4" className="w-[32px] ml-[-8px]" />
                     </div>
-                    <Typography color="#fff" noDarkMode>Client Worldwide</Typography>
+                    <Typography color="#fff" noDarkMode>100+ Companies Served</Typography>
                 </div>
             </div>
             <div className="mt-[60px] py-[48px] md:py-[60px] flex flex-col items-center gap-[32px]">
-                <Typography as="div" size={16} weight={500} className="text-center px-[40px]">Adverza is used by over 69.000+ companies across the globe</Typography>
+                <Typography as="div" size={16} weight={500} className="text-center px-[40px]">Trusted by 100+ Malaysian Companies Across Multiple Industries</Typography>
                 <div className="overflow-hidden w-full" ref={sliderRef}>
                     <div className="flex items-center gap-20 slider-track">
                         {[...images, ...images].map((image, index) => (

@@ -61,7 +61,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, content, isOpen, o
                         variant === "primary" && "bg-white dark:bg-[#393939]",
                         variant === "secondary" &&
                         (isOpen
-                            ? "bg-[linear-gradient(282deg,_#1146F2_-8.95%,_#873AE3_118.24%)]"
+                            ? "bg-[linear-gradient(282deg,_#F2B611_-8.95%,_#873AE3_118.24%)]"
                             : "bg-[#1D1D1D] dark:bg-[#393939]")
                     )}
                 >

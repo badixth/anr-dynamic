@@ -20,29 +20,29 @@ export default function OurServices() {
 
     const services = [
         {
-            title: "SEO & Content Marketing",
+            title: "Accounting Advisory",
             image: Services1,
-            desc: "Boost visibility and engagement with powerful SEO strategies and compelling content that drive traffic, enhance rankings, and maximize conversions.",
+            desc: "Comprehensive bookkeeping, payroll processing, financial reporting, management accounts, and cloud accounting implementation to maintain accurate financial records.",
         },
         {
-            title: "Pay-Per-Click (PPC) Advertising",
+            title: "Tax Advisory",
             image: Services2,
-            desc: "Boost visibility and engagement with powerful SEO strategies and compelling content that drive traffic, enhance rankings, and maximize conversions.",
+            desc: "Tax planning, compliance filing, LHDN audit defense, E-Invoice registration, tax optimization strategies, and comprehensive correspondence with tax authorities.",
         },
         {
-            title: "Social Media Management",
+            title: "Audit & Assurance",
             image: Services3,
-            desc: "Boost visibility and engagement with powerful SEO strategies and compelling content that drive traffic, enhance rankings, and maximize conversions.",
+            desc: "Statutory audit services, internal control evaluation, audit readiness preparation, and financial statement assurance meeting Malaysian regulatory standards.",
         },
         {
-            title: "Social Media Management",
+            title: "Corporate Advisory",
             image: Services4,
-            desc: "Boost visibility and engagement with powerful SEO strategies and compelling content that drive traffic, enhance rankings, and maximize conversions.",
+            desc: "Business strategy consulting, SSM registration and conversions, mergers & acquisitions support, restructuring, and risk management advisory.",
         },
         {
-            title: "Social Media Management",
+            title: "ERP System Implementation",
             image: Services5,
-            desc: "Boost visibility and engagement with powerful SEO strategies and compelling content that drive traffic, enhance rankings, and maximize conversions.",
+            desc: "Comprehensive ERP system implementation, business process automation, system integration, and digital transformation consulting for operational efficiency.",
         },
     ];
 
@@ -79,18 +79,14 @@ export default function OurServices() {
                     <div className="flex flex-col items-start gap-[24px]">
                         <Tag color="#fff">Our Services</Tag>
                         <Typography as="div" noDarkMode size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6} color="#fff">
-                            Digital Solutions for <br />
-                            Business Growth
+                            Professional Services for <br />
+                            Malaysian Business Compliance
                         </Typography>
                     </div>
                     <div className="flex flex-col items-start gap-[48px] lg:gap-[14px] w-full lg:w-[35%]">
                         <Typography size={14} noDarkMode color="#fff">
-                            From branding to performance marketing, we deliver data-driven solutions that drive engagement, boost conversions, and accelerate growth.
+                            From financial record management to statutory audit and ERP implementation, we provide comprehensive solutions for every stage of your business journey.
                         </Typography>
-                        <div className="flex gap-[8px] cursor-pointer">
-                            <Typography size={16} weight={500} noDarkMode color="#fff">SEE MORE</Typography>
-                            <Icons name="arrowRight" className="w-5" color="#fff" />
-                        </div>
                     </div>
                 </div>
                 <div className="flex flex-col items-start gap-[51px] mt-[48px] md:mt-[64px]">

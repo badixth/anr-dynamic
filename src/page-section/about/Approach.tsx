@@ -10,17 +10,17 @@ export default function Approach() {
     return (
         <div className="bg-white dark:bg-[#070707] w-full px-[16px] md:px-[72px] py-[48px] md:py-[80px]">
             <Tag>
-                <Typography size={14} weight={500}>Frequently Asked Question</Typography>
+                <Typography size={14} weight={500}>Our Methodology</Typography>
             </Tag>
             <div className="flex flex-col lg:flex-row justify-between items-start w-full mt-[24px]">
                 <div className="flex flex-col items-start w-full lg:w-[50%]">
                     <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff]">
-                        Strategic Insights, Data-Driven Actions, Measurable Growth Success
+                        The ANR 5-Stage Approach: From Problem Identification to Resolution
                     </div>
                 </div>
                 <div className="flex gap-[10px] w-full lg:w-[40%]">
                     <Typography size={16} weight={500} lineHeight={24}>
-                        We combine innovative strategies, cutting-edge technology, and data-driven insights to maximize your brand’s digital impact and business growth
+                        Our structured methodology ensures every compliance challenge is addressed systematically, with clear steps from initial diagnosis through ongoing support.
                     </Typography>
                 </div>
             </div>
@@ -29,10 +29,10 @@ export default function Approach() {
                     <Image src={Trends} alt="Trends" className="w-15" />
                     <div>
                         <Typography size={20} weight={700} lineHeight={32}>
-                            Data-Driven Strategy
+                            Diagnostic Excellence
                         </Typography>
                         <Typography className="mt-[8px]">
-                            Every strategic decision we make is backed by in-depth analytics, ensuring optimal performance, higher efficiency, and measurable business growth.
+                            Thorough investigation to identify root causes of financial, tax, and compliance issues before recommending solutions.
                         </Typography>
                     </div>
                 </div>
@@ -40,10 +40,10 @@ export default function Approach() {
                     <Image src={Rocket} alt="Rocket" className="w-15" />
                     <div>
                         <Typography size={20} weight={700} lineHeight={32}>
-                            Innovative Solutions
+                            Direct Representation
                         </Typography>
                         <Typography className="mt-[8px]">
-                            Every strategic decision we make is backed by in-depth analytics, ensuring optimal performance, higher efficiency, and measurable business growth.
+                            We stand with you in SSM, LHDN, and audit engagements, advocating for your interests and managing authority communications.
                         </Typography>
                     </div>
                 </div>
@@ -51,10 +51,10 @@ export default function Approach() {
                     <Image src={TargetBlue} alt="TargetBlue" className="w-15" />
                     <div>
                         <Typography size={20} weight={700} lineHeight={32}>
-                            Result Approach
+                            Sustainable Solutions
                         </Typography>
                         <Typography className="mt-[8px]">
-                            Every strategic decision we make is backed by in-depth analytics, ensuring optimal performance, higher efficiency, and measurable business growth.
+                            Implementation of lasting compliance frameworks and ongoing support to prevent future issues and ensure continuous adherence.
                         </Typography>
                     </div>
                 </div>
