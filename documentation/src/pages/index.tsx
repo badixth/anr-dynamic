@@ -20,7 +20,7 @@ export default function Home(): ReactNode {
           textAlign: 'center',
         }}
       >
-        <h1>👋 Welcome to Solver Corp Documentation</h1>
+        <h1>👋 Welcome to ANR Dynamic Documentation</h1>
         <h2>Follow us to more info</h2>
         <div style={{
           display: 'flex',

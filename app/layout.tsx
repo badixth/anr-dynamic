@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import ClientLayout from "./ClientLayout";
 
 export const metadata: Metadata = {
-  title: "SolverCorp.",
-  description: "Next.ts App",
+  title: "ANR Dynamic",
+  description: "Professional Accounting, Tax & Corporate Advisory Services",
 };
 
 export default function RootLayout({

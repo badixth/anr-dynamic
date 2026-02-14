@@ -1,4 +1,4 @@
-# 🚀 Solver Corp Next.js Project
+# 🚀 ANR Dynamic Next.js Project
 
 This project is built using [Next.js](https://nextjs.org) and bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
@@ -8,7 +8,7 @@ This project is built using [Next.js](https://nextjs.org) and bootstrapped with 
 
 For the complete setup guide, project structure, and development workflow, please visit our official documentation:
 
-🔗 **[https://documentation-solver-corp-next.vercel.app/](https://documentation-solver-corp-next.vercel.app/)**
+🔗 **[https://documentation-anr-dynamic.vercel.app/](https://documentation-anr-dynamic.vercel.app/)**
 
 ---
 
