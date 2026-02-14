@@ -5,40 +5,43 @@ export default function Partnership() {
   const partnerships = [
     {
       number: "01",
-      title: "TRUSTED PARTNERSHIPS",
+      title: "Trusted Partnerships",
       subtitle: "Building Long-Term Client Relationships",
-      description: "Our approach is grounded in trust, transparency, and a shared commitment to your success.",
+      description:
+        "Our approach is grounded in trust, transparency, and a shared commitment to your success.",
       points: [
         "Open and professional communication",
         "Confidential handling of sensitive matters",
         "Independent and objective advice",
-        "A shared commitment to compliance, governance, and integrity"
-      ]
+        "A shared commitment to compliance, governance, and integrity",
+      ],
     },
     {
       number: "02",
-      title: "DEEP REGIONAL EXPERTISE",
+      title: "Deep Regional Expertise",
       subtitle: "Local Knowledge with Professional Standards",
-      description: "Our experience across multiple industries enables us to navigate complex regulatory environments effectively.",
+      description:
+        "Our experience across multiple industries enables us to navigate complex regulatory environments effectively.",
       points: [
         "Interpret and apply local regulations and government requirements accurately",
         "Address issues arising from regulatory reviews, tax audits, and compliance assessments",
-        "Advise clients in a manner that is practical, defensible, and aligned with Malaysian standards"
-      ]
+        "Advise clients in a manner that is practical, defensible, and aligned with Malaysian standards",
+      ],
     },
     {
       number: "03",
-      title: "END-TO-END ADVISORY",
+      title: "End-to-End Advisory",
       subtitle: "Comprehensive Support Throughout Your Business Journey",
-      description: "We work closely with clients to provide complete advisory solutions from diagnosis to implementation.",
+      description:
+        "We work closely with clients to provide complete advisory solutions from diagnosis to implementation.",
       points: [
         "Diagnose accounting, audit, tax, and compliance issues",
         "Advise on regulatory requirements and appropriate responses",
         "Assist in engagement with relevant authorities and stakeholders",
         "Implement corrective measures and strengthen internal controls",
-        "Support ongoing compliance and governance improvements"
-      ]
-    }
+        "Support ongoing compliance and governance improvements",
+      ],
+    },
   ];
 
   return (
@@ -60,7 +63,8 @@ export default function Partnership() {
           Why Partner With ANR Dynamic Ventures
         </Typography>
         <Typography size={16} lineHeight={24} className="max-w-[800px]">
-          We don't just provide services—we build lasting partnerships based on trust, expertise, and comprehensive support for your business success.
+          We don't just provide services—we build lasting partnerships based on
+          trust, expertise, and comprehensive support for your business success.
         </Typography>
       </div>
 
@@ -77,28 +81,49 @@ export default function Partnership() {
 
             {/* Title */}
             <div>
-              <Typography size={24} sizeMobile={20} weight={700} className="mb-[8px]">
+              <Typography
+                size={24}
+                sizeMobile={20}
+                weight={700}
+                className="mb-[8px] text-[#070707] dark:text-white"
+              >
                 {item.title}
               </Typography>
-              <Typography size={16} weight={600} color="#F2B611" noDarkMode className="dark:text-[#5B8EFF]">
+              <Typography
+                size={16}
+                weight={600}
+                className="text-[#F2B611] dark:text-[#F2B611]"
+              >
                 {item.subtitle}
               </Typography>
             </div>
 
             {/* Description */}
-            <Typography size={14} lineHeight={24} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">
+            <Typography
+              size={14}
+              lineHeight={24}
+              className="text-[#555555] dark:text-[#A0A0A0]"
+            >
               {item.description}
             </Typography>
 
             {/* Points List */}
             <div className="flex flex-col gap-[12px]">
-              <Typography size={14} weight={600} color="#070707" noDarkMode className="dark:text-[#fff] uppercase tracking-wide">
+              <Typography
+                size={14}
+                weight={600}
+                className="text-[#1A1A1A] dark:text-[#E5E5E5] uppercase tracking-wide"
+              >
                 Our Approach:
               </Typography>
               {item.points.map((point, pointIdx) => (
                 <div key={pointIdx} className="flex items-start gap-[12px]">
                   <div className="bg-[#F2B611] rounded-full w-[6px] h-[6px] flex-shrink-0 mt-[8px]"></div>
-                  <Typography size={14} lineHeight={22} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">
+                  <Typography
+                    size={14}
+                    lineHeight={22}
+                    className="text-[#4A4A4A] dark:text-[#CCCCCC]"
+                  >
                     {point}
                   </Typography>
                 </div>

@@ -36,7 +36,7 @@ export default function Testimonials() {
     animateContent();
     setTimeout(() => {
       setCurrentIndex((prev) =>
-        prev === 0 ? testimonials.length - 1 : prev - 1
+        prev === 0 ? testimonials.length - 1 : prev - 1,
       );
     }, 300);
   };
@@ -45,7 +45,7 @@ export default function Testimonials() {
     animateContent();
     setTimeout(() => {
       setCurrentIndex((prev) =>
-        prev === testimonials.length - 1 ? 0 : prev + 1
+        prev === testimonials.length - 1 ? 0 : prev + 1,
       );
     }, 300);
   };
@@ -55,7 +55,9 @@ export default function Testimonials() {
   return (
     <div className="bg-white dark:bg-[#070707] w-full px-[16px] md:px-[72px] py-[48px] md:py-[80px] flex flex-col items-center justify-center gap-[64px]">
       <Tag>
-        <Typography size={14} sizeMobile={12} weight={500}>Client Testimonials</Typography>
+        <Typography size={14} sizeMobile={12} weight={500}>
+          Client Testimonials
+        </Typography>
       </Tag>
 
       <div className="relative w-full md:px-[32px] text-center">
@@ -79,18 +81,35 @@ export default function Testimonials() {
           </p>
 
           <div className="mt-[48px] md:mt-[64px] flex flex-col md:flex-row items-center justify-center gap-[12px] md:gap-[20px]">
-            <Image
-              src={current.avatar}
-              alt={current.name}
-              width={52}
-              height={52}
-              className="w-11 md:w-13 h-11 md:h-13 rounded-full object-cover"
-            />
+            {current.avatar ? (
+              <Image
+                src={current.avatar}
+                alt={current.name}
+                width={52}
+                height={52}
+                className="w-11 md:w-13 h-11 md:h-13 rounded-full object-cover"
+              />
+            ) : (
+              <div
+                className="w-11 md:w-13 h-11 md:h-13 rounded-full flex items-center justify-center bg-[#EEE] dark:bg-[#393939] text-[#070707] dark:text-white font-bold text-xl select-none"
+                style={{
+                  minWidth: 44,
+                  minHeight: 44,
+                  maxWidth: 52,
+                  maxHeight: 52,
+                }}
+                aria-label={current.name}
+              >
+                {current.name?.charAt(0)?.toUpperCase() || "?"}
+              </div>
+            )}
             <div className="text-center md:text-left">
               <p className="font-bold text-[#070707] dark:text-[#fff] text-[16px] md:text-[20px]">
                 {current.name}
               </p>
-              <p className="text-[14px] md:text-[16px] text-[#070707] dark:text-[#fff]">{current.role}, {current.company}</p>
+              <p className="text-[14px] md:text-[16px] text-[#070707] dark:text-[#fff]">
+                {current.role}, {current.company}
+              </p>
             </div>
           </div>
 

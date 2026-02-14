@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Button from "./Button";
 
-import Logo from "@/src/assets/images/Logo.svg";
+import LogoImg from "@/src/assets/images/Logo.png";
+import Image from "next/image";
 import XLogo from "@/src/assets/images/XLogo.svg";
 import InstagramLogo from "@/src/assets/images/InstagramLogo.svg";
 import LinkedinLogo from "@/src/assets/images/LinkedinLogo.svg";
@@ -29,7 +30,9 @@ export default function Footer() {
               Facing Financial Compliance Issues? Get Expert Guidance Today.
             </div>
             <div className="text-[#fff] text-[14px]">
-              Don't let regulatory challenges hold your business back. Our team provides immediate support for audit readiness, tax compliance, SSM registration, and authority engagement.
+              Don't let regulatory challenges hold your business back. Our team
+              provides immediate support for audit readiness, tax compliance,
+              SSM registration, and authority engagement.
             </div>
           </div>
           <Link href="/contact">
@@ -38,12 +41,13 @@ export default function Footer() {
         </div>
 
         {/* Footer Links */}
-        <div className="mt-[64px] md:mt-[107px] flex flex-col lg:flex-row items-start justify-between gap-[48px]">
+        <div className="mt-[64px] md:mt-[107px] flex flex-col lg:flex-row items-start gap-[48px] lg:gap-[72px]">
           {/* Brand Section */}
-          <div className="flex flex-col gap-[24px] w-[70%] lg:w-[20%]">
-            <Logo className="w-full h-auto" />
+          <div className="flex flex-col gap-[24px] lg:w-[26%] shrink-0">
+            <Image src={LogoImg} alt="ANR Dynamic Ventures" className="w-[200px] h-auto" />
             <div className="font-medium text-white leading-[24px]">
-              Your Trusted Partner in Accounting, Audit & Regulatory Compliance and Tax Advisory
+              Your Trusted Partner in Accounting, Audit & Regulatory Compliance
+              and Tax Advisory
             </div>
             <div className="flex items-center gap-[15px]">
               <div className="bg-[#1D1D1D] rounded-full p-[10px]">
@@ -59,33 +63,63 @@ export default function Footer() {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex items-start justify-between w-full lg:w-[35%] md:gap-[100px]">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-[40px] gap-y-[40px] md:gap-x-[64px] w-full lg:flex-1">
             <div>
-              <div className="text-[#8D8D8D] mb-[24px]">Main Menu</div>
-              <div className="flex flex-col items-start gap-[16px] text-white">
-                <Link href="/" className="cursor-pointer">Home</Link>
-                <Link href="/about" className="cursor-pointer">About Us</Link>
-                <Link href="/services" className="cursor-pointer">Services</Link>
-                <Link href="/careers" className="cursor-pointer">Careers</Link>
-                <Link href="/contact" className="cursor-pointer">Contact</Link>
+              <div className="text-[#8D8D8D] mb-[24px]">Menu</div>
+              <div className="flex flex-col items-start w-full gap-[16px] text-white">
+                <Link href="/" className="cursor-pointer">
+                  Home
+                </Link>
+                <Link href="/about" className="cursor-pointer">
+                  About Us
+                </Link>
+                <Link href="/services" className="cursor-pointer">
+                  Services
+                </Link>
+                <Link href="/careers" className="cursor-pointer">
+                  Careers
+                </Link>
+                <Link href="/contact" className="cursor-pointer">
+                  Contact
+                </Link>
               </div>
             </div>
 
             <div>
               <div className="text-[#8D8D8D] mb-[24px]">Services</div>
               <div className="flex flex-col items-start gap-[16px] text-white">
-                <Link href="/services/accounting-advisory" className="cursor-pointer">Accounting Advisory</Link>
-                <Link href="/services/tax-advisory" className="cursor-pointer">Tax Advisory</Link>
-                <Link href="/services/audit-assurance" className="cursor-pointer">Audit & Assurance</Link>
-                <Link href="/services/corporate-erp" className="cursor-pointer">Corporate Advisory</Link>
-                <Link href="/services/corporate-erp" className="cursor-pointer">ERP System Implementation</Link>
+                <Link
+                  href="/services/accounting-advisory"
+                  className="cursor-pointer"
+                >
+                  Accounting Advisory
+                </Link>
+                <Link href="/services/tax-advisory" className="cursor-pointer">
+                  Tax Advisory
+                </Link>
+                <Link
+                  href="/services/audit-assurance"
+                  className="cursor-pointer"
+                >
+                  Audit & Assurance
+                </Link>
+                <Link href="/services/corporate-erp" className="cursor-pointer">
+                  Corporate Advisory
+                </Link>
+                <Link href="/services/corporate-erp" className="cursor-pointer">
+                  ERP System Implementation
+                </Link>
               </div>
             </div>
 
-            <div>
+            <div className="col-span-2 md:col-span-1">
               <div className="text-[#8D8D8D] mb-[24px]">Contact</div>
               <div className="flex flex-col items-start gap-[16px] text-white text-[14px]">
-                <div>UOA Business Park Unit 2-1, Level 2, The Podium, Tower 3<br />Jalan Pengaturcara, Seksyen U1/51a<br />40150 Shah Alam Selangor, Malaysia</div>
+                <div>
+                  UOA Business Park Unit 2-1, Level 2, The Podium, Tower 3 Jalan
+                  Pengaturcara, Seksyen U1/51a 40150 Shah Alam Selangor,
+                  Malaysia
+                </div>
                 <div>+60192257845</div>
                 <div>+603-96237617</div>
                 <div>+6011-21698236</div>

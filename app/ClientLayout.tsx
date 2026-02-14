@@ -2,8 +2,10 @@
 
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { ThemeProvider } from "@/src/context/ThemeProvider";
+import { TransitionProvider } from "@/src/context/TransitionContext";
 import { LenisContext } from "@/src/context/LenisContext";
 import Lenis from "lenis";
+import PageTransition from "@/src/component/PageTransition";
 
 export default function ClientLayout({ children }: { children: ReactNode }) {
   const [lenis, setLenis] = useState<Lenis | null>(null);
@@ -25,11 +27,13 @@ export default function ClientLayout({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  // Always render children — don't block on Lenis initialization
   return (
     <ThemeProvider>
       <LenisContext.Provider value={lenis}>
-        {children}
+        <TransitionProvider>
+          <PageTransition />
+          {children}
+        </TransitionProvider>
       </LenisContext.Provider>
     </ThemeProvider>
   );
