@@ -42,8 +42,8 @@ export default function Form() {
           </Button>
           <Typography size={14} weight={500} className="text-center">
             By contacting us, you agree to our{" "}
-            <span className="text-[#873AE3]">Terms of Service</span> <br />
-            and <span className="text-[#873AE3]">Privacy Policy</span>. We will
+            <span className="text-[#F2C911]">Terms of Service</span> <br />
+            and <span className="text-[#F2C911]">Privacy Policy</span>. We will
             respond to your inquiry within 24 business hours.
           </Typography>
         </div>
