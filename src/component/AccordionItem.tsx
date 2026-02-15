@@ -77,7 +77,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
 
       <div
         ref={contentRef}
-        className="overflow-hidden text-[#616161] dark:text-white/60"
+        className="overflow-hidden text-[#616161] dark:text-white/90"
         style={{ height: 0, opacity: 0 }}
       >
         <div className="pt-[16px]">{content}</div>
