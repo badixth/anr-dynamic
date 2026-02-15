@@ -54,14 +54,11 @@ export default function Header({
     `}
     >
       {/* Logo */}
-      <Link
-        href="/"
-        className="cursor-pointer flex justify-start items-center"
-      >
+      <Link href="/" className="cursor-pointer flex justify-start items-center">
         <Image
           src={LogoImg}
           alt="ANR Dynamic Ventures"
-          className="w-[120px] sm:w-[160px] md:w-[180px] lg:w-[200px] h-auto"
+          className="w-[200px] sm:w-[200px] md:w-[220px] lg:w-[220px] h-auto"
           priority
         />
       </Link>
