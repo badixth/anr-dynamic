@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useTheme } from "@/src/context/ThemeProvider";
 
 import Image from "next/image";
+import Link from "next/link";
 import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
 
@@ -15,14 +16,14 @@ import Services5 from '@/src/assets/images/service-5.png';
 
 export default function OurServices() {
     const { theme } = useTheme();
-    const cardsRef = useRef<HTMLDivElement[]>([]);
+    const cardsRef = useRef<HTMLAnchorElement[]>([]);
     const themeRef = useRef(theme);
 
     useEffect(() => {
         themeRef.current = theme;
     }, [theme]);
 
-    const handleMouseEnter = useCallback((card: HTMLDivElement) => {
+    const handleMouseEnter = useCallback((card: HTMLElement) => {
         gsap.to(card, {
             backgroundColor: themeRef.current === "light" ? "#1D1D1D" : "#393939",
             padding: "24px 32px",
@@ -32,7 +33,7 @@ export default function OurServices() {
         });
     }, []);
 
-    const handleMouseLeave = useCallback((card: HTMLDivElement) => {
+    const handleMouseLeave = useCallback((card: HTMLElement) => {
         gsap.to(card, {
             backgroundColor: "transparent",
             padding: "0px",
@@ -44,8 +45,8 @@ export default function OurServices() {
 
     useEffect(() => {
         const cards = cardsRef.current.filter(Boolean);
-        const enterHandlers = new Map<HTMLDivElement, () => void>();
-        const leaveHandlers = new Map<HTMLDivElement, () => void>();
+        const enterHandlers = new Map<HTMLElement, () => void>();
+        const leaveHandlers = new Map<HTMLElement, () => void>();
 
         cards.forEach((card) => {
             const onEnter = () => handleMouseEnter(card);
@@ -70,26 +71,31 @@ export default function OurServices() {
         {
             title: "Accounting Advisory",
             image: Services1,
+            href: "/services/accounting-advisory",
             desc: "Comprehensive bookkeeping, payroll processing, financial reporting, management accounts, and cloud accounting implementation to maintain accurate financial records.",
         },
         {
             title: "Tax Advisory",
             image: Services2,
+            href: "/services/tax-advisory",
             desc: "Tax planning, compliance filing, LHDN audit defense, E-Invoice registration, tax optimization strategies, and comprehensive correspondence with tax authorities.",
         },
         {
             title: "Audit & Assurance",
             image: Services3,
+            href: "/services/audit-assurance",
             desc: "Statutory audit services, internal control evaluation, audit readiness preparation, and financial statement assurance meeting Malaysian regulatory standards.",
         },
         {
             title: "Corporate Advisory",
             image: Services4,
+            href: "/services/corporate-erp",
             desc: "Business strategy consulting, SSM registration and conversions, mergers & acquisitions support, restructuring, and risk management advisory.",
         },
         {
             title: "ERP System Implementation",
             image: Services5,
+            href: "/services/corporate-erp",
             desc: "Comprehensive ERP system implementation, business process automation, system integration, and digital transformation consulting for operational efficiency.",
         },
     ];
@@ -113,12 +119,13 @@ export default function OurServices() {
                 </div>
                 <div className="flex flex-col items-start gap-[51px] mt-[48px] md:mt-[64px]">
                     {services.map((service, idx) => (
-                        <div
+                        <Link
                             key={idx}
+                            href={service.href}
                             ref={(el) => {
                                 if (el) cardsRef.current[idx] = el;
                             }}
-                            className="flex flex-col lg:flex-row items-center justify-between w-full gap-[24px]"
+                            className="flex flex-col lg:flex-row items-center justify-between w-full gap-[24px] cursor-pointer"
                             style={{ padding: 0, backgroundColor: "transparent", borderRadius: "12px" }}
                         >
                             <Typography
@@ -145,7 +152,7 @@ export default function OurServices() {
                             >
                                 {service.desc}
                             </Typography>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

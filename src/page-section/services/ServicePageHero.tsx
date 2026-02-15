@@ -5,10 +5,10 @@ import Button from "@/src/component/Button";
 import HeroBackground from "@/src/component/HeroBackground";
 import Link from "next/link";
 import Image from "next/image";
-import Avatar1 from '@/src/assets/images/avatar-1.png';
-import Avatar2 from '@/src/assets/images/avatar-2.png';
-import Avatar3 from '@/src/assets/images/avatar-3.png';
-import Avatar4 from '@/src/assets/images/avatar-4.png';
+import Avatar1 from "@/src/assets/images/avatar-1.png";
+import Avatar2 from "@/src/assets/images/avatar-2.png";
+import Avatar3 from "@/src/assets/images/avatar-3.png";
+import Avatar4 from "@/src/assets/images/avatar-4.png";
 
 type ServicePageHeroProps = {
   headline: string;
@@ -69,15 +69,6 @@ export default function ServicePageHero({
               {ctaText}
             </Button>
           </Link>
-        </div>
-        <div className="flex flex-col items-start lg:items-end gap-[12px] pt-[24px] order-1 lg:order-2">
-          <div className="flex items-center">
-            <Image src={Avatar1} alt="Avatar1" className="w-[32px]" />
-            <Image src={Avatar2} alt="Avatar2" className="w-[32px] ml-[-8px]" />
-            <Image src={Avatar3} alt="Avatar3" className="w-[32px] ml-[-8px]" />
-            <Image src={Avatar4} alt="Avatar4" className="w-[32px] ml-[-8px]" />
-          </div>
-          <Typography color="#fff" noDarkMode>100+ Companies Served</Typography>
         </div>
       </div>
     </HeroBackground>
