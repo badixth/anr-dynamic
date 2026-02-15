@@ -18,7 +18,7 @@ const director = {
 
 const teamMembers = [
   {
-    name: "JAZMAN SHAHAR ABDOLLAH",
+    name: "DR. JASSHA ABDOLLAH",
     position: "Co-Founder and Board Advisor",
     image: Team1,
     description:
@@ -29,21 +29,21 @@ const teamMembers = [
     position: "Head of Corporate Planning",
     image: Team3,
     description:
-      "Experienced professional overseeing all secretarial functions, client coordination, and operational excellence. Ensures seamless engagement processes and maintains the highest standards of confidentiality and professionalism.",
+      "Strategic leader with extensive corporate planning experience. Drives business development initiatives, shapes organizational strategy, and guides clients through complex corporate restructuring and growth challenges.",
   },
   {
     name: "HALMI HALIM",
     position: "Head of Enterprise Resource Planning",
     image: Team4,
     description:
-      "Strategic leader with extensive corporate planning experience. Drives business development initiatives, shapes organizational strategy, and guides clients through complex corporate restructuring and growth challenges.",
+      "Experienced principal partner providing strategic leadership and expert advisory services to drive business excellence through technology and financial strategy.",
   },
   {
     name: "MUMINA ABDULLAH",
     position: "Secretary and Administration",
     image: Team5,
     description:
-      "Leads ERP implementation and digital transformation initiatives. Combines deep technical expertise with business acumen to deliver integrated systems that enhance operational efficiency and support sustainable growth.",
+      "Experienced professional overseeing secretarial functions and administrative operations to ensure smooth business processes.",
   },
 ];
 
