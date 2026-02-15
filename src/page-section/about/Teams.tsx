@@ -100,7 +100,7 @@ export default function Teams() {
           {/* Info */}
           <div className="relative flex flex-col justify-center gap-[24px] p-[32px] md:p-[48px] lg:p-[64px] w-full lg:w-[60%]">
             <span className="absolute top-[16px] right-[24px] text-[120px] md:text-[200px] font-bold leading-none text-[#F2B611]/[0.04] select-none pointer-events-none font-heading">
-              D
+              A
             </span>
             <div className="relative z-10 flex flex-col gap-[24px]">
               <div className="inline-flex items-center gap-[8px] bg-gradient-to-r from-[#F2B611] to-[#D4A017] text-white text-[12px] md:text-[13px] font-semibold px-[14px] py-[8px] rounded-full w-fit uppercase tracking-wider">
