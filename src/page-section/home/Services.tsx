@@ -119,7 +119,7 @@ export default function Services() {
               lineHeightMobile={41.6}
               heading
             >
-              Professional Services for Malaysian Business Compliance
+              Service We Provide
             </Typography>
           </div>
           <div className="flex flex-col items-start gap-[48px] lg:gap-[14px] w-full lg:w-[35%]">

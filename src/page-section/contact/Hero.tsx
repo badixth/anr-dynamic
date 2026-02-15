@@ -23,21 +23,28 @@ export default function Hero() {
             noDarkMode
             heading
           >
-            Get Expert Financial & Compliance Advisory Support
+            Contact Us Today
           </Typography>
           <Typography color="#fff" noDarkMode size={18} className="md:w-[80%]">
-            Facing a regulatory challenge, tax issue, or audit requirement? Our
-            team is ready to provide immediate guidance and representation for
-            Malaysian businesses needing expert financial advisory.
+            Ready to get your business to the next level? Get in touch with our
+            team for a consultation.
           </Typography>
           <Button variant="primary" className="mt-[32px]">
             CONTACT US NOW
           </Button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px] w-full">
-          <a href="mailto:anrdynamic@gmail.com" className="flex items-center gap-[16px] bg-white/[0.05] border border-white/[0.1] rounded-[12px] p-[20px] hover:bg-white/[0.1] transition-colors">
+          <a
+            href="mailto:anrdynamic@gmail.com"
+            className="flex items-center gap-[16px] bg-white/[0.05] border border-white/[0.1] rounded-[12px] p-[20px] hover:bg-white/[0.1] transition-colors"
+          >
             <div className="bg-[#F2B611] rounded-[10px] p-[10px] flex-shrink-0">
-              <Icons name="envelope" className="w-[20px] h-[20px]" color="#fff" noDarkMode />
+              <Icons
+                name="envelope"
+                className="w-[20px] h-[20px]"
+                color="#fff"
+                noDarkMode
+              />
             </div>
             <div className="flex flex-col items-start gap-[2px]">
               <Typography color="#fff" noDarkMode size={16} weight={600}>
@@ -49,9 +56,17 @@ export default function Hero() {
             </div>
           </a>
 
-          <a href="tel:+60189804875" className="flex items-center gap-[16px] bg-white/[0.05] border border-white/[0.1] rounded-[12px] p-[20px] hover:bg-white/[0.1] transition-colors">
+          <a
+            href="tel:+60189804875"
+            className="flex items-center gap-[16px] bg-white/[0.05] border border-white/[0.1] rounded-[12px] p-[20px] hover:bg-white/[0.1] transition-colors"
+          >
             <div className="bg-[#F2B611] rounded-[10px] p-[10px] flex-shrink-0">
-              <Icons name="phone" className="w-[20px] h-[20px]" color="#fff" noDarkMode />
+              <Icons
+                name="phone"
+                className="w-[20px] h-[20px]"
+                color="#fff"
+                noDarkMode
+              />
             </div>
             <div className="flex flex-col items-start gap-[2px]">
               <Typography color="#fff" noDarkMode size={16} weight={600}>
@@ -63,9 +78,19 @@ export default function Hero() {
             </div>
           </a>
 
-          <a href="https://wa.me/60189804875" target="_blank" rel="noopener noreferrer" className="flex items-center gap-[16px] bg-white/[0.05] border border-white/[0.1] rounded-[12px] p-[20px] hover:bg-white/[0.1] transition-colors">
+          <a
+            href="https://wa.me/60189804875"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-[16px] bg-white/[0.05] border border-white/[0.1] rounded-[12px] p-[20px] hover:bg-white/[0.1] transition-colors"
+          >
             <div className="bg-[#25D366] rounded-[10px] p-[10px] flex-shrink-0">
-              <Icons name="whatsapp" className="w-[20px] h-[20px]" color="#fff" noDarkMode />
+              <Icons
+                name="whatsapp"
+                className="w-[20px] h-[20px]"
+                color="#fff"
+                noDarkMode
+              />
             </div>
             <div className="flex flex-col items-start gap-[2px]">
               <Typography color="#fff" noDarkMode size={16} weight={600}>
