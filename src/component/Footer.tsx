@@ -143,9 +143,12 @@ export default function Footer() {
               2025 ANR Dynamic Ventures Sdn. Bhd. All rights reserved
             </div>
           </div>
-          <div className="flex justify-between items-center gap-[8px] text-white cursor-pointer">
+          <Link
+            href="/contact"
+            className="flex justify-between items-center gap-[8px] text-white cursor-pointer"
+          >
             CONTACT SUPPORT <Icons name="arrowRight" className="w-5" />
-          </div>
+          </Link>
         </div>
       </div>
     </div>
