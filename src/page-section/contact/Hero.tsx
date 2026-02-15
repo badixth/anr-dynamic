@@ -14,7 +14,7 @@ export default function Hero() {
     <HeroBackground>
       <div className="w-full lg:w-[60%] lg:mx-auto flex flex-col items-start lg:items-center lg:text-center justify-center gap-[72px] lg:gap-[160px]">
         <div className="w-full flex flex-col items-start lg:items-center gap-[24px]">
-          <div className="flex flex-col items-start gap-[12px] pt-[24px]">
+          {/* <div className="flex flex-col items-start gap-[12px] pt-[24px]">
             <div className="flex items-center">
               <Image src={Avatar1} alt="Avatar1" className="w-[32px]" />
               <Image
@@ -36,7 +36,7 @@ export default function Hero() {
             <Typography color="#fff" noDarkMode className="md:hidden">
               100+ Companies Served
             </Typography>
-          </div>
+          </div> */}
           <Typography
             as="div"
             color="#fff"

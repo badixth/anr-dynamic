@@ -16,8 +16,8 @@ export default function Footer() {
     <div className="relative overflow-hidden bg-[#070707]">
       {/* Background Blur Elements */}
       <div className="absolute w-full z-0">
-        <div className="absolute right-[-90%] mt-[-15%] md:mt-[20%] lg:mt-[-3%] md:right-[-15%] bg-[#873AE3] blur-[30px] lg:blur-[96px] w-[300px] lg:w-[1242px] h-[80px] lg:h-[262px] rounded-[300px] lg:rounded-[1242px] rotate-[170.318deg]" />
-        <div className="absolute left-[-50%] md:left-[-10%] lg:left-10 mt-[-15%] lg:mt-[-3%] bg-[#F2B611] blur-[30px] md:blur-[96px] w-[350px] md:w-[1475px] h-[80px] md:h-[308px] rounded-[350px] md:rounded-[1475px] rotate-[170.318deg]" />
+        <div className="absolute right-[-90%] mt-[-15%] md:mt-[20%] lg:mt-[-3%] md:right-[-15%] bg-[#C89919] blur-[30px] lg:blur-[96px] w-[300px] lg:w-[1242px] h-[80px] lg:h-[262px] rounded-[300px] lg:rounded-[1242px] rotate-[170.318deg]" />
+        <div className="absolute left-[-50%] md:left-[-10%] lg:left-10 mt-[-15%] lg:mt-[-3%] bg-[#FBC737] blur-[30px] md:blur-[96px] w-[350px] md:w-[1475px] h-[80px] md:h-[308px] rounded-[350px] md:rounded-[1475px] rotate-[170.318deg]" />
         <div className="ml-[-20%] mt-[-33%] md:mt-[-40%] lg:mt-[-17%] bg-[#fff] dark:bg-[#070707] blur-[25px] md:blur-[74px] w-[500px] md:w-[3459px] h-[120px] md:h-[448px] rounded-[500px] md:rounded-[448px] rotate-[177.318deg]" />
       </div>
 
@@ -44,7 +44,11 @@ export default function Footer() {
         <div className="mt-[64px] md:mt-[107px] flex flex-col lg:flex-row items-start gap-[48px] lg:gap-[72px]">
           {/* Brand Section */}
           <div className="flex flex-col gap-[24px] lg:w-[26%] shrink-0">
-            <Image src={LogoImg} alt="ANR Dynamic Ventures" className="w-[200px] h-auto" />
+            <Image
+              src={LogoImg}
+              alt="ANR Dynamic Ventures"
+              className="w-[200px] h-auto"
+            />
             <div className="font-medium text-white leading-[24px]">
               Your Trusted Partner in Accounting, Audit & Regulatory Compliance
               and Tax Advisory

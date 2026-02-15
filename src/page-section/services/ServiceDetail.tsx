@@ -70,7 +70,7 @@ export default function ServiceDetail({
                 <Typography size={20} weight={600}>
                   {item.title}
                 </Typography>
-                <Typography size={14} lineHeight={20} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">
+                <Typography size={14} lineHeight={20} color="#666666" noDarkMode darkColor="#D4D4D4">
                   {item.description}
                 </Typography>
               </div>

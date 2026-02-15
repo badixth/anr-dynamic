@@ -1,28 +1,18 @@
 "use client";
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useEffect } from "react";
 
 const ThemeContext = createContext<any>(null);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState("light");
+  const theme = "dark";
 
   useEffect(() => {
-    const stored = localStorage.getItem("theme") || "light";
-    setTheme(stored);
-    document.documentElement.setAttribute("data-theme", stored);
+    document.documentElement.setAttribute("data-theme", "dark");
   }, []);
 
-  function toggleTheme() {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-
-    document.documentElement.setAttribute("data-theme", newTheme);
-  }
-
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme }}>
       {children}
     </ThemeContext.Provider>
   );

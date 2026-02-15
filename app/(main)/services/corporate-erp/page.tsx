@@ -51,7 +51,7 @@ export default function CorporateERPPage() {
                 Corporate Advisory
               </Typography>
             </Tag>
-            <Typography as="div" size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6}>
+            <Typography as="div" size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6} heading>
               Strategic Business Consulting & SSM Services
             </Typography>
             <Typography size={16} lineHeight={24} className="max-w-[800px]">
@@ -94,7 +94,7 @@ export default function CorporateERPPage() {
                 ERP Implementation
               </Typography>
             </Tag>
-            <Typography as="div" size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6}>
+            <Typography as="div" size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6} heading>
               End-to-End ERP System Implementation
             </Typography>
             <Typography size={16} lineHeight={24} className="max-w-[800px]">
@@ -129,7 +129,7 @@ export default function CorporateERPPage() {
           {/* Why Choose ANR Section */}
           <div>
             <div className="mb-[32px]">
-              <Typography as="div" size={32} sizeMobile={28} weight={600} lineHeight={40}>
+              <Typography as="div" size={32} sizeMobile={28} weight={600} lineHeight={40} heading>
                 Why Choose ANR for Corporate & ERP Services
               </Typography>
             </div>
@@ -139,7 +139,7 @@ export default function CorporateERPPage() {
                   <Typography size={20} weight={600}>
                     {item.title}
                   </Typography>
-                  <Typography size={14} lineHeight={20} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">
+                  <Typography size={14} lineHeight={20} color="#666666" noDarkMode darkColor="#D4D4D4">
                     {item.description}
                   </Typography>
                 </div>

@@ -48,7 +48,7 @@ export default function ServicePageHero({
           </Typography>
           <Typography
             noDarkMode
-            color="#B2B2B2"
+            color="#D4D4D4"
             size={20}
             sizeMobile={16}
             weight={600}

@@ -2,6 +2,7 @@
 
 import React, { useSyncExternalStore, JSX } from "react";
 import clsx from "clsx";
+import { useTheme } from "@/src/context/ThemeProvider";
 
 interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
   as?: keyof JSX.IntrinsicElements | React.ComponentType<Record<string, unknown>>;
@@ -18,6 +19,7 @@ interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
   letterSpacingTablet?: number;
   letterSpacingMobile?: number;
   color?: string;
+  darkColor?: string;
   noDarkMode?: boolean;
   heading?: boolean;
   className?: string;
@@ -71,6 +73,7 @@ const Typography: React.FC<TypographyProps> = ({
   letterSpacingTablet,
   letterSpacingMobile,
   color = "#070707",
+  darkColor,
   noDarkMode = false,
   heading = false,
   className = "",
@@ -78,6 +81,7 @@ const Typography: React.FC<TypographyProps> = ({
   ...props
 }) => {
   const width = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const { theme } = useTheme();
 
   const fontSize = pickResponsiveValue(size, sizeTablet, sizeMobile, width);
   const fontWeight = pickResponsiveValue(weight, weightTablet, weightMobile, width);
@@ -98,7 +102,9 @@ const Typography: React.FC<TypographyProps> = ({
       fontWeight: fontWeight,
       lineHeight: lh ? `${lh}px` : undefined,
       letterSpacing: ls ? `${ls}px` : undefined,
-      ...(noDarkMode && color ? { color } : {}),
+      ...(noDarkMode && color
+        ? { color: theme === "dark" && darkColor ? darkColor : color }
+        : {}),
     },
     ...props,
   },

@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import Navigation from "./Navigation";
 import LogoImg from "@/src/assets/images/Logo.png";
 import Image from "next/image";
-import Switch from "./Switch";
 import Icons from "./Icons";
 
 interface HeaderProps {
@@ -18,11 +17,8 @@ export default function Header({
   mobileOpen = false,
   onOpenMobileNav,
 }: HeaderProps) {
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [isIdle, setIsIdle] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
 
-  const lastScrollYRef = useRef(0);
   const topBar = useRef<HTMLDivElement>(null);
   const midBar = useRef<HTMLDivElement>(null);
   const botBar = useRef<HTMLDivElement>(null);
@@ -39,39 +35,21 @@ export default function Header({
     }
   }, [mobileOpen]);
 
-  const handleScroll = useCallback(() => {
-    const currentScrollY = window.scrollY;
-    const lastY = lastScrollYRef.current;
-
-    setShowNavbar(currentScrollY < lastY || currentScrollY === 0);
-    lastScrollYRef.current = currentScrollY;
-    setHasScrolled(currentScrollY > 10);
-  }, []);
-
   useEffect(() => {
-    let timeoutId: ReturnType<typeof setTimeout>;
-
     const onScroll = () => {
-      handleScroll();
-      setIsIdle(false);
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        setIsIdle(true);
-      }, 3000);
+      setHasScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", onScroll);
-      clearTimeout(timeoutId);
     };
-  }, [handleScroll]);
+  }, []);
 
   return (
     <div
-      className={`fixed top-0 z-20 left-0 w-full transition-transform duration-300 h-[10dvh] px-[20px] md:px-[72px] md:py-[32px] flex justify-between items-center
-      ${mobileOpen || (showNavbar && !isIdle) ? "translate-y-0" : "-translate-y-full"}
+      className={`fixed top-0 z-20 left-0 w-full h-[10dvh] px-[20px] md:px-[72px] md:py-[32px] flex justify-between items-center transition-colors duration-300
       ${hasScrolled ? "bg-[#070707]" : ""}
     `}
     >
@@ -93,7 +71,6 @@ export default function Header({
 
       {/* Desktop CTA */}
       <div className="hidden lg:flex justify-between items-center gap-[32px]">
-        <Switch />
         <Link
           href="/contact"
           className="flex justify-between items-center gap-[8px] text-white cursor-pointer"
@@ -104,7 +81,6 @@ export default function Header({
 
       {/* Mobile Menu Toggle */}
       <div className="flex items-center gap-[24px] lg:hidden">
-        <Switch />
         <div
           className="flex justify-center items-center w-[10%] cursor-pointer"
           onClick={onOpenMobileNav}

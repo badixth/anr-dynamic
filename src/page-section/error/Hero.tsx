@@ -12,7 +12,7 @@ export default function Hero() {
                     <Typography as="div" color="#fff" className="text-center" size={88} sizeMobile={100} weight={600} lineHeightMobile={100} letterSpacing={-1.44} noDarkMode heading>
                         We hit <br className="md:hidden"/> a snag!
                     </Typography>
-                    <Typography size={18} color="#BABABA" className="text-center w-full md:w-[80%]" noDarkMode>
+                    <Typography size={18} color="#D4D4D4" className="text-center w-full md:w-[80%]" noDarkMode>
                         It looks like there’s an issue with the website. Don’t worry; we’re on it! Our team is working hard to fix this as quickly as possible.
                     </Typography>
                 </div>

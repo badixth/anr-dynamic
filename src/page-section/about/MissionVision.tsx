@@ -1,41 +1,97 @@
+import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
 import { companyInfo } from "@/src/data/company";
 
 export default function MissionVision() {
   return (
     <div className="bg-[#F5F5F5] dark:bg-[#0D0D0D] py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] md:gap-[64px]">
+      {/* Section Header */}
+      <div className="flex flex-col items-center text-center gap-[24px] mb-[64px]">
+        <Tag>
+          <Typography size={14} sizeMobile={12} weight={500}>
+            What Drives Us
+          </Typography>
+        </Tag>
+        <Typography
+          as="div"
+          size={48}
+          sizeMobile={32}
+          weight={700}
+          lineHeight={56}
+          lineHeightMobile={41.6}
+          heading
+        >
+          Mission & Vision
+        </Typography>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[32px] md:gap-[48px]">
         {/* Mission */}
-        <div className="flex flex-col items-start gap-[24px]">
-          <div className="bg-[#F2B611] rounded-full w-[64px] h-[64px] flex items-center justify-center mb-[8px]">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M2 17L12 22L22 17" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M2 12L12 17L22 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+        <div className="relative bg-white dark:bg-[#1D1D1D] rounded-[16px] p-[32px] md:p-[48px] overflow-hidden">
+          <span className="absolute top-[16px] right-[24px] text-[120px] md:text-[160px] font-bold leading-none text-[#F2B611]/[0.06] dark:text-[#F2B611]/[0.08] select-none pointer-events-none font-heading">
+            M
+          </span>
+          <div className="relative z-10 flex flex-col items-start gap-[24px]">
+            <Typography
+              size={32}
+              sizeMobile={20}
+              weight={600}
+              color="#F2B611"
+              noDarkMode
+              letterSpacing={2}
+              className="uppercase"
+              heading
+            >
+              Our Mission
+            </Typography>
+            <Typography
+              size={24}
+              sizeTablet={20}
+              sizeMobile={16}
+              weight={400}
+              lineHeight={38}
+              lineHeightTablet={32}
+              lineHeightMobile={28}
+              color="#fff"
+              noDarkMode
+            >
+              {companyInfo.mission}
+            </Typography>
           </div>
-          <Typography size={32} sizeMobile={28} weight={700} lineHeight={40} heading>
-            Our Mission
-          </Typography>
-          <Typography size={16} lineHeight={28} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">
-            {companyInfo.mission}
-          </Typography>
         </div>
 
         {/* Vision */}
-        <div className="flex flex-col items-start gap-[24px]">
-          <div className="bg-[#F2B611] rounded-full w-[64px] h-[64px] flex items-center justify-center mb-[8px]">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="3" stroke="white" strokeWidth="2"/>
-              <path d="M12 5V3M12 21V19M5 12H3M21 12H19M7.05 7.05L5.64 5.64M18.36 18.36L16.95 16.95M7.05 16.95L5.64 18.36M18.36 5.64L16.95 7.05" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
+        <div className="relative bg-[#070707] dark:bg-[#161616] rounded-[16px] p-[32px] md:p-[48px] overflow-hidden">
+          <span className="absolute top-[16px] right-[24px] text-[120px] md:text-[160px] font-bold leading-none text-white/[0.03] select-none pointer-events-none font-heading">
+            V
+          </span>
+          <div className="relative z-10 flex flex-col items-start gap-[24px]">
+            <Typography
+              size={32}
+              sizeMobile={20}
+              weight={600}
+              color="#F2B611"
+              noDarkMode
+              letterSpacing={2}
+              className="uppercase"
+              heading
+            >
+              Our Vision
+            </Typography>
+            <Typography
+              size={24}
+              sizeTablet={20}
+              sizeMobile={16}
+              weight={400}
+              lineHeight={38}
+              lineHeightTablet={32}
+              lineHeightMobile={28}
+              color="#fff"
+              noDarkMode
+            >
+              {companyInfo.vision}
+            </Typography>
           </div>
-          <Typography size={32} sizeMobile={28} weight={700} lineHeight={40} heading>
-            Our Vision
-          </Typography>
-          <Typography size={16} lineHeight={28} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">
-            {companyInfo.vision}
-          </Typography>
         </div>
       </div>
     </div>

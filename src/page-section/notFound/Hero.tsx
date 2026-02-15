@@ -11,7 +11,7 @@ export default function Hero() {
                         Ooops! <br className="md:hidden" />
                         Page Not Found
                     </Typography>
-                    <Typography size={18} color="#BABABA" className="text-center w-full md:w-[90%] lg:w-[55%] text-[#ADADAD]" noDarkMode>
+                    <Typography size={18} color="#D4D4D4" className="text-center w-full md:w-[90%] lg:w-[55%]" noDarkMode>
                         The page you’re looking for doesn’t exist—or maybe it’s taking a coffee break. But don’t worry, we’re here to guide you back on track.
                     </Typography>
                 </div>

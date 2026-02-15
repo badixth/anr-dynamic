@@ -23,7 +23,8 @@ export default function Values() {
           Built on Integrity, Excellence, Collaboration & Innovation
         </Typography>
         <Typography size={16} lineHeight={24} className="max-w-[800px]">
-          Our core values guide every interaction, decision, and service we provide. They define who we are and how we serve our clients.
+          Our core values guide every interaction, decision, and service we
+          provide. They define who we are and how we serve our clients.
         </Typography>
       </div>
 
@@ -41,7 +42,13 @@ export default function Values() {
             <Typography size={24} weight={600} heading>
               {value.title}
             </Typography>
-            <Typography size={14} lineHeight={22} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">
+            <Typography
+              size={14}
+              lineHeight={22}
+              color="#666666"
+              noDarkMode
+              darkColor="#D4D4D4"
+            >
               {value.description}
             </Typography>
           </div>

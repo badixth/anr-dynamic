@@ -7,65 +7,90 @@ import Typography from "@/src/component/Typography";
 import Button from "@/src/component/Button";
 import HeroBackground from "@/src/component/HeroBackground";
 
-import Avatar1 from '@/src/assets/images/avatar-1.png';
-import Avatar2 from '@/src/assets/images/avatar-2.png';
-import Avatar3 from '@/src/assets/images/avatar-3.png';
-import Avatar4 from '@/src/assets/images/avatar-4.png';
-import Partner1 from "@/src/assets/images/Partners-1.png"
-import Partner2 from "@/src/assets/images/Partners-2.png"
-import Partner3 from "@/src/assets/images/Partners-3.png"
-import Partner4 from "@/src/assets/images/Partners-4.png"
-import Partner5 from "@/src/assets/images/Partners-5.png"
-import Partner6 from "@/src/assets/images/Partners-6.png"
+import Avatar1 from "@/src/assets/images/avatar-1.png";
+import Avatar2 from "@/src/assets/images/avatar-2.png";
+import Avatar3 from "@/src/assets/images/avatar-3.png";
+import Avatar4 from "@/src/assets/images/avatar-4.png";
+import Partner1 from "@/src/assets/images/Partners-1.png";
+import Partner2 from "@/src/assets/images/Partners-2.png";
+import Partner3 from "@/src/assets/images/Partners-3.png";
+import Partner4 from "@/src/assets/images/Partners-4.png";
+import Partner5 from "@/src/assets/images/Partners-5.png";
+import Partner6 from "@/src/assets/images/Partners-6.png";
 import Link from "next/link";
 
 const images = [
-    { src: Partner1, alt: "Partner1" },
-    { src: Partner2, alt: "Partner2" },
-    { src: Partner3, alt: "Partner3" },
-    { src: Partner4, alt: "Partner4" },
-    { src: Partner5, alt: "Partner5" },
-    { src: Partner6, alt: "Partner6" },
+  { src: Partner1, alt: "Partner1" },
+  { src: Partner2, alt: "Partner2" },
+  { src: Partner3, alt: "Partner3" },
+  { src: Partner4, alt: "Partner4" },
+  { src: Partner5, alt: "Partner5" },
+  { src: Partner6, alt: "Partner6" },
 ];
 
 export default function Hero() {
-    const sliderRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef<HTMLDivElement>(null);
 
-    useGSAP(() => {
-        if (!sliderRef.current) return;
+  useGSAP(() => {
+    if (!sliderRef.current) return;
 
-        const wrapper = sliderRef.current.querySelector(".slider-track") as HTMLDivElement;
-        if (!wrapper) return;
+    const wrapper = sliderRef.current.querySelector(
+      ".slider-track",
+    ) as HTMLDivElement;
+    if (!wrapper) return;
 
-        const totalWidth = wrapper.scrollWidth / 2;
-        gsap.to(wrapper, {
-            x: `-=${totalWidth}`,
-            duration: 20,
-            ease: "linear",
-            repeat: -1,
-            modifiers: {
-                x: (x) => {
-                    const current = parseFloat(x);
-                    return (current % totalWidth) + "px";
-                },
-            },
-        });
-    }, []);
-    return (
-        <HeroBackground>
-            <div className="flex flex-col lg:flex-row justify-between items-start self-stretch gap-[8px]">
-                <div className="w-full order-2 lg:w-[70%] lg:order-1">
-                    <Typography as="div" color="#fff" size={72} sizeTablet={52} sizeMobile={40} weight={600} lineHeight={85} lineHeightTablet={64} lineHeightMobile={52} letterSpacing={-2.16} letterSpacingMobile={-1.2} noDarkMode heading>
-                        Comprehensive Financial & Regulatory Compliance Services
-                    </Typography>
-                    <Typography noDarkMode color="#fff" size={18} className="mt-[24px] w-full lg:w-[60%]">
-                        Expert accounting, tax, audit, and corporate advisory solutions designed to resolve compliance challenges and support business growth for Malaysian companies.
-                    </Typography>
-                    <Link href="/contact">
-                        <Button variant="primary" className="mt-[32px]">DISCUSS YOUR NEEDS</Button>
-                    </Link>
-                </div>
-                <div className="flex flex-col items-start lg:items-end gap-[12px] pt-[24px] order-1 lg:order-2">
+    const totalWidth = wrapper.scrollWidth / 2;
+    gsap.to(wrapper, {
+      x: `-=${totalWidth}`,
+      duration: 20,
+      ease: "linear",
+      repeat: -1,
+      modifiers: {
+        x: (x) => {
+          const current = parseFloat(x);
+          return (current % totalWidth) + "px";
+        },
+      },
+    });
+  }, []);
+  return (
+    <HeroBackground>
+      <div className="flex flex-col lg:flex-row justify-between items-start self-stretch gap-[8px]">
+        <div className="w-full order-2 lg:w-[70%] lg:order-1">
+          <Typography
+            as="div"
+            color="#fff"
+            size={72}
+            sizeTablet={52}
+            sizeMobile={40}
+            weight={600}
+            lineHeight={85}
+            lineHeightTablet={64}
+            lineHeightMobile={52}
+            letterSpacing={-2.16}
+            letterSpacingMobile={-1.2}
+            noDarkMode
+            heading
+          >
+            Comprehensive Financial & Regulatory Compliance Services
+          </Typography>
+          <Typography
+            noDarkMode
+            color="#fff"
+            size={18}
+            className="mt-[24px] w-full lg:w-[60%]"
+          >
+            Expert accounting, tax, audit, and corporate advisory solutions
+            designed to resolve compliance challenges and support business
+            growth for Malaysian companies.
+          </Typography>
+          <Link href="/contact">
+            <Button variant="primary" className="mt-[32px]">
+              DISCUSS YOUR NEEDS
+            </Button>
+          </Link>
+        </div>
+        {/* <div className="flex flex-col items-start lg:items-end gap-[12px] pt-[24px] order-1 lg:order-2">
                     <div className="flex items-center">
                         <Image src={Avatar1} alt="Avatar1" className="w-[32px]" />
                         <Image src={Avatar2} alt="Avatar2" className="w-[32px] ml-[-8px]" />
@@ -73,23 +98,30 @@ export default function Hero() {
                         <Image src={Avatar4} alt="Avatar4" className="w-[32px] ml-[-8px]" />
                     </div>
                     <Typography color="#fff" noDarkMode>100+ Companies Served</Typography>
-                </div>
-            </div>
-            <div className="mt-[72px] md:mt-[100px] py-[48px] md:py-[60px] flex flex-col items-center gap-[32px]">
-                <Typography as="div" size={16} weight={500} className="text-center px-[40px]">Trusted by 100+ Malaysian Companies Across Multiple Industries</Typography>
-                <div className="overflow-hidden w-full" ref={sliderRef}>
-                    <div className="flex items-center gap-20 slider-track">
-                        {[...images, ...images].map((image, index) => (
-                            <Image
-                                key={index}
-                                src={image.src}
-                                alt={image.alt}
-                                className="w-[30%] md:w-[20%] lg:w-[11%] flex-shrink-0"
-                            />
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </HeroBackground>
-    )
+                </div> */}
+      </div>
+      <div className="mt-[72px] md:mt-[100px] py-[48px] md:py-[60px] flex flex-col items-center gap-[32px]">
+        <Typography
+          as="div"
+          size={16}
+          weight={500}
+          className="text-center px-[40px]"
+        >
+          Trusted by 100+ Malaysian Companies Across Multiple Industries
+        </Typography>
+        <div className="overflow-hidden w-full" ref={sliderRef}>
+          <div className="flex items-center gap-20 slider-track">
+            {[...images, ...images].map((image, index) => (
+              <Image
+                key={index}
+                src={image.src}
+                alt={image.alt}
+                className="w-[30%] md:w-[20%] lg:w-[11%] flex-shrink-0"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </HeroBackground>
+  );
 }

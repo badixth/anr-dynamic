@@ -11,20 +11,24 @@ export default function CareersPage() {
   const whyWorkItems = [
     {
       title: "Professional Growth",
-      description: "Work with diverse clients across multiple industries, continuously expanding your technical expertise and industry knowledge. We support professional certification (ACCA, MICPA, CPA) and ongoing learning opportunities."
+      description:
+        "Work with diverse clients across multiple industries, continuously expanding your technical expertise and industry knowledge. We support professional certification (ACCA, MICPA, CPA) and ongoing learning opportunities.",
     },
     {
       title: "Impactful Work",
-      description: "Solve critical business challenges and help Malaysian companies navigate complex compliance issues. Your work directly influences business success and regulatory compliance."
+      description:
+        "Solve critical business challenges and help Malaysian companies navigate complex compliance issues. Your work directly influences business success and regulatory compliance.",
     },
     {
       title: "Collaborative Environment",
-      description: "Join a supportive team culture that values mentorship, knowledge sharing, and work-life balance. We believe in empowering our people and fostering long-term career development."
+      description:
+        "Join a supportive team culture that values mentorship, knowledge sharing, and work-life balance. We believe in empowering our people and fostering long-term career development.",
     },
     {
       title: "Career Advancement",
-      description: "Clear progression paths from associate to manager to partner level, with performance-based recognition, competitive compensation, and opportunities to take on leadership responsibilities."
-    }
+      description:
+        "Clear progression paths from associate to manager to partner level, with performance-based recognition, competitive compensation, and opportunities to take on leadership responsibilities.",
+    },
   ];
 
   const currentOpenings = [
@@ -32,48 +36,56 @@ export default function CareersPage() {
       title: "Senior Auditor",
       experience: "3-5 years",
       qualifications: "ACCA/MICPA qualified or finalist",
-      description: "Lead statutory audits, manage client relationships, mentor junior staff, and ensure compliance with Malaysian auditing standards."
+      description:
+        "Lead statutory audits, manage client relationships, mentor junior staff, and ensure compliance with Malaysian auditing standards.",
     },
     {
       title: "Tax Associate",
       experience: "1-3 years",
       qualifications: "Degree in Accounting/Taxation, tax knowledge",
-      description: "Prepare tax computations, assist with LHDN audits, conduct tax research, and support tax planning initiatives for diverse clients."
+      description:
+        "Prepare tax computations, assist with LHDN audits, conduct tax research, and support tax planning initiatives for diverse clients.",
     },
     {
       title: "Accounting Executive",
       experience: "2-4 years",
       qualifications: "Degree in Accounting, bookkeeping/reporting experience",
-      description: "Manage full-cycle bookkeeping, prepare financial reports, handle payroll processing, and implement cloud accounting solutions."
-    }
+      description:
+        "Manage full-cycle bookkeeping, prepare financial reports, handle payroll processing, and implement cloud accounting solutions.",
+    },
   ];
 
   const applicationSteps = [
     {
       number: "01",
       title: "Submit Resume",
-      description: "Email your resume and cover letter to careers@anrdynamic.com with the position title in the subject line."
+      description:
+        "Email your resume and cover letter to careers@anrdynamic.com with the position title in the subject line.",
     },
     {
       number: "02",
       title: "Initial Screening",
-      description: "Our team reviews your application and contacts qualified candidates within 5 business days."
+      description:
+        "Our team reviews your application and contacts qualified candidates within 5 business days.",
     },
     {
       number: "03",
       title: "Interview",
-      description: "Meet with our team to discuss your experience, technical skills, and career goals (1-2 rounds)."
+      description:
+        "Meet with our team to discuss your experience, technical skills, and career goals (1-2 rounds).",
     },
     {
       number: "04",
       title: "Reference Checks",
-      description: "We conduct professional reference checks to verify your experience and qualifications."
+      description:
+        "We conduct professional reference checks to verify your experience and qualifications.",
     },
     {
       number: "05",
       title: "Offer & Onboarding",
-      description: "Receive your offer letter, complete onboarding paperwork, and join our team!"
-    }
+      description:
+        "Receive your offer letter, complete onboarding paperwork, and join our team!",
+    },
   ];
 
   return (
@@ -94,12 +106,13 @@ export default function CareersPage() {
             letterSpacing={-2.16}
             letterSpacingMobile={-1.2}
             noDarkMode
+            heading
           >
             Join Our Team
           </Typography>
           <Typography
             noDarkMode
-            color="#B2B2B2"
+            color="#D4D4D4"
             size={20}
             sizeMobile={16}
             weight={600}
@@ -113,7 +126,9 @@ export default function CareersPage() {
             size={18}
             className="max-w-[700px]"
           >
-            We're looking for talented professionals passionate about helping Malaysian businesses navigate complex financial and regulatory challenges.
+            We're looking for talented professionals passionate about helping
+            Malaysian businesses navigate complex financial and regulatory
+            challenges.
           </Typography>
           <Link href="#openings">
             <Button variant="primary" className="mt-[16px]">
@@ -131,21 +146,41 @@ export default function CareersPage() {
               Why ANR
             </Typography>
           </Tag>
-          <Typography as="div" size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6}>
+          <Typography
+            as="div"
+            size={48}
+            sizeMobile={32}
+            weight={700}
+            lineHeight={56}
+            lineHeightMobile={41.6}
+            heading
+          >
             Why Work With ANR Dynamic Ventures
           </Typography>
           <Typography size={16} lineHeight={24} className="max-w-[800px]">
-            Join a team that values expertise, integrity, and professional growth. We offer meaningful work, career development opportunities, and a collaborative environment where your contributions make a real difference.
+            Join a team that values expertise, integrity, and professional
+            growth. We offer meaningful work, career development opportunities,
+            and a collaborative environment where your contributions make a real
+            difference.
           </Typography>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[32px]">
           {whyWorkItems.map((item, idx) => (
-            <div key={idx} className="bg-[#F5F5F5] dark:bg-[#1D1D1D] p-[32px] rounded-[12px]">
-              <Typography size={24} weight={600} className="mb-[16px]">
+            <div
+              key={idx}
+              className="bg-[#F5F5F5] dark:bg-[#1D1D1D] p-[32px] rounded-[12px]"
+            >
+              <Typography size={24} weight={600} heading className="mb-[16px]">
                 {item.title}
               </Typography>
-              <Typography size={14} lineHeight={22} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">
+              <Typography
+                size={14}
+                lineHeight={22}
+                color="#666666"
+                darkColor="#D4D4D4"
+                noDarkMode
+              >
                 {item.description}
               </Typography>
             </div>
@@ -154,27 +189,49 @@ export default function CareersPage() {
       </div>
 
       {/* Current Openings Section */}
-      <div id="openings" className="bg-[#F5F5F5] dark:bg-[#0D0D0D] py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
+      <div
+        id="openings"
+        className="bg-[#F5F5F5] dark:bg-[#0D0D0D] py-[48px] md:py-[80px] px-[16px] md:px-[72px]"
+      >
         <div className="flex flex-col items-center text-center gap-[24px] mb-[64px]">
           <Tag>
             <Typography size={14} sizeMobile={12} weight={500}>
               Open Positions
             </Typography>
           </Tag>
-          <Typography as="div" size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6}>
+          <Typography
+            as="div"
+            size={48}
+            sizeMobile={32}
+            weight={700}
+            lineHeight={56}
+            lineHeightMobile={41.6}
+            heading
+          >
             Current Career Opportunities
           </Typography>
           <Typography size={16} lineHeight={24} className="max-w-[800px]">
-            Explore our current openings and find the right fit for your skills and career goals. Don't see a perfect match? We're always interested in connecting with talented accounting professionals.
+            Explore our current openings and find the right fit for your skills
+            and career goals. Don't see a perfect match? We're always interested
+            in connecting with talented accounting professionals.
           </Typography>
         </div>
 
         <div className="grid grid-cols-1 gap-[24px] max-w-[900px] mx-auto">
           {currentOpenings.map((job, idx) => (
-            <div key={idx} className="bg-white dark:bg-[#1D1D1D] p-[32px] rounded-[12px]">
+            <div
+              key={idx}
+              className="bg-white dark:bg-[#1D1D1D] p-[32px] rounded-[12px]"
+            >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-[16px] mb-[16px]">
                 <div>
-                  <Typography size={28} sizeMobile={24} weight={600} className="mb-[8px]">
+                  <Typography
+                    size={28}
+                    sizeMobile={24}
+                    weight={600}
+                    heading
+                    className="mb-[8px]"
+                  >
                     {job.title}
                   </Typography>
                   <div className="flex flex-wrap gap-[12px]">
@@ -192,22 +249,36 @@ export default function CareersPage() {
                   </Button>
                 </Link>
               </div>
-              <Typography size={14} lineHeight={22} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">
+              <Typography
+                size={14}
+                lineHeight={22}
+                color="#666666"
+                darkColor="#D4D4D4"
+                noDarkMode
+              >
                 {job.description}
               </Typography>
             </div>
           ))}
         </div>
 
-        <div className="mt-[48px] text-center">
+        <div className="mt-[48px]  text-center">
           <Typography size={16} weight={500} className="mb-[16px]">
             Don't see the right position?
           </Typography>
-          <Typography size={14} lineHeight={22} color="#666666" noDarkMode className="dark:text-[#B2B2B2] mb-[24px]">
-            We're always interested in connecting with talented accounting professionals. <br />
+          <Typography
+            size={14}
+            lineHeight={22}
+            color="#666666"
+            darkColor="#D4D4D4"
+            noDarkMode
+            className="mb-[24px]"
+          >
+            We're always interested in connecting with talented accounting
+            professionals. <br />
             Submit your resume for future opportunities.
           </Typography>
-          <Link href="/contact">
+          <Link href="/contact" className="flex justify-center">
             <Button variant="secondary">SEND YOUR RESUME</Button>
           </Link>
         </div>
@@ -221,11 +292,21 @@ export default function CareersPage() {
               Application Process
             </Typography>
           </Tag>
-          <Typography as="div" size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6}>
+          <Typography
+            as="div"
+            size={48}
+            sizeMobile={32}
+            weight={700}
+            lineHeight={56}
+            lineHeightMobile={41.6}
+            heading
+          >
             How to Apply
           </Typography>
           <Typography size={16} lineHeight={24} className="max-w-[800px]">
-            Our hiring process is designed to be straightforward and respectful of your time. Here's what to expect when you apply to join the ANR team.
+            Our hiring process is designed to be straightforward and respectful
+            of your time. Here's what to expect when you apply to join the ANR
+            team.
           </Typography>
         </div>
 
@@ -238,7 +319,13 @@ export default function CareersPage() {
               <Typography size={18} weight={600}>
                 {step.title}
               </Typography>
-              <Typography size={14} lineHeight={22} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">
+              <Typography
+                size={14}
+                lineHeight={22}
+                color="#666666"
+                darkColor="#D4D4D4"
+                noDarkMode
+              >
                 {step.description}
               </Typography>
             </div>
@@ -263,11 +350,20 @@ export default function CareersPage() {
             weight={700}
             lineHeight={56}
             lineHeightMobile={41.6}
+            heading
           >
             Ready to Join Our Team?
           </Typography>
-          <Typography noDarkMode color="#B2B2B2" size={16} lineHeight={24} className="max-w-[700px]">
-            Take the next step in your accounting career. Send your resume to careers@anrdynamic.com or contact us to learn more about current opportunities at ANR Dynamic Ventures.
+          <Typography
+            noDarkMode
+            color="#D4D4D4"
+            size={16}
+            lineHeight={24}
+            className="max-w-[700px]"
+          >
+            Take the next step in your accounting career. Send your resume to
+            careers@anrdynamic.com or contact us to learn more about current
+            opportunities at ANR Dynamic Ventures.
           </Typography>
           <div className="flex flex-col md:flex-row gap-[16px] mt-[16px]">
             <Link href="/contact">
