@@ -99,9 +99,9 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
             size={18}
             className="mt-[24px] lg:w-[60%]"
           >
-            Expert accounting, audit, and tax advisory services for Malaysian
-            businesses facing compliance issues, authority engagements, and
-            complex financial requirements.
+            Your Trusted Partner in Accounting, Audit & Regulatory Compliance
+            and Tax Advisory. We help companies resolve issues with authorities,
+            stengthen compliance, and move forward confidently.
           </Typography>
 
           <Link href="/contact">

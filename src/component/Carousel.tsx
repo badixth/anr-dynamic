@@ -101,7 +101,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                                 <Typography size={20} weight={700}>
                                     {member.name}
                                 </Typography>
-                                <Typography weight={500} className="text-[#8D8D8D] dark:text-[#8D8D8D]">{member.experience}</Typography>
+                                <Typography weight={500} className="text-[#B4B4B4] dark:text-[#B4B4B4]">{member.experience}</Typography>
                             </div>
                         </div>
                     ))}

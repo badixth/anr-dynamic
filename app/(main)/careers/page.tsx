@@ -33,13 +33,6 @@ export default function CareersPage() {
 
   const currentOpenings = [
     {
-      title: "Senior Auditor",
-      experience: "3-5 years",
-      qualifications: "ACCA/MICPA qualified or finalist",
-      description:
-        "Lead statutory audits, manage client relationships, mentor junior staff, and ensure compliance with Malaysian auditing standards.",
-    },
-    {
       title: "Tax Associate",
       experience: "1-3 years",
       qualifications: "Degree in Accounting/Taxation, tax knowledge",

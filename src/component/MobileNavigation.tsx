@@ -50,7 +50,7 @@ export default function MobileNavigation({ open = false, handleOpen }: MobileNav
               onClick={handleOpen}
               className={clsx(
                 "cursor-pointer transition-all",
-                isActive ? "text-[18px] font-bold text-white" : "text-[16px] font-normal text-[#8D8D8D]",
+                isActive ? "text-[18px] font-bold text-white" : "text-[16px] font-normal text-[#B4B4B4]",
                 "hover:text-white hover:font-bold",
                 isIndented && "pl-[24px] text-[14px]"
               )}

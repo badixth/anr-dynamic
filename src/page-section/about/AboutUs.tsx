@@ -30,7 +30,7 @@ export default function AboutUs() {
     triggersRef.current.forEach((t) => t.kill());
     triggersRef.current = [];
 
-    gsap.set(words, { opacity: 1, color: "#8D8D8D" });
+    gsap.set(words, { opacity: 1, color: "#B4B4B4" });
 
     const tween = gsap.to(words, {
       opacity: 1,

@@ -47,7 +47,7 @@ export default function Navigation() {
                   "cursor-pointer text-[16px] hover:text-white hover:font-bold transition-colors duration-200",
                   isActive
                     ? "font-bold text-white"
-                    : "font-regular text-[#8D8D8D]"
+                    : "font-regular text-[#B4B4B4]"
                 )}
               >
                 {item.name}
@@ -90,7 +90,7 @@ export default function Navigation() {
               "cursor-pointer text-[16px] hover:text-white hover:font-bold transition-colors duration-200",
               isActive
                 ? "font-bold text-white"
-                : "font-regular text-[#8D8D8D]"
+                : "font-regular text-[#B4B4B4]"
             )}
           >
             {item.name}

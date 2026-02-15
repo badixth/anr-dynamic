@@ -22,6 +22,14 @@ import IcMap from "@/src/assets/icons/map.svg";
 import IcPhone from "@/src/assets/icons/phone.svg";
 import IcMenu from "@/src/assets/icons/menu.svg";
 import IcWhatsapp from "@/src/assets/icons/whatsapp.svg";
+import IcMagnify from "@/src/assets/icons/magnify.svg";
+import IcPuzzle from "@/src/assets/icons/puzzle.svg";
+import IcCompass from "@/src/assets/icons/compass.svg";
+import IcHandshake from "@/src/assets/icons/handshake.svg";
+import IcHome from "@/src/assets/icons/home.svg";
+import IcChart from "@/src/assets/icons/chart.svg";
+import IcBriefcase from "@/src/assets/icons/briefcase.svg";
+import IcBuilding from "@/src/assets/icons/building.svg";
 
 import clsx from "clsx";
 import { useTheme } from "@/src/context/ThemeProvider";
@@ -49,6 +57,14 @@ const iconMap = {
   phone: IcPhone,
   menu: IcMenu,
   whatsapp: IcWhatsapp,
+  magnify: IcMagnify,
+  puzzle: IcPuzzle,
+  compass: IcCompass,
+  handshake: IcHandshake,
+  home: IcHome,
+  chart: IcChart,
+  briefcase: IcBriefcase,
+  building: IcBuilding,
 };
 
 interface IconProps {

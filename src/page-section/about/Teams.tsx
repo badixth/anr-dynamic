@@ -67,14 +67,18 @@ export default function Teams() {
             lineHeightMobile={41.6}
             heading
           >
-            Experienced Professionals Committed to Your Success
+            Meet Our Leadership
           </Typography>
         </div>
         <div className="flex gap-[10px] w-full lg:w-[40%]">
           <Typography size={16} weight={500} lineHeight={24}>
-            Our leadership brings decades of combined experience in accounting,
-            audit, tax advisory, and business strategy to serve your compliance
-            and financial management needs.
+            Our Team specialises in assisting companies facing challenges with
+            regulatory authorities, compliance issues, and changing government
+            requirements. Our approach is solution-driven, practical, and
+            aligned with current laws and professional standards. Whether you
+            are responding to an audit query, managing tax exposure, or
+            strengthening internal compliance, we work closely with you to
+            resolve issues efficiently and responsibly.
           </Typography>
         </div>
       </div>
@@ -176,7 +180,7 @@ export default function Teams() {
                 size={13}
                 weight={400}
                 lineHeight={20}
-                color="#8D8D8D"
+                color="#B4B4B4"
                 noDarkMode
               >
                 {member.description}

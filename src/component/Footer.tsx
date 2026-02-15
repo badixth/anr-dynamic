@@ -51,9 +51,10 @@ export default function Footer() {
             />
             <div className="font-medium text-white leading-[24px]">
               ANR Dynamic Ventures Sdn. Bhd. (1393044-X) <br />
-              <span className="text-[#8D8D8D]">
-                Your Trusted Partner in Accounting, Audit & Regulatory
-                Compliance and Tax Advisory
+              <span className="text-[#B4B4B4]">
+                Empowering businesses with strategic solutions, innovative
+                approaches, and comprehensive support for sustainable growth and
+                success.
               </span>
             </div>
             <div className="flex items-center gap-[15px]">
@@ -72,7 +73,7 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-x-[40px] gap-y-[40px] md:gap-x-[64px] w-full lg:flex-1">
             <div>
-              <div className="text-[#8D8D8D] mb-[24px]">Menu</div>
+              <div className="text-[#B4B4B4] mb-[24px]">Menu</div>
               <div className="flex flex-col items-start w-full gap-[16px] text-white">
                 <Link href="/" className="cursor-pointer">
                   Home
@@ -93,7 +94,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <div className="text-[#8D8D8D] mb-[24px]">Services</div>
+              <div className="text-[#B4B4B4] mb-[24px]">Services</div>
               <div className="flex flex-col items-start gap-[16px] text-white">
                 <Link
                   href="/services/accounting-advisory"
@@ -120,7 +121,7 @@ export default function Footer() {
             </div>
 
             <div className="col-span-2 md:col-span-1">
-              <div className="text-[#8D8D8D] mb-[24px]">Contact</div>
+              <div className="text-[#B4B4B4] mb-[24px]">Contact</div>
               <div className="flex flex-col items-start gap-[16px] text-white text-[14px]">
                 <div>
                   UOA Business Park Unit 2-1, Level 2, The Podium, Tower 3 Jalan
