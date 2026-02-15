@@ -111,7 +111,7 @@ export default function Hero() {
           weight={500}
           className="text-center px-[40px]"
         >
-          Trusted by 100+ Malaysian Companies Across Multiple Industries
+          Join over 100+ companies that trust ANR Dynamic Ventures
         </Typography>
         <div className="overflow-hidden w-full" ref={sliderRef}>
           <div className="flex items-center gap-20 slider-track">
