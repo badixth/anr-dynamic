@@ -14,7 +14,7 @@ export default function MissionVision() {
               <path d="M2 12L12 17L22 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-          <Typography size={32} sizeMobile={28} weight={700} lineHeight={40}>
+          <Typography size={32} sizeMobile={28} weight={700} lineHeight={40} heading>
             Our Mission
           </Typography>
           <Typography size={16} lineHeight={28} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">
@@ -30,7 +30,7 @@ export default function MissionVision() {
               <path d="M12 5V3M12 21V19M5 12H3M21 12H19M7.05 7.05L5.64 5.64M18.36 18.36L16.95 16.95M7.05 16.95L5.64 18.36M18.36 5.64L16.95 7.05" stroke="white" strokeWidth="2" strokeLinecap="round"/>
             </svg>
           </div>
-          <Typography size={32} sizeMobile={28} weight={700} lineHeight={40}>
+          <Typography size={32} sizeMobile={28} weight={700} lineHeight={40} heading>
             Our Vision
           </Typography>
           <Typography size={16} lineHeight={28} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">

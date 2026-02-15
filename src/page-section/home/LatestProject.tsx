@@ -16,7 +16,7 @@ export default function LatestProject() {
                     <Tag>
                         <Typography size={14} sizeMobile={12} weight={500}>Latest Projects</Typography>
                     </Tag>
-                    <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff]">
+                    <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff] font-heading">
                         Showcasing Creativity, <br />
                         Inspiring <Image src={Eclipse} alt="Eclipse" className="inline w-10 md:w-20" /> Possibilities
                     </div>

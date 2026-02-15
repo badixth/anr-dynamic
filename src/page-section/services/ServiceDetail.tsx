@@ -31,7 +31,7 @@ export default function ServiceDetail({
             {tag}
           </Typography>
         </Tag>
-        <Typography as="div" size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6}>
+        <Typography as="div" size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6} heading>
           {headline}
         </Typography>
         <Typography size={16} lineHeight={24} className="max-w-[800px]">
@@ -60,7 +60,7 @@ export default function ServiceDetail({
       {whyChooseItems && whyChooseItems.length > 0 && (
         <div>
           <div className="mb-[32px]">
-            <Typography as="div" size={32} sizeMobile={28} weight={600} lineHeight={40}>
+            <Typography as="div" size={32} sizeMobile={28} weight={600} lineHeight={40} heading>
               Why Choose ANR for {tag}
             </Typography>
           </div>

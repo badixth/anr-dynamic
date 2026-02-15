@@ -18,6 +18,7 @@ export default function Values() {
           weight={700}
           lineHeight={56}
           lineHeightMobile={41.6}
+          heading
         >
           Built on Integrity, Excellence, Collaboration & Innovation
         </Typography>
@@ -37,7 +38,7 @@ export default function Values() {
                 {value.title.charAt(0)}
               </Typography>
             </div>
-            <Typography size={24} weight={600}>
+            <Typography size={24} weight={600} heading>
               {value.title}
             </Typography>
             <Typography size={14} lineHeight={22} color="#666666" noDarkMode className="dark:text-[#B2B2B2]">

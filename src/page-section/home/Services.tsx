@@ -117,6 +117,7 @@ export default function Services() {
               weight={700}
               lineHeight={56}
               lineHeightMobile={41.6}
+              heading
             >
               Professional Services for Malaysian Business Compliance
             </Typography>
@@ -159,6 +160,7 @@ export default function Services() {
                   lineHeight={40}
                   noDarkMode
                   color="#fff"
+                  heading
                   className="w-full lg:w-[25%]"
                 >
                   {service.title}

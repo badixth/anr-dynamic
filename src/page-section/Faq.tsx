@@ -21,7 +21,7 @@ export default function Faq({ items, headline, description }: FaqProps = {}) {
                     <Tag>
                         <Typography size={14} sizeMobile={12} weight={500}>Frequently Asked Questions</Typography>
                     </Tag>
-                    <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff]">
+                    <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff] font-heading">
                         {headline || (
                             <>
                                 Common Questions About <br />

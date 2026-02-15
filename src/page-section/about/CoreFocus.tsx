@@ -19,6 +19,7 @@ export default function CoreFocus() {
           weight={700}
           lineHeight={56}
           lineHeightMobile={41.6}
+          heading
         >
           {companyInfo.coreFocus.headline}
         </Typography>
@@ -52,6 +53,7 @@ export default function CoreFocus() {
           noDarkMode
           lineHeight={32}
           lineHeightMobile={26}
+          heading
         >
           {companyInfo.coreFocus.tagline}
         </Typography>

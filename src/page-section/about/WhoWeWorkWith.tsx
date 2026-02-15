@@ -18,6 +18,7 @@ export default function WhoWeWorkWith() {
           weight={700}
           lineHeight={56}
           lineHeightMobile={41.6}
+          heading
         >
           Serving Businesses Across Malaysia
         </Typography>

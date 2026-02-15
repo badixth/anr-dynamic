@@ -100,7 +100,7 @@ export default function OurServices() {
                 <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end self-stretch gap-[16px]">
                     <div className="flex flex-col items-start gap-[24px]">
                         <Tag color="#fff">Our Services</Tag>
-                        <Typography as="div" noDarkMode size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6} color="#fff">
+                        <Typography as="div" noDarkMode size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6} color="#fff" heading>
                             Professional Services for <br />
                             Malaysian Business Compliance
                         </Typography>
@@ -129,6 +129,7 @@ export default function OurServices() {
                                 lineHeight={40}
                                 noDarkMode
                                 color="#fff"
+                                heading
                                 className="w-full lg:w-[25%]"
                             >
                                 {service.title}

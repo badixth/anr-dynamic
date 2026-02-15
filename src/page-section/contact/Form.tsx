@@ -7,7 +7,7 @@ export default function Form() {
         <div className="bg-white dark:bg-[#070707] flex justify-center items-center py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
             <div className="w-full lg:w-[35%] flex flex-col items-start gap-[48px]">
                 <div className="flex flex-col items-start gap-[24px]">
-                    <Typography size={32} weight={600}>
+                    <Typography size={32} weight={600} heading>
                         Schedule a Consultation
                     </Typography>
                     <Typography size={16}>

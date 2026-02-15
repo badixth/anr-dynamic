@@ -42,6 +42,7 @@ export default function ServicePageHero({
             letterSpacing={-2.16}
             letterSpacingMobile={-1.2}
             noDarkMode
+            heading
           >
             {headline}
           </Typography>

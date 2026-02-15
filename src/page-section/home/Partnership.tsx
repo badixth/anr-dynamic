@@ -59,6 +59,7 @@ export default function Partnership() {
           weight={700}
           lineHeight={56}
           lineHeightMobile={41.6}
+          heading
         >
           Why Partner With ANR Dynamic Ventures
         </Typography>
@@ -85,6 +86,7 @@ export default function Partnership() {
                 size={24}
                 sizeMobile={20}
                 weight={700}
+                heading
                 className="mb-[8px] text-[#070707] dark:text-white"
               >
                 {item.title}

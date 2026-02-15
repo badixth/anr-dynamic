@@ -55,7 +55,7 @@ export default function Hero() {
         <HeroBackground>
             <div className="flex flex-col lg:flex-row justify-between items-start self-stretch gap-[8px]">
                 <div className="w-full order-2 lg:w-[70%] lg:order-1">
-                    <Typography as="div" color="#fff" size={72} sizeTablet={52} sizeMobile={40} weight={600} lineHeight={85} lineHeightTablet={64} lineHeightMobile={52} letterSpacing={-2.16} letterSpacingMobile={-1.2} noDarkMode>
+                    <Typography as="div" color="#fff" size={72} sizeTablet={52} sizeMobile={40} weight={600} lineHeight={85} lineHeightTablet={64} lineHeightMobile={52} letterSpacing={-2.16} letterSpacingMobile={-1.2} noDarkMode heading>
                         Comprehensive Financial & Regulatory Compliance Services
                     </Typography>
                     <Typography noDarkMode color="#fff" size={18} className="mt-[24px] w-full lg:w-[60%]">

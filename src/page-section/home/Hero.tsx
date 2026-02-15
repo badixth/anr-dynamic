@@ -1,25 +1,68 @@
 "use client";
 
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import Image from "next/image";
+import Link from "next/link";
+
 import HeroBackground from "@/src/component/HeroBackground";
 import Typography from "@/src/component/Typography";
 import Button from "@/src/component/Button";
-import Icons from "@/src/component/Icons";
-import Image from "next/image";
-import Link from "next/link";
 
 import Avatar1 from "@/src/assets/images/avatar-1.png";
 import Avatar2 from "@/src/assets/images/avatar-2.png";
 import Avatar3 from "@/src/assets/images/avatar-3.png";
 import Avatar4 from "@/src/assets/images/avatar-4.png";
+import Partner1 from "@/src/assets/images/Partners-1.png";
+import Partner2 from "@/src/assets/images/Partners-2.png";
+import Partner3 from "@/src/assets/images/Partners-3.png";
+import Partner4 from "@/src/assets/images/Partners-4.png";
+import Partner5 from "@/src/assets/images/Partners-5.png";
+import Partner6 from "@/src/assets/images/Partners-6.png";
+
+const partnerImages = [
+  { src: Partner1, alt: "Partner1" },
+  { src: Partner2, alt: "Partner2" },
+  { src: Partner3, alt: "Partner3" },
+  { src: Partner4, alt: "Partner4" },
+  { src: Partner5, alt: "Partner5" },
+  { src: Partner6, alt: "Partner6" },
+];
 
 interface HeroProps {
   onScrollToTestimonials?: () => void;
 }
 
 export default function Hero({ onScrollToTestimonials }: HeroProps) {
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!sliderRef.current) return;
+
+    const wrapper = sliderRef.current.querySelector(
+      ".slider-track",
+    ) as HTMLDivElement;
+    if (!wrapper) return;
+
+    const totalWidth = wrapper.scrollWidth / 2;
+    gsap.to(wrapper, {
+      x: `-=${totalWidth}`,
+      duration: 20,
+      ease: "linear",
+      repeat: -1,
+      modifiers: {
+        x: (x) => {
+          const current = parseFloat(x);
+          return (current % totalWidth) + "px";
+        },
+      },
+    });
+  }, []);
+
   return (
     <HeroBackground>
-      <div className="flex flex-col lg:flex-row justify-between items-start self-stretch gap-[8px]">
+      <div className="flex flex-col lg:flex-row justify-between items-start self-stretch">
         {/* Text Section */}
         <div className="w-full order-2 lg:w-[70%] lg:order-1">
           <Typography
@@ -35,6 +78,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
             letterSpacing={-2.16}
             letterSpacingMobile={-1.2}
             noDarkMode
+            heading
           >
             Leading Full-Suite
             <br />
@@ -68,96 +112,37 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
         </div>
 
         {/* Avatar Section */}
-      </div>
-
-      {/* Stats for Mobile */}
-      <div className="flex items-center gap-[40px] mt-[48px] lg:hidden">
-        <div className="w-[180px]">
-          <Typography color="#070707" size={40} weight={600} lineHeight={48}>
-            100+
-          </Typography>
-          <Typography color="#070707" className="mt-[8px]">
-            Companies Served
-          </Typography>
-        </div>
-        <div className="w-[180px]">
-          <Typography color="#070707" size={40} weight={600} lineHeight={48}>
-            15+
-          </Typography>
-          <Typography color="#070707" className="mt-[8px]">
-            Years Combined Experience
-          </Typography>
-        </div>
-      </div>
-
-      {/* Bottom Section */}
-      <div className="flex justify-between items-stretch lg:items-end self-stretch mt-[48px] lg:mt-[22px]">
-        {/* Scroll Down */}
-        <div
-          className="hidden lg:flex justify-between items-center gap-[8px] text-[#070707] dark:text-white cursor-pointer"
-          onClick={onScrollToTestimonials}
-        >
-          SCROLL DOWN <Icons name="arrowDown" className="w-5" />
-        </div>
-
-        {/* Portfolio + Stats */}
-        <div className="relative flex flex-col justify-between items-end pt-[56px] lg:pt-0">
-          {/* Desktop Stats */}
-          <div className="hidden absolute left-0 top-[-650%] lg:flex items-center gap-[80px]">
-            <div className="w-[180px]">
-              <Typography
-                color="#070707"
-                size={40}
-                weight={600}
-                lineHeight={48}
-              >
-                100+
-              </Typography>
-              <Typography color="#070707" className="mt-[8px]">
-                Companies Served
-              </Typography>
-            </div>
-            <div className="w-[180px]">
-              <Typography
-                color="#070707"
-                size={40}
-                weight={600}
-                lineHeight={48}
-              >
-                15+
-              </Typography>
-              <Typography color="#070707" className="mt-[8px]">
-                Years Combined Experience
-              </Typography>
-            </div>
+        {/* <div className="flex flex-col items-start lg:items-end gap-[12px] pt-[24px] order-1 lg:order-2">
+          <div className="flex items-center">
+            <Image src={Avatar1} alt="Avatar1" className="w-[32px]" />
+            <Image src={Avatar2} alt="Avatar2" className="w-[32px] ml-[-8px]" />
+            <Image src={Avatar3} alt="Avatar3" className="w-[32px] ml-[-8px]" />
+            <Image src={Avatar4} alt="Avatar4" className="w-[32px] ml-[-8px]" />
           </div>
+          <Typography color="#fff" noDarkMode>100+ Companies Served</Typography>
+        </div> */}
+      </div>
 
-          {/* Service Highlight */}
-          <Link href="/services">
-            <div className="flex justify-between items-center gap-[8px] text-[#070707] text-[14px] dark:text-[#fff] cursor-pointer">
-              LEARN MORE <Icons name="arrowUpRight" className="w-5" />
-            </div>
-          </Link>
-        </div>
-
-        {/* Service Highlight Card */}
-        <div className="flex items-end gap-[24px] w-[50%] md:w-auto">
-          <div className="bg-white dark:bg-[#1D1D1D] p-[24px] rounded-[8px] w-full md:w-[270px]">
-            <Typography color="#8D8D8D" noDarkMode size={12}>
-              Critical Issue?
-            </Typography>
-            <Typography
-              color="#070707"
-              weight={600}
-              className="mt-[8px]"
-              size={18}
-            >
-              Authority Engagement Support
-            </Typography>
-            <Typography color="#8D8D8D" className="mt-[12px]" size={14}>
-              We represent and support clients in engagements with SSM, LHDN,
-              and regulatory bodies.
-            </Typography>
+      {/* Partner Logos */}
+      <div className="mt-[60px] py-[48px] md:py-[60px] flex flex-col items-center gap-[32px]">
+        <Typography
+          as="div"
+          size={16}
+          weight={500}
+          className="text-center px-[40px]"
+        >
+          Trusted by 100+ Malaysian Companies Across Multiple Industries
+        </Typography>
+        <div className="overflow-hidden w-full" ref={sliderRef}>
+          <div className="flex items-center gap-20 slider-track">
+            {[...partnerImages, ...partnerImages].map((image, index) => (
+              <Image
+                key={index}
+                src={image.src}
+                alt={image.alt}
+                className="w-[30%] md:w-[20%] lg:w-[11%] flex-shrink-0"
+              />
+            ))}
           </div>
         </div>
       </div>

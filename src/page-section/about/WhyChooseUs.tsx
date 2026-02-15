@@ -18,6 +18,7 @@ export default function WhyChooseUs() {
           weight={700}
           lineHeight={56}
           lineHeightMobile={41.6}
+          heading
         >
           As Your Strategic Partner
         </Typography>

@@ -14,7 +14,7 @@ export default function Approach() {
             </Tag>
             <div className="flex flex-col lg:flex-row justify-between items-start w-full mt-[24px]">
                 <div className="flex flex-col items-start w-full lg:w-[50%]">
-                    <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff]">
+                    <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff] font-heading">
                         The ANR 5-Stage Approach: From Problem Identification to Resolution
                     </div>
                 </div>
@@ -28,7 +28,7 @@ export default function Approach() {
                 <div className="flex flex-1 shrink-0 basis-0 flex-col items-start gap-[32px] bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] rounded-[12px] p-[24px]">
                     <Image src={Trends} alt="Trends" className="w-15" />
                     <div>
-                        <Typography size={20} weight={700} lineHeight={32}>
+                        <Typography size={20} weight={700} lineHeight={32} heading>
                             Diagnostic Excellence
                         </Typography>
                         <Typography className="mt-[8px]">
@@ -39,7 +39,7 @@ export default function Approach() {
                 <div className="flex flex-1 shrink-0 basis-0 flex-col items-start gap-[32px] bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] rounded-[12px] p-[24px]">
                     <Image src={Rocket} alt="Rocket" className="w-15" />
                     <div>
-                        <Typography size={20} weight={700} lineHeight={32}>
+                        <Typography size={20} weight={700} lineHeight={32} heading>
                             Direct Representation
                         </Typography>
                         <Typography className="mt-[8px]">
@@ -50,7 +50,7 @@ export default function Approach() {
                 <div className="flex flex-1 shrink-0 basis-0 flex-col items-start gap-[32px] bg-[#EEE] dark:bg-[#1D1D1D] border border-[#EEE] rounded-[12px] p-[24px]">
                     <Image src={TargetBlue} alt="TargetBlue" className="w-15" />
                     <div>
-                        <Typography size={20} weight={700} lineHeight={32}>
+                        <Typography size={20} weight={700} lineHeight={32} heading>
                             Sustainable Solutions
                         </Typography>
                         <Typography className="mt-[8px]">

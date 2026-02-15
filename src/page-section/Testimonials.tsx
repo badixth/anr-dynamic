@@ -76,7 +76,7 @@ export default function Testimonials() {
         </button>
 
         <div className="w-full md:w-[75%] md:mx-auto" ref={contentRef}>
-          <p className="text-[24px] md:text-[40px] font-semibold text-[#070707] dark:text-[#fff] leading-[31.6px] md:leading-[48px]">
+          <p className="text-[24px] md:text-[40px] font-semibold text-[#070707] dark:text-[#fff] leading-[31.6px] md:leading-[48px] font-heading">
             {current.message}
           </p>
 

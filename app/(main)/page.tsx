@@ -1,19 +1,25 @@
 "use client";
-import gsap from 'gsap';
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
-import { useGSAP } from '@gsap/react';
+import { useGSAP } from "@gsap/react";
 import React, { useRef, Suspense, useContext } from "react";
 import { LenisContext } from "@/src/context/LenisContext";
 
 const Hero = React.lazy(() => import("@/src/page-section/home/Hero"));
 const AboutUs = React.lazy(() => import("@/src/page-section/about/AboutUs"));
-const LogoPartners = React.lazy(() => import("@/src/page-section/home/LogoPartners"));
+const LogoPartners = React.lazy(
+  () => import("@/src/page-section/home/LogoPartners"),
+);
 const Services = React.lazy(() => import("@/src/page-section/home/Services"));
-const Partnership = React.lazy(() => import("@/src/page-section/home/Partnership"));
+const Partnership = React.lazy(
+  () => import("@/src/page-section/home/Partnership"),
+);
 const Faq = React.lazy(() => import("@/src/page-section/Faq"));
-const Testimonials = React.lazy(() => import("@/src/page-section/Testimonials"));
+const Testimonials = React.lazy(
+  () => import("@/src/page-section/Testimonials"),
+);
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -39,9 +45,6 @@ export default function Home() {
         <AboutUs />
       </Suspense>
       <Suspense fallback={null}>
-        <LogoPartners />
-      </Suspense>
-      <Suspense fallback={null}>
         <Services />
       </Suspense>
       <Suspense fallback={null}>
@@ -56,5 +59,5 @@ export default function Home() {
         </div>
       </Suspense>
     </div>
-  )
+  );
 }

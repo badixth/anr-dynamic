@@ -19,6 +19,7 @@ interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
   letterSpacingMobile?: number;
   color?: string;
   noDarkMode?: boolean;
+  heading?: boolean;
   className?: string;
 }
 
@@ -71,6 +72,7 @@ const Typography: React.FC<TypographyProps> = ({
   letterSpacingMobile,
   color = "#070707",
   noDarkMode = false,
+  heading = false,
   className = "",
   children,
   ...props
@@ -88,6 +90,7 @@ const Typography: React.FC<TypographyProps> = ({
     className: clsx(
       !noDarkMode && "dark:text-white",
       color === "#070707" ? "text-[#070707]" : "",
+      heading && "font-heading",
       className
     ),
     style: {

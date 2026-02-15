@@ -61,7 +61,7 @@ export default function Teams() {
               Leadership Team
             </Typography>
           </Tag>
-          <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff]">
+          <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff] font-heading">
             Experienced Professionals Committed to Your Success
           </div>
         </div>

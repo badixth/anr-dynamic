@@ -56,7 +56,7 @@ export default function LogoPartners() {
                             key={index}
                             src={image.src}
                             alt={image.alt}
-                            className="w-[30%] md:w-[11%] flex-shrink-0"
+                            className="w-[35%] md:w-[14%] flex-shrink-0"
                         />
                     ))}
                 </div>

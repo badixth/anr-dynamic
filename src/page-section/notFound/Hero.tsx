@@ -7,7 +7,7 @@ export default function Hero() {
         <HeroBackground>
             <div className="min-h-[75dvh] md:min-h-[70dvh] lg:min-h-[67dvh] w-full flex flex-col items-center">
                 <div className="flex flex-col items-center gap-[24px]">
-                    <Typography as="div" color="#fff" className="text-center" size={48} weight={600} letterSpacing={-1.44} noDarkMode>
+                    <Typography as="div" color="#fff" className="text-center" size={48} weight={600} letterSpacing={-1.44} noDarkMode heading>
                         Ooops! <br className="md:hidden" />
                         Page Not Found
                     </Typography>
