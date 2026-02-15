@@ -10,90 +10,105 @@ import Typography from "@/src/component/Typography";
 import { testimonials } from "@/src/data/testimonials";
 
 const AUTO_CYCLE_MS = 6000;
+const PROGRESS_TICK = 50;
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const contentRef = useRef<HTMLDivElement>(null);
+  const indexRef = useRef(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const progressRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const isAnimatingRef = useRef(false);
 
-  const animateAndGo = useCallback(
-    (newIndex: number) => {
-      const tl = gsap.timeline();
-      tl.to(contentRef.current, {
-        opacity: 0,
-        y: 20,
-        duration: 0.25,
-        ease: "power1.out",
-        onComplete: () => {
-          setCurrentIndex(newIndex);
-          tl.to(contentRef.current, {
-            opacity: 1,
-            y: 0,
-            duration: 0.25,
-            ease: "power1.out",
-          });
-        },
+  const animateToIndex = useCallback((newIndex: number) => {
+    if (isAnimatingRef.current) return;
+    isAnimatingRef.current = true;
+
+    const tl = gsap.timeline();
+    tl.to(contentRef.current, {
+      opacity: 0,
+      y: 20,
+      duration: 0.25,
+      ease: "power1.out",
+      onComplete: () => {
+        indexRef.current = newIndex;
+        setCurrentIndex(newIndex);
+        tl.to(contentRef.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.25,
+          ease: "power1.out",
+          onComplete: () => {
+            isAnimatingRef.current = false;
+          },
+        });
+      },
+    });
+  }, []);
+
+  const clearTimers = useCallback(() => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+    if (progressRef.current) {
+      clearInterval(progressRef.current);
+      progressRef.current = null;
+    }
+  }, []);
+
+  const startAutoLoop = useCallback(() => {
+    clearTimers();
+    setProgress(0);
+
+    progressRef.current = setInterval(() => {
+      setProgress((p) => {
+        const next = p + (PROGRESS_TICK / AUTO_CYCLE_MS) * 100;
+        return next >= 100 ? 100 : next;
       });
-    },
-    [],
-  );
+    }, PROGRESS_TICK);
+
+    timerRef.current = setInterval(() => {
+      const nextIdx =
+        indexRef.current === testimonials.length - 1
+          ? 0
+          : indexRef.current + 1;
+      animateToIndex(nextIdx);
+      setProgress(0);
+    }, AUTO_CYCLE_MS);
+  }, [animateToIndex, clearTimers]);
 
   const goTo = useCallback(
     (idx: number) => {
-      animateAndGo(idx);
-      setProgress(0);
-      // restart auto-cycle
-      if (timerRef.current) clearInterval(timerRef.current);
-      if (progressRef.current) clearInterval(progressRef.current);
+      animateToIndex(idx);
       startAutoLoop();
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
+    [animateToIndex, startAutoLoop],
   );
 
   const prev = useCallback(() => {
     const newIdx =
-      currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1;
+      indexRef.current === 0
+        ? testimonials.length - 1
+        : indexRef.current - 1;
     goTo(newIdx);
-  }, [currentIndex, goTo]);
+  }, [goTo]);
 
   const next = useCallback(() => {
     const newIdx =
-      currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1;
+      indexRef.current === testimonials.length - 1
+        ? 0
+        : indexRef.current + 1;
     goTo(newIdx);
-  }, [currentIndex, goTo]);
-
-  function startAutoLoop() {
-    const progressTick = 50;
-    progressRef.current = setInterval(() => {
-      setProgress((p) => {
-        const next = p + (progressTick / AUTO_CYCLE_MS) * 100;
-        return next >= 100 ? 100 : next;
-      });
-    }, progressTick);
-
-    timerRef.current = setInterval(() => {
-      setCurrentIndex((prev) => {
-        const newIdx = prev === testimonials.length - 1 ? 0 : prev + 1;
-        animateAndGo(newIdx);
-        return prev; // animateAndGo sets it
-      });
-      setProgress(0);
-    }, AUTO_CYCLE_MS);
-  }
+  }, [goTo]);
 
   useEffect(() => {
     startAutoLoop();
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-      if (progressRef.current) clearInterval(progressRef.current);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    return clearTimers;
+  }, [startAutoLoop, clearTimers]);
 
-  const current = testimonials[currentIndex];
+  const current = testimonials[currentIndex] ?? testimonials[0];
 
   return (
     <div className="bg-white dark:bg-[#070707] w-full px-[16px] md:px-[72px] py-[48px] md:py-[80px] flex flex-col items-center justify-center gap-[48px] md:gap-[64px]">
