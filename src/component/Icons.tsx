@@ -21,6 +21,7 @@ import IcChats from "@/src/assets/icons/chats.svg";
 import IcMap from "@/src/assets/icons/map.svg";
 import IcPhone from "@/src/assets/icons/phone.svg";
 import IcMenu from "@/src/assets/icons/menu.svg";
+import IcWhatsapp from "@/src/assets/icons/whatsapp.svg";
 
 import clsx from "clsx";
 import { useTheme } from "@/src/context/ThemeProvider";
@@ -47,6 +48,7 @@ const iconMap = {
   map: IcMap,
   phone: IcPhone,
   menu: IcMenu,
+  whatsapp: IcWhatsapp,
 };
 
 interface IconProps {

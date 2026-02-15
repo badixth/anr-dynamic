@@ -27,12 +27,12 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between w-full md:pr-[80px] gap-[32px]">
           <div className="flex flex-col gap-[16px] w-full lg:w-[60%]">
             <div className="text-[#fff] text-[32px] md:text-[40px] font-semibold leading-[41px] md:leading-[48px]">
-              Facing Financial Compliance Issues? Get Expert Guidance Today.
+              Connect With Our Experts Today!
             </div>
             <div className="text-[#fff] text-[14px]">
-              Don't let regulatory challenges hold your business back. Our team
-              provides immediate support for audit readiness, tax compliance,
-              SSM registration, and authority engagement.
+              From Accounting Support to Strategic Corporate Advice, our
+              services are designed to help your business thrive. Let our
+              experts provide the insights you need to succeed.
             </div>
           </div>
           <Link href="/contact">
@@ -50,8 +50,11 @@ export default function Footer() {
               className="w-[200px] h-auto"
             />
             <div className="font-medium text-white leading-[24px]">
-              Your Trusted Partner in Accounting, Audit & Regulatory Compliance
-              and Tax Advisory
+              ANR Dynamic Ventures Sdn. Bhd. (1393044-X) <br />
+              <span className="text-[#8D8D8D]">
+                Your Trusted Partner in Accounting, Audit & Regulatory
+                Compliance and Tax Advisory
+              </span>
             </div>
             <div className="flex items-center gap-[15px]">
               <div className="bg-[#1D1D1D] rounded-full p-[10px]">
@@ -124,9 +127,7 @@ export default function Footer() {
                   Pengaturcara, Seksyen U1/51a 40150 Shah Alam Selangor,
                   Malaysia
                 </div>
-                <div>+60192257845</div>
-                <div>+603-96237617</div>
-                <div>+6011-21698236</div>
+                <div>+60 18-980 4875</div>
                 <div>anrdynamic@gmail.com</div>
               </div>
             </div>

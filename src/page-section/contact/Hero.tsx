@@ -1,42 +1,13 @@
-import Image from "next/image";
 import HeroBackground from "@/src/component/HeroBackground";
 import Typography from "@/src/component/Typography";
 import Button from "@/src/component/Button";
 import Icons from "@/src/component/Icons";
-
-import Avatar1 from "@/src/assets/images/avatar-1.png";
-import Avatar2 from "@/src/assets/images/avatar-2.png";
-import Avatar3 from "@/src/assets/images/avatar-3.png";
-import Avatar4 from "@/src/assets/images/avatar-4.png";
 
 export default function Hero() {
   return (
     <HeroBackground>
       <div className="w-full lg:w-[60%] lg:mx-auto flex flex-col items-start lg:items-center lg:text-center justify-center gap-[72px] lg:gap-[160px]">
         <div className="w-full flex flex-col items-start lg:items-center gap-[24px]">
-          {/* <div className="flex flex-col items-start gap-[12px] pt-[24px]">
-            <div className="flex items-center">
-              <Image src={Avatar1} alt="Avatar1" className="w-[32px]" />
-              <Image
-                src={Avatar2}
-                alt="Avatar2"
-                className="w-[32px] ml-[-8px]"
-              />
-              <Image
-                src={Avatar3}
-                alt="Avatar3"
-                className="w-[32px] ml-[-8px]"
-              />
-              <Image
-                src={Avatar4}
-                alt="Avatar4"
-                className="w-[32px] ml-[-8px]"
-              />
-            </div>
-            <Typography color="#fff" noDarkMode className="md:hidden">
-              100+ Companies Served
-            </Typography>
-          </div> */}
           <Typography
             as="div"
             color="#fff"
@@ -63,61 +34,48 @@ export default function Hero() {
             CONTACT US NOW
           </Button>
         </div>
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-[32px] w-full lg:w-[90%]">
-          <div className="flex items-center gap-[24px]">
-            <div className="bg-[#1D1D1D] dark:bg-[#393939] rounded-[12px] p-[12px]">
-              <Icons name="chats" className="w-[24px] h-[24px]" color="#fff" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px] w-full">
+          <a href="mailto:anrdynamic@gmail.com" className="flex items-center gap-[16px] bg-white/[0.05] border border-white/[0.1] rounded-[12px] p-[20px] hover:bg-white/[0.1] transition-colors">
+            <div className="bg-[#F2B611] rounded-[10px] p-[10px] flex-shrink-0">
+              <Icons name="chats" className="w-[20px] h-[20px]" color="#fff" noDarkMode />
             </div>
-            <div className="flex flex-col items-start gap-[4px]">
-              <Typography color="#070707" size={20} weight={700}>
+            <div className="flex flex-col items-start gap-[2px]">
+              <Typography color="#fff" noDarkMode size={16} weight={600}>
                 Email Us
               </Typography>
-              <Typography
-                color="#070707"
-                size={14}
-                weight={400}
-                className="underline"
-              >
+              <Typography color="#D4D4D4" noDarkMode size={13} weight={400}>
                 anrdynamic@gmail.com
               </Typography>
             </div>
-          </div>
-          <div className="flex items-start gap-[24px]">
-            <div className="bg-[#1D1D1D] dark:bg-[#393939] rounded-[12px] p-[12px]">
-              <Icons name="map" className="w-[24px] h-[24px]" color="#fff" />
+          </a>
+
+          <a href="tel:+60189804875" className="flex items-center gap-[16px] bg-white/[0.05] border border-white/[0.1] rounded-[12px] p-[20px] hover:bg-white/[0.1] transition-colors">
+            <div className="bg-[#F2B611] rounded-[10px] p-[10px] flex-shrink-0">
+              <Icons name="phone" className="w-[20px] h-[20px]" color="#fff" noDarkMode />
             </div>
-            <div className="flex flex-col items-start gap-[4px]">
-              <Typography color="#070707" size={20} weight={700}>
-                Visit Us
-              </Typography>
-              <Typography
-                color="#070707"
-                size={14}
-                weight={400}
-                className="underline text-start"
-              >
-                Jalan Pengaturcara U1/51A, Shah Alam, Selangor
-              </Typography>
-            </div>
-          </div>
-          <div className="flex items-start gap-[24px]">
-            <div className="bg-[#1D1D1D] dark:bg-[#393939] rounded-[12px] p-[12px]">
-              <Icons name="phone" className="w-[24px] h-[24px]" color="#fff" />
-            </div>
-            <div className="flex flex-col items-start gap-[4px]">
-              <Typography color="#070707" size={20} weight={700}>
+            <div className="flex flex-col items-start gap-[2px]">
+              <Typography color="#fff" noDarkMode size={16} weight={600}>
                 Call Us
               </Typography>
-              <Typography
-                color="#070707"
-                size={14}
-                weight={400}
-                className="underline text-start"
-              >
-                +603-96237617 / +6011-21698236
+              <Typography color="#D4D4D4" noDarkMode size={13} weight={400}>
+                +60 18-980 4875
               </Typography>
             </div>
-          </div>
+          </a>
+
+          <a href="https://wa.me/60189804875" target="_blank" rel="noopener noreferrer" className="flex items-center gap-[16px] bg-white/[0.05] border border-white/[0.1] rounded-[12px] p-[20px] hover:bg-white/[0.1] transition-colors">
+            <div className="bg-[#25D366] rounded-[10px] p-[10px] flex-shrink-0">
+              <Icons name="whatsapp" className="w-[20px] h-[20px]" color="#fff" noDarkMode />
+            </div>
+            <div className="flex flex-col items-start gap-[2px]">
+              <Typography color="#fff" noDarkMode size={16} weight={600}>
+                WhatsApp Us
+              </Typography>
+              <Typography color="#D4D4D4" noDarkMode size={13} weight={400}>
+                +60 18-980 4875
+              </Typography>
+            </div>
+          </a>
         </div>
       </div>
     </HeroBackground>
