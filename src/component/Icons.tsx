@@ -30,6 +30,7 @@ import IcHome from "@/src/assets/icons/home.svg";
 import IcChart from "@/src/assets/icons/chart.svg";
 import IcBriefcase from "@/src/assets/icons/briefcase.svg";
 import IcBuilding from "@/src/assets/icons/building.svg";
+import IcEnvelope from "@/src/assets/icons/envelope.svg";
 
 import clsx from "clsx";
 import { useTheme } from "@/src/context/ThemeProvider";
@@ -65,6 +66,7 @@ const iconMap = {
   chart: IcChart,
   briefcase: IcBriefcase,
   building: IcBuilding,
+  envelope: IcEnvelope,
 };
 
 interface IconProps {

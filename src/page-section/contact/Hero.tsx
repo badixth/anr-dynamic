@@ -37,7 +37,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px] w-full">
           <a href="mailto:anrdynamic@gmail.com" className="flex items-center gap-[16px] bg-white/[0.05] border border-white/[0.1] rounded-[12px] p-[20px] hover:bg-white/[0.1] transition-colors">
             <div className="bg-[#F2B611] rounded-[10px] p-[10px] flex-shrink-0">
-              <Icons name="chats" className="w-[20px] h-[20px]" color="#fff" noDarkMode />
+              <Icons name="envelope" className="w-[20px] h-[20px]" color="#fff" noDarkMode />
             </div>
             <div className="flex flex-col items-start gap-[2px]">
               <Typography color="#fff" noDarkMode size={16} weight={600}>
