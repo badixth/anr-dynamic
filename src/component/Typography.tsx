@@ -92,6 +92,7 @@ const Typography: React.FC<TypographyProps> = ({
   Tag,
   {
     className: clsx(
+      "text-balance",
       !noDarkMode && "dark:text-white",
       color === "#070707" ? "text-[#070707]" : "",
       heading && "font-heading",

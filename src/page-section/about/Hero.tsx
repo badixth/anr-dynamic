@@ -77,7 +77,7 @@ export default function Hero() {
           color="#fff"
           size={18}
           noDarkMode
-          className="mt-[24px] lg:w-[65%]"
+          className="mt-[24px] lg:w-[65%] text-balance"
         >
           We provide accurate, reliable, and actionable financial services that
           empower Malaysian businesses to make confident decisions and achieve

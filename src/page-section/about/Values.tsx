@@ -22,7 +22,7 @@ export default function Values() {
         >
           Built on Integrity, Excellence, Collaboration & Innovation
         </Typography>
-        <Typography size={16} lineHeight={24} className="max-w-[800px]">
+        <Typography size={16} lineHeight={24} className="max-w-[800px] text-balance">
           Our core values guide every interaction, decision, and service we
           provide. They define who we are and how we serve our clients.
         </Typography>
@@ -48,6 +48,7 @@ export default function Values() {
               color="#666666"
               noDarkMode
               darkColor="#D4D4D4"
+              className="text-balance"
             >
               {value.description}
             </Typography>

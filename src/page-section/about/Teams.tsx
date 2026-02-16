@@ -71,7 +71,7 @@ export default function Teams() {
           </Typography>
         </div>
         <div className="max-w-[700px]">
-          <Typography size={16} weight={500} lineHeight={24}>
+          <Typography size={16} weight={500} lineHeight={24} className="text-balance">
             Our Team specialises in assisting companies facing challenges with
             regulatory authorities, compliance issues, and changing government
             requirements. Our approach is solution-driven, practical, and
@@ -123,15 +123,14 @@ export default function Teams() {
               </Typography>
               <div className="w-[60px] h-[3px] bg-[#F2B611] rounded-full" />
               <Typography
-                size={18}
-                sizeTablet={16}
-                sizeMobile={15}
+                size={13}
+                sizeMobile={12}
                 weight={400}
-                lineHeight={30}
-                lineHeightTablet={26}
-                lineHeightMobile={24}
-                color="#B0B0B0"
+                lineHeight={20}
+                lineHeightMobile={18}
+                color="#B4B4B4"
                 noDarkMode
+                className="max-w-[480px] text-balance"
               >
                 {director.description}
               </Typography>
@@ -185,6 +184,7 @@ export default function Teams() {
                 lineHeightMobile={18}
                 color="#B4B4B4"
                 noDarkMode
+                className="text-balance"
               >
                 {member.description}
               </Typography>

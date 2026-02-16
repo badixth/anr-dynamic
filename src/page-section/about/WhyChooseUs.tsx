@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
                 {idx + 1}
               </Typography>
             </div>
-            <Typography size={16} lineHeight={28}>
+            <Typography size={16} lineHeight={28} className="text-balance">
               {reason}
             </Typography>
           </div>

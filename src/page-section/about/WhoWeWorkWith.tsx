@@ -41,7 +41,7 @@ export default function WhoWeWorkWith() {
         >
           Serving Businesses Across Malaysia
         </Typography>
-        <Typography size={16} lineHeight={24} className="max-w-[800px]">
+        <Typography size={16} lineHeight={24} className="max-w-[800px] text-balance">
           We partner with diverse organizations, from family-owned businesses to
           established corporations, providing tailored advisory services that
           meet their unique needs.

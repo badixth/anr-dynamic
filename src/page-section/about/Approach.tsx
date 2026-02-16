@@ -57,7 +57,7 @@ export default function Approach() {
           </Typography>
         </div>
         <div className="max-w-[700px]">
-          <Typography size={16} weight={500} lineHeight={24}>
+          <Typography size={16} weight={500} lineHeight={24} className="text-balance">
             Our structured methodology ensures every compliance challenge is
             addressed systematically, with clear steps from initial diagnosis
             through ongoing support.
@@ -114,6 +114,7 @@ export default function Approach() {
                 lineHeightMobile={24}
                 color="#B4B4B4"
                 noDarkMode
+                className="text-balance"
               >
                 {item.description}
               </Typography>

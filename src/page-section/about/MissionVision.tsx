@@ -54,6 +54,7 @@ export default function MissionVision() {
               lineHeightMobile={28}
               color="#fff"
               noDarkMode
+              className="text-balance"
             >
               {companyInfo.mission}
             </Typography>
@@ -88,6 +89,7 @@ export default function MissionVision() {
               lineHeightMobile={28}
               color="#fff"
               noDarkMode
+              className="text-balance"
             >
               {companyInfo.vision}
             </Typography>

@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="text-[#fff] text-[32px] md:text-[40px] font-semibold leading-[41px] md:leading-[48px]">
               Connect With Our Experts Today!
             </div>
-            <div className="text-[#fff] text-[14px]">
+            <div className="text-[#fff] text-[14px] text-balance">
               From Accounting Support to Strategic Corporate Advice, our
               services are designed to help your business thrive. Let our
               experts provide the insights you need to succeed.

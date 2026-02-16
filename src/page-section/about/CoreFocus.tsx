@@ -22,7 +22,7 @@ export default function CoreFocus() {
         >
           {companyInfo.coreFocus.headline}
         </Typography>
-        <Typography size={16} lineHeight={24} className="max-w-[800px]">
+        <Typography size={16} lineHeight={24} className="max-w-[800px] text-balance">
           {companyInfo.coreFocus.description}
         </Typography>
       </div>
@@ -52,7 +52,7 @@ export default function CoreFocus() {
               lineHeightMobile={24}
               color="#D4D4D4"
               noDarkMode
-              className="relative z-10"
+              className="relative z-10 text-balance"
             >
               {point}
             </Typography>
