@@ -79,12 +79,12 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
           as="div"
           color="#fff"
           size={64}
-          sizeTablet={48}
-          sizeMobile={48}
+          sizeTablet={56}
+          sizeMobile={50}
           weight={600}
           lineHeight={76}
-          lineHeightTablet={58}
-          lineHeightMobile={50}
+          lineHeightTablet={64}
+          lineHeightMobile={60}
           letterSpacing={-2.16}
           letterSpacingMobile={-1.2}
           noDarkMode
