@@ -1,187 +1,92 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useTheme } from "@/src/context/ThemeProvider";
-
-import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
-import Icons from "@/src/component/Icons";
 
 export default function AboutUs() {
-  const { theme } = useTheme();
-
-  const heroText =
-    "ANR Dynamic Ventures Sdn Bhd is a specialized accounting, audit, and tax advisory firm dedicated to helping Malaysian businesses navigate complex regulatory requirements and resolve critical financial compliance matters with accuracy, integrity, and expert guidance.";
-
-  const advisoryServices = [
-    "Mergers and acquisitions",
-    "Business valuation",
-    "Business turnaround and optimisation planning",
-    "Grants and incentives application",
-    "LHDN tax regularisation and negotiation",
-    "SSM compliance and rectification",
-  ];
-
-  const descAboutUsRef = useRef<HTMLDivElement>(null);
-  const triggersRef = useRef<ScrollTrigger[]>([]);
-
-  useEffect(() => {
-    if (!descAboutUsRef.current) return;
-
-    const words = descAboutUsRef.current.querySelectorAll("span");
-
-    triggersRef.current.forEach((t) => t.kill());
-    triggersRef.current = [];
-
-    gsap.set(words, { opacity: 1, color: "#B4B4B4" });
-
-    const tween = gsap.to(words, {
-      opacity: 1,
-      color: theme === "light" ? "#070707" : "#fff",
-      stagger: 0.08,
-      scrollTrigger: {
-        trigger: descAboutUsRef.current,
-        start: "top 70%",
-        end: "bottom 30%",
-        scrub: 1,
-      },
-    });
-
-    if (tween.scrollTrigger) {
-      triggersRef.current.push(tween.scrollTrigger);
-    }
-
-    ScrollTrigger.refresh();
-
-    return () => {
-      triggersRef.current.forEach((t) => t.kill());
-      triggersRef.current = [];
-    };
-  }, [theme]);
-
-  const words = heroText.split(" ");
-
   return (
-    <div className="bg-white dark:bg-[#070707] w-full px-[20px] md:px-[72px] py-[48px] md:py-[80px] flex flex-col items-center gap-[24px]">
-      <Tag>
-        <Typography size={14} sizeMobile={12} weight={500}>
-          About Us
-        </Typography>
-      </Tag>
+    <div className="bg-white dark:bg-[#070707] w-full px-[20px] md:px-[72px] py-[48px] md:py-[80px] flex flex-col items-center">
+      {/* Heading */}
+      <Typography
+        as="div"
+        size={40}
+        sizeMobile={28}
+        weight={700}
+        lineHeight={48}
+        lineHeightMobile={36}
+        heading
+        className="mb-[40px] md:mb-[56px]"
+      >
+        About Us
+      </Typography>
 
-      {/* Animated hero paragraph */}
-      <div className="w-full md:w-[75%] text-center">
-        <div
-          ref={descAboutUsRef}
-          className="text-[22px] md:text-[32px] font-semibold leading-[30px] md:leading-[42px] font-heading"
-          style={{ whiteSpace: "pre-wrap" }}
+      {/* Body text */}
+      <div className="w-full max-w-[900px] flex flex-col gap-[28px] md:gap-[36px] text-center text-balance">
+        {/* Paragraph 1 */}
+        <Typography
+          size={18}
+          sizeMobile={16}
+          lineHeight={32}
+          lineHeightMobile={28}
+          weight={400}
+          color="#444444"
+          darkColor="#CCCCCC"
         >
-          {words.map((word, index) => (
-            <span key={index} className="inline-block mr-[0.3em]">
-              {word}
-            </span>
-          ))}
-        </div>
-      </div>
+          ANR Dynamic Ventures Sdn Bhd is a specialized accounting, audit, and
+          tax advisory firm dedicated to helping Malaysian businesses navigate
+          complex regulatory requirements and resolve critical financial
+          compliance matters with accuracy, integrity, and expert guidance.
+        </Typography>
 
-      {/* Content sections below */}
-      <div className="w-full max-w-[1100px] mt-[32px] md:mt-[56px] flex flex-col gap-[32px]">
-        {/* Proprietary software + cost savings highlight */}
-        <div className="bg-[#0D0D0D] dark:bg-[#111111] rounded-[16px] p-[32px] md:p-[40px] flex flex-col md:flex-row items-start gap-[24px] md:gap-[40px] border border-white/[0.06]">
-          <div className="flex-shrink-0 flex flex-col items-center gap-[8px]">
-            <div className="text-[#F2B611] text-[48px] md:text-[56px] font-bold leading-none font-heading">
-              10–20%
-            </div>
-            <Typography
-              size={13}
-              weight={600}
-              color="#F2B611"
-              noDarkMode
-              className="uppercase tracking-wider"
-            >
-              Cost Savings
-            </Typography>
-          </div>
-          <div className="flex flex-col gap-[12px]">
-            <Typography
-              size={20}
-              sizeMobile={18}
-              weight={700}
-              color="#fff"
-              noDarkMode
-              heading
-            >
-              Proprietary In-House Technology
-            </Typography>
-            <Typography size={15} lineHeight={24} color="#B4B4B4" noDarkMode>
-              We leverage our proprietary in-house software to deliver
-              efficient, reliable solutions that not only address compliance
-              issues promptly but also provide cost savings of approximately
-              10–20% compared to prevailing market fees.
-            </Typography>
-          </div>
-        </div>
+        {/* Paragraph 2 — cost savings highlight */}
+        <Typography
+          size={18}
+          sizeMobile={16}
+          lineHeight={32}
+          lineHeightMobile={28}
+          weight={400}
+          color="#444444"
+          darkColor="#CCCCCC"
+        >
+          We leverage our proprietary in-house software to deliver efficient,
+          reliable solutions that not only address compliance issues promptly
+          but also provide cost savings of approximately{" "}
+          <span className="text-[#F2B611] font-bold text-[20px] md:text-[22px]">
+            10–20%
+          </span>{" "}
+          compared to prevailing market fees.
+        </Typography>
 
-        {/* Corporate advisory services */}
-        <div className="bg-[#F5F5F5] dark:bg-[#111111] rounded-[16px] p-[32px] md:p-[40px] border border-transparent dark:border-white/[0.06]">
-          <Typography
-            size={20}
-            sizeMobile={18}
-            weight={700}
-            heading
-            className="mb-[8px]"
-          >
-            Beyond Our Core Services
-          </Typography>
-          <Typography
-            size={15}
-            lineHeight={24}
-            color="#666666"
-            darkColor="#B4B4B4"
-            noDarkMode
-            className="mb-[24px]"
-          >
-            We offer comprehensive corporate advisory support including:
-          </Typography>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px]">
-            {advisoryServices.map((service, idx) => (
-              <div key={idx} className="flex items-center gap-[12px]">
-                <div className="flex-shrink-0">
-                  <Icons
-                    name="check"
-                    className="w-[18px] h-[18px]"
-                    color="#F2B611"
-                  />
-                </div>
-                <Typography size={15} weight={500} lineHeight={22}>
-                  {service}
-                </Typography>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Paragraph 3 — advisory services */}
+        <Typography
+          size={18}
+          sizeMobile={16}
+          lineHeight={32}
+          lineHeightMobile={28}
+          weight={400}
+          color="#444444"
+          darkColor="#CCCCCC"
+        >
+          Beyond our core services, we offer comprehensive corporate advisory
+          support including mergers and acquisitions, business valuation,
+          business turnaround and optimisation planning, grants and incentives
+          application, LHDN tax regularisation and negotiation, as well as SSM
+          compliance and rectification.
+        </Typography>
 
-        {/* Closing commitment */}
-        <div className="text-center px-[8px] md:px-[40px]">
-          <Typography
-            size={17}
-            sizeMobile={15}
-            lineHeight={28}
-            lineHeightMobile={24}
-            weight={500}
-            color="#666666"
-            darkColor="#B4B4B4"
-            noDarkMode
-            className="italic"
-          >
-            We are committed to delivering practical, strategic, and
-            results-driven solutions, and we welcome businesses seeking a
-            trusted partner to strengthen their financial governance and
-            long-term growth.
-          </Typography>
-        </div>
+        {/* Paragraph 4 — closing commitment */}
+        <Typography
+          size={18}
+          sizeMobile={16}
+          lineHeight={32}
+          lineHeightMobile={28}
+          weight={400}
+          color="#444444"
+          darkColor="#CCCCCC"
+        >
+          We are committed to delivering practical, strategic, and
+          results-driven solutions, and we welcome businesses seeking a trusted
+          partner to strengthen their financial governance and long-term growth.
+        </Typography>
       </div>
     </div>
   );
