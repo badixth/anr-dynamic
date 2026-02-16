@@ -22,10 +22,22 @@ import Partner5 from "@/src/assets/images/Partners-5.png";
 import Partner6 from "@/src/assets/images/Partners-6.png";
 
 const partnerImages = [
-  { src: Partner1, alt: "Subaidah Holding Sdn. Bhd.", name: "Subaidah Holding Sdn. Bhd." },
+  {
+    src: Partner1,
+    alt: "Subaidah Holding Sdn. Bhd.",
+    name: "Subaidah Holding Sdn. Bhd.",
+  },
   { src: Partner2, alt: "Pug3gold Sdn. Bhd.", name: "Pug3gold Sdn. Bhd." },
-  { src: Partner3, alt: "Thoyyib Global Berhad", name: "Thoyyib Global Berhad" },
-  { src: Partner4, alt: "Baqarah Farms Ventures", name: "Baqarah Farms Ventures" },
+  {
+    src: Partner3,
+    alt: "Thoyyib Global Berhad",
+    name: "Thoyyib Global Berhad",
+  },
+  {
+    src: Partner4,
+    alt: "Baqarah Farms Ventures",
+    name: "Baqarah Farms Ventures",
+  },
   { src: Partner5, alt: "Fiarina Sdn. Bhd.", name: "Fiarina Sdn. Bhd." },
   { src: Partner6, alt: "TFX Islamic", name: "TFX Islamic" },
 ];
@@ -63,59 +75,55 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
   return (
     <HeroBackground>
       <div className="w-full lg:w-[70%] lg:mx-auto flex flex-col items-center text-center self-stretch">
-          <Typography
-            as="div"
-            color="#fff"
-            size={64}
-            sizeTablet={48}
-            sizeMobile={32}
-            weight={600}
-            lineHeight={76}
-            lineHeightTablet={58}
-            lineHeightMobile={42}
-            letterSpacing={-2.16}
-            letterSpacingMobile={-1.2}
-            noDarkMode
-            heading
+        <Typography
+          as="div"
+          color="#fff"
+          size={64}
+          sizeTablet={48}
+          sizeMobile={40}
+          weight={600}
+          lineHeight={76}
+          lineHeightTablet={58}
+          lineHeightMobile={50}
+          letterSpacing={-2.16}
+          letterSpacingMobile={-1.2}
+          noDarkMode
+          heading
+        >
+          Leading
+          <br className="md:hidden" /> Full-Suite
+          <br />
+          <span
+            className="bg-gradient-to-r from-[#FFD700] via-[#FFC700] to-[#FFB300] bg-clip-text text-transparent"
+            style={{
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
           >
-            Leading<br className="md:hidden" />{" "}Full-Suite
-            <br />
-            <span
-              className="bg-gradient-to-r from-[#FFD700] via-[#FFC700] to-[#FFB300] bg-clip-text text-transparent"
-              style={{
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Business Advisory
-            </span>
-          </Typography>
+            Business Advisory
+          </span>
+        </Typography>
 
-          <Typography
-            color="#fff"
-            noDarkMode
-            size={18}
-            weight={600}
-            className="mt-[24px] lg:w-[60%]"
-          >
-            Your Trusted Partner in Accounting, Audit & Regulatory Compliance
-            and Tax Advisory.
-          </Typography>
-          <Typography
-            color="#B4B4B4"
-            noDarkMode
-            size={16}
-            className="mt-[12px] lg:w-[55%]"
-          >
-            We help companies resolve issues with authorities,
-            strengthen compliance, and move forward confidently.
-          </Typography>
+        <Typography
+          color="#E0E0E0"
+          noDarkMode
+          size={18}
+          className="mt-[24px] lg:w-[45%] text-balance"
+        >
+          Your Trusted Partner in Accounting, Audit & Regulatory Compliance and
+          Tax Advisory.
+          <br />
+          <br />
+          We help companies resolve issues with authorities,
+          <br className="hidden lg:block" />
+          strengthen compliance, and move forward with confidence.
+        </Typography>
 
-          <Link href="/contact">
-            <Button variant="primary" className="mt-[32px]">
-              SCHEDULE CONSULTATION
-            </Button>
-          </Link>
+        <Link href="/contact">
+          <Button variant="primary" className="mt-[32px]">
+            SCHEDULE CONSULTATION
+          </Button>
+        </Link>
       </div>
 
       {/* Partner Logos */}
@@ -128,18 +136,25 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
           weight={400}
           className="text-center px-[40px]"
         >
-          Join over 100+ companies that trust <span className="text-[#F2B611]">ANR</span> Dynamic Ventures
+          Join over 100+ companies that trust{" "}
+          <span className="text-[#F2B611]">ANR</span> Dynamic Ventures
         </Typography>
         <div className="overflow-hidden w-full" ref={sliderRef}>
           <div className="flex items-center gap-20 slider-track">
             {[...partnerImages, ...partnerImages].map((image, index) => (
-              <div key={index} className="flex flex-col items-center gap-[10px] flex-shrink-0 w-[30%] md:w-[20%] lg:w-[11%]">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full"
-                />
-                <Typography size={13} sizeMobile={11} weight={500} color="#999" noDarkMode className="whitespace-nowrap">
+              <div
+                key={index}
+                className="flex flex-col items-center gap-[10px] flex-shrink-0 w-[30%] md:w-[20%] lg:w-[11%]"
+              >
+                <Image src={image.src} alt={image.alt} className="w-full" />
+                <Typography
+                  size={13}
+                  sizeMobile={11}
+                  weight={500}
+                  color="#999"
+                  noDarkMode
+                  className="whitespace-nowrap"
+                >
                   {image.name}
                 </Typography>
               </div>
