@@ -78,7 +78,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
             noDarkMode
             heading
           >
-            Leading Full-Suite
+            Leading<br className="md:hidden" />{" "}Full-Suite
             <br />
             <span
               className="bg-gradient-to-r from-[#FFD700] via-[#FFC700] to-[#FFB300] bg-clip-text text-transparent"
