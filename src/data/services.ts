@@ -58,7 +58,7 @@ export const services = [
   },
   {
     id: "audit-assurance",
-    title: "Audit Compliance & Assurance Services",
+    title: "Audit Advisory & Compliance Assurance",
     shortDescription: "Our team help organisations meet statutory requirements, enhance investor confidence, and maintain trust with stakeholders.",
     longDescription: "Reliable Audit & Assurance for Accurate Financial Reporting",
     image: "/images/services/audit.jpg",

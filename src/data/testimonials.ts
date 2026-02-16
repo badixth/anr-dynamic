@@ -16,7 +16,7 @@ export const testimonials = [
     company: "Fiarina Sdn Bhd",
     message:
       "ANR's audit team provided exceptional statutory audit services for our company. Their thorough approach and attention to detail gave us confidence in our financial statements. They identified key areas for improvement and helped strengthen our internal controls.",
-    service: "Audit Compliance & Assurance",
+    service: "Audit Advisory & Compliance Assurance",
     avatar: "",
   },
   {

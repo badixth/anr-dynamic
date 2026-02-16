@@ -16,7 +16,7 @@ const navItems = [
       { name: "Corporate Advisory", path: "/services/corporate-advisory" },
       { name: "Financial Reporting & Compliance", path: "/services/financial-reporting" },
       { name: "Accounting Advisory", path: "/services/accounting-advisory" },
-      { name: "Audit Compliance & Assurance", path: "/services/audit-assurance" },
+      { name: "Audit Advisory & Compliance Assurance", path: "/services/audit-assurance" },
     ]
   },
   { name: "Careers", path: "/careers" },

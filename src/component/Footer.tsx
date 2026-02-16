@@ -109,7 +109,7 @@ export default function Footer() {
                   Accounting Advisory
                 </Link>
                 <Link href="/services/audit-assurance" className="cursor-pointer">
-                  Audit Compliance & Assurance
+                  Audit Advisory & Compliance Assurance
                 </Link>
               </div>
             </div>

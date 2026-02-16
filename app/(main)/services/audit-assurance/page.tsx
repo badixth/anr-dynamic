@@ -35,7 +35,7 @@ export default function AuditAssurancePage() {
     <main>
       <Suspense fallback={<div>Loading...</div>}>
         <ServicePageHero
-          headline="Audit Compliance & Assurance Services"
+          headline="Audit Advisory & Compliance Assurance"
           tagline="Reliable Audit & Assurance for Accurate Financial Reporting"
           description="Our team help organisations meet statutory requirements, enhance investor confidence, and maintain trust with stakeholders."
           ctaText="DISCUSS YOUR AUDIT NEEDS"
@@ -59,7 +59,7 @@ export default function AuditAssurancePage() {
       <Suspense fallback={<div>Loading...</div>}>
         <Faq
           items={accordionData}
-          headline="Audit Compliance & Assurance FAQs"
+          headline="Audit Advisory & Compliance Assurance FAQs"
           description="Common questions about audit compliance, assurance services, and regulatory requirements"
         />
       </Suspense>

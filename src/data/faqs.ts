@@ -3,7 +3,7 @@ export const homeFaqs = [
   {
     question: "What services does ANR Dynamic Ventures offer?",
     answer:
-      "We offer four core professional services: Audit Compliance & Assurance Services (helping organisations meet statutory requirements and enhance investor confidence), Corporate Advisory Services (strategic guidance to drive growth and minimise risk), Accounting Advisory (efficient, cost-effective accounting solutions), and Financial Reporting & Compliance (accurate reporting to ensure compliance and build trust).",
+      "We offer five core professional services: Enterprise Resource Planning (ERP), Corporate Advisory Services (strategic guidance to drive growth and minimise risk), Financial Reporting & Compliance (accurate reporting to ensure compliance and build trust), Accounting Advisory (efficient, cost-effective accounting solutions), and Audit Advisory & Compliance Assurance (helping organisations meet statutory requirements and enhance investor confidence).",
   },
   {
     question: "How can I schedule a consultation with your team?",

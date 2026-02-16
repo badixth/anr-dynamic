@@ -12,7 +12,7 @@ const navItems = [
   { name: "Corporate Advisory", path: "/services/corporate-advisory", indent: true },
   { name: "Financial Reporting & Compliance", path: "/services/financial-reporting", indent: true },
   { name: "Accounting Advisory", path: "/services/accounting-advisory", indent: true },
-  { name: "Audit Compliance & Assurance", path: "/services/audit-assurance", indent: true },
+  { name: "Audit Advisory & Compliance Assurance", path: "/services/audit-assurance", indent: true },
   { name: "Careers", path: "/careers" },
   { name: "Contact", path: "/contact" },
 ];

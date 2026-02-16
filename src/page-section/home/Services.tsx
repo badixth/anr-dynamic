@@ -95,7 +95,7 @@ export default function Services() {
       link: "/services/accounting-advisory",
     },
     {
-      title: "Audit Compliance & Assurance Services",
+      title: "Audit Advisory & Compliance Assurance",
       image: Services3,
       desc: "Our team help organisations meet statutory requirements, enhance investor confidence, and maintain trust with stakeholders.",
       link: "/services/audit-assurance",

@@ -93,7 +93,7 @@ export default function OurServices() {
             desc: "Our team provide professional, cost-effective accounting solutions. We manage financial records, reporting, and compliance so you can focus on growth.",
         },
         {
-            title: "Audit Compliance & Assurance Services",
+            title: "Audit Advisory & Compliance Assurance",
             image: Services3,
             href: "/services/audit-assurance",
             desc: "Our team help organisations meet statutory requirements, enhance investor confidence, and maintain trust with stakeholders.",
