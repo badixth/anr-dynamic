@@ -69,48 +69,63 @@ export default function Approach() {
         </div>
       </div>
 
-      {/* Approach Cards */}
-      <div className="mt-[48px] md:mt-[64px] grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[24px]">
-        {approaches.map((item, idx) => (
-          <div
-            key={idx}
-            className="relative bg-[#0D0D0D] dark:bg-[#111111] border border-white/[0.06] rounded-[16px] p-[32px] md:p-[40px] overflow-hidden group hover:border-[#F2B611]/[0.2] transition-colors duration-300"
-          >
-            {/* Watermark number */}
-            <span className="absolute top-[-8px] right-[16px] text-[100px] md:text-[140px] font-bold leading-none text-white/[0.03] select-none pointer-events-none font-heading">
-              {item.number}
-            </span>
-
-            <div className="relative z-10 flex flex-col gap-[20px]">
-              {/* Icon + Number row */}
-              <div className="flex items-center gap-[16px]">
-                <div className="w-[52px] h-[52px] md:w-[56px] md:h-[56px] flex items-center justify-center">
-                  <item.Icon className="w-[44px] h-[44px] md:w-[48px] md:h-[48px]" />
-                </div>
-                <span className="text-[#F2B611]/[0.4] text-[14px] font-bold tracking-widest">
-                  STEP {item.number}
+      {/* Process Flow */}
+      <div className="mt-[48px] md:mt-[64px]">
+        {/* Desktop step indicators with connecting line */}
+        <div className="hidden lg:grid grid-cols-4 gap-[20px] relative mb-[16px]">
+          {/* Connecting line */}
+          <div className="absolute top-1/2 left-[12.5%] right-[12.5%] h-[2px] -translate-y-1/2 bg-gradient-to-r from-[#F2B611]/[0.06] via-[#F2B611]/[0.3] to-[#F2B611]/[0.06]" />
+          {approaches.map((item, idx) => (
+            <div key={`node-${idx}`} className="flex justify-center">
+              <div className="relative z-10 w-[48px] h-[48px] rounded-full bg-[#0D0D0D] dark:bg-[#111111] border-2 border-[#F2B611]/[0.4] flex items-center justify-center shadow-[0_0_16px_rgba(242,182,17,0.1)]">
+                <span className="text-[#F2B611] text-[16px] font-bold font-heading">
+                  {item.number}
                 </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[16px] md:gap-[20px]">
+          {approaches.map((item, idx) => (
+            <div
+              key={idx}
+              className="relative bg-[#0D0D0D] dark:bg-[#111111] border border-white/[0.06] rounded-[16px] p-[24px] md:p-[28px] w-full flex flex-col items-center text-center gap-[16px] group hover:border-[#F2B611]/[0.2] transition-colors duration-300"
+            >
+              {/* Mobile step badge */}
+              <div className="lg:hidden inline-flex items-center bg-[#F2B611]/[0.1] border border-[#F2B611]/[0.25] text-[#F2B611] text-[12px] font-bold px-[12px] py-[5px] rounded-full tracking-widest">
+                STEP {item.number}
+              </div>
+
+              {/* Icon */}
+              <div className="w-[56px] h-[56px] md:w-[64px] md:h-[64px] flex items-center justify-center">
+                <item.Icon className="w-[48px] h-[48px] md:w-[56px] md:h-[56px]" />
               </div>
 
               {/* Title */}
               <Typography
-                size={24}
-                sizeMobile={20}
+                size={20}
+                sizeMobile={18}
                 weight={700}
                 color="#fff"
                 noDarkMode
-                lineHeight={32}
-                lineHeightMobile={28}
+                lineHeight={28}
+                lineHeightMobile={24}
                 heading
               >
                 {item.title}
               </Typography>
 
+              {/* Divider */}
+              <div className="w-[32px] h-[2px] bg-[#F2B611]/[0.3] rounded-full" />
+
               {/* Description */}
               <Typography
-                size={15}
-                lineHeight={26}
-                lineHeightMobile={24}
+                size={14}
+                sizeMobile={13}
+                lineHeight={22}
+                lineHeightMobile={20}
                 color="#B4B4B4"
                 noDarkMode
                 className="text-balance"
@@ -118,8 +133,8 @@ export default function Approach() {
                 {item.description}
               </Typography>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
