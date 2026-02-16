@@ -46,7 +46,6 @@ export default function AuditAssurancePage() {
       <Suspense fallback={<div>Loading...</div>}>
         <ServiceDetail
           tag="Key Services"
-          headline="Professional Audit & Assurance for Regulatory Compliance"
           description="We deliver reliable audit and assurance services that help your organisation meet statutory requirements and maintain trust with stakeholders."
           features={[
             "Audit issue resolution & advisory",

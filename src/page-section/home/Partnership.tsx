@@ -1,4 +1,3 @@
-import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
 import Icons from "@/src/component/Icons";
 
@@ -54,18 +53,13 @@ export default function Partnership() {
   return (
     <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
       <div className="flex flex-col items-center text-center gap-[24px] mb-[48px] md:mb-[64px]">
-        <Tag>
-          <Typography size={14} sizeMobile={12} weight={500}>
-            Why Choose Us
-          </Typography>
-        </Tag>
         <Typography
           as="div"
           size={40}
-          sizeMobile={26}
+          sizeMobile={28}
           weight={700}
           lineHeight={48}
-          lineHeightMobile={34}
+          lineHeightMobile={36}
           heading
         >
           Why Partner With <span className="text-[#F2B611]">ANR</span> Dynamic Ventures
@@ -131,8 +125,9 @@ export default function Partnership() {
 
             {/* Description */}
             <Typography
-              size={14}
-              lineHeight={24}
+              size={16}
+              sizeMobile={16}
+              lineHeight={26}
               color="#B4B4B4"
               noDarkMode
             >
@@ -155,8 +150,9 @@ export default function Partnership() {
                     />
                   </div>
                   <Typography
-                    size={14}
-                    lineHeight={22}
+                    size={16}
+                    sizeMobile={16}
+                    lineHeight={24}
                     color="#D4D4D4"
                     noDarkMode
                   >

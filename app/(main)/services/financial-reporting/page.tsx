@@ -46,7 +46,6 @@ export default function FinancialReportingPage() {
       <Suspense fallback={<div>Loading...</div>}>
         <ServiceDetail
           tag="Key Services"
-          headline="Comprehensive Financial Reporting and Compliance Solutions"
           description="From statutory reporting to tax filing, we ensure your business stays compliant and your stakeholders stay informed."
           features={[
             "Statutory and management reporting",

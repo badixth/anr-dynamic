@@ -1,4 +1,3 @@
-import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
 import { companyInfo } from "@/src/data/company";
 
@@ -13,21 +12,16 @@ export default function WhyChooseUs() {
   return (
     <div className="bg-[#F5F5F5] dark:bg-[#0D0D0D] py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
       <div className="flex flex-col items-center text-center gap-[24px] mb-[48px]">
-        <Tag>
-          <Typography size={14} sizeMobile={12} weight={500}>
-            Why Choose Us
-          </Typography>
-        </Tag>
         <Typography
           as="div"
           size={40}
-          sizeMobile={26}
+          sizeMobile={28}
           weight={700}
           lineHeight={48}
-          lineHeightMobile={34}
+          lineHeightMobile={36}
           heading
         >
-          As Your Strategic Partner
+          Why Choose Us
         </Typography>
       </div>
 

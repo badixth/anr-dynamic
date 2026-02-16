@@ -108,7 +108,8 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
           color="#E0E0E0"
           noDarkMode
           size={18}
-          className="mt-[24px] lg:w-[45%] text-balance"
+          weight={600}
+          className="mt-[24px] lg:w-[45%] text-balance "
         >
           Your Trusted Partner in Accounting, Audit & Regulatory Compliance and
           Tax Advisory.

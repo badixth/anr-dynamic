@@ -40,7 +40,7 @@ export default function Form() {
           <Button variant="form" className="px-[32px] py-[16px]">
             SUBMIT INQUIRY
           </Button>
-          <Typography size={14} weight={500} className="text-center">
+          <Typography size={16} sizeMobile={16} weight={500} className="text-center">
             By contacting us, you agree to our{" "}
             <span className="text-[#F2C911]">Terms of Service</span> <br />
             and <span className="text-[#F2C911]">Privacy Policy</span>. We will

@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="text-[#fff] text-[32px] md:text-[40px] font-semibold leading-[41px] md:leading-[48px]">
               Connect With Our Experts Today!
             </div>
-            <div className="text-[#fff] text-[14px] text-balance">
+            <div className="text-[#fff] text-[16px] text-balance">
               From Accounting Support to Strategic Corporate Advice, our
               services are designed to help your business thrive. Let our
               experts provide the insights you need to succeed.
@@ -96,27 +96,27 @@ export default function Footer() {
             <div>
               <div className="text-[#B4B4B4] mb-[24px]">Services</div>
               <div className="flex flex-col items-start gap-[16px] text-white">
-                <Link href="/services/erp" className="cursor-pointer">
-                  Enterprise Resource Planning (ERP)
-                </Link>
-                <Link href="/services/corporate-advisory" className="cursor-pointer">
-                  Corporate Advisory
-                </Link>
-                <Link href="/services/financial-reporting" className="cursor-pointer">
-                  Financial Reporting & Compliance
-                </Link>
                 <Link href="/services/accounting-advisory" className="cursor-pointer">
                   Accounting Advisory
                 </Link>
                 <Link href="/services/audit-assurance" className="cursor-pointer">
                   Audit Advisory & Compliance Assurance
                 </Link>
+                <Link href="/services/financial-reporting" className="cursor-pointer">
+                  Financial Reporting & Compliance
+                </Link>
+                <Link href="/services/corporate-advisory" className="cursor-pointer">
+                  Corporate Advisory
+                </Link>
+                <Link href="/services/erp" className="cursor-pointer">
+                  Enterprise Resource Planning (ERP)
+                </Link>
               </div>
             </div>
 
             <div className="col-span-2 md:col-span-1">
               <div className="text-[#B4B4B4] mb-[24px]">Contact</div>
-              <div className="flex flex-col items-start gap-[16px] text-white text-[14px]">
+              <div className="flex flex-col items-start gap-[16px] text-white text-[16px]">
                 <div>
                   UOA Business Park Unit 2-1, Level 2, The Podium, Tower 3 Jalan
                   Pengaturcara, Seksyen U1/51a 40150 Shah Alam Selangor,

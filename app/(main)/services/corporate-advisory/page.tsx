@@ -46,7 +46,6 @@ export default function CorporateAdvisoryPage() {
       <Suspense fallback={<div>Loading...</div>}>
         <ServiceDetail
           tag="Key Services"
-          headline="Strategic Business Advisory for Growth and Risk Management"
           description="From business strategy to financial restructuring, we provide expert guidance to help your business navigate complex decisions and unlock growth."
           features={[
             "Business strategy and planning",

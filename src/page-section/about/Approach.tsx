@@ -1,4 +1,3 @@
-import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
 
 import LibraryIcon from "@/src/assets/icons/isocons/local-library-20.svg";
@@ -43,18 +42,13 @@ export default function Approach() {
       {/* Section Header */}
       <div className="flex flex-col items-center text-center w-full gap-[24px]">
         <div className="flex flex-col items-center gap-[24px]">
-          <Tag>
-            <Typography size={14} sizeMobile={12} weight={500}>
-              Our Methodology
-            </Typography>
-          </Tag>
           <Typography
             as="div"
             size={40}
-            sizeMobile={26}
+            sizeMobile={28}
             weight={700}
             lineHeight={48}
-            lineHeightMobile={34}
+            lineHeightMobile={36}
             heading
           >
             How We Deliver Results
@@ -122,10 +116,9 @@ export default function Approach() {
 
               {/* Description */}
               <Typography
-                size={14}
-                sizeMobile={13}
-                lineHeight={22}
-                lineHeightMobile={20}
+                size={16}
+                sizeMobile={16}
+                lineHeight={24}
                 color="#B4B4B4"
                 noDarkMode
                 className="text-balance"

@@ -1,13 +1,12 @@
 import HeroBackground from "@/src/component/HeroBackground";
 import Typography from "@/src/component/Typography";
 import Button from "@/src/component/Button";
-import Tag from "@/src/component/Tag";
 
 export default function Hero() {
     return (
         <HeroBackground>
             <div className="min-h-[75dvh] md:min-h-[70dvh] lg:min-h-[68dvh]w-full flex flex-col items-center">
-                <Tag color="#fff" noDarkMode noIcon>Sorry for a while</Tag>
+                <Typography size={18} color="#D4D4D4" noDarkMode weight={500}>Sorry for a while</Typography>
                 <div className="flex flex-col items-center gap-[32px] md:gap-[12px] mt-[48px]">
                     <Typography as="div" color="#fff" className="text-center" size={88} sizeMobile={100} weight={600} lineHeightMobile={100} letterSpacing={-1.44} noDarkMode heading>
                         We hit <br className="md:hidden"/> a snag!

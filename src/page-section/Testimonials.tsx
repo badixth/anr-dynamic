@@ -5,7 +5,6 @@ import gsap from "gsap";
 
 import Image from "next/image";
 import Icons from "@/src/component/Icons";
-import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
 import { testimonials } from "@/src/data/testimonials";
 
@@ -250,11 +249,17 @@ export default function Testimonials() {
 
   return (
     <div className="bg-white dark:bg-[#070707] w-full px-[16px] md:px-[72px] py-[48px] md:py-[80px] flex flex-col items-center justify-center gap-[48px] md:gap-[64px]">
-      <Tag>
-        <Typography size={14} sizeMobile={12} weight={500}>
-          Client Testimonials
-        </Typography>
-      </Tag>
+      <Typography
+        as="div"
+        size={40}
+        sizeMobile={28}
+        weight={700}
+        lineHeight={48}
+        lineHeightMobile={36}
+        heading
+      >
+        Clients Testimony
+      </Typography>
 
       <div className="relative w-full md:px-[32px] text-center">
         {/* Desktop arrows */}

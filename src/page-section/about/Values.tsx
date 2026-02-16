@@ -1,4 +1,3 @@
-import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
 import { companyInfo } from "@/src/data/company";
 
@@ -13,21 +12,16 @@ export default function Values() {
   return (
     <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
       <div className="flex flex-col items-center text-center gap-[24px] mb-[64px]">
-        <Tag>
-          <Typography size={14} sizeMobile={12} weight={500}>
-            Our Values
-          </Typography>
-        </Tag>
         <Typography
           as="div"
           size={40}
-          sizeMobile={26}
+          sizeMobile={28}
           weight={700}
           lineHeight={48}
-          lineHeightMobile={34}
+          lineHeightMobile={36}
           heading
         >
-          Built on Integrity, Excellence, Collaboration & Innovation
+          Our Values
         </Typography>
         <Typography size={16} lineHeight={24} className="max-w-[800px] text-balance">
           Our core values guide every interaction, decision, and service we
@@ -53,8 +47,9 @@ export default function Values() {
               {value.title}
             </Typography>
             <Typography
-              size={14}
-              lineHeight={22}
+              size={16}
+              sizeMobile={16}
+              lineHeight={24}
               color="#666666"
               noDarkMode
               darkColor="#D4D4D4"

@@ -12,11 +12,11 @@ const navItems = [
     name: "Services",
     path: "/services",
     dropdown: [
-      { name: "Enterprise Resource Planning (ERP)", path: "/services/erp" },
-      { name: "Corporate Advisory", path: "/services/corporate-advisory" },
-      { name: "Financial Reporting & Compliance", path: "/services/financial-reporting" },
       { name: "Accounting Advisory", path: "/services/accounting-advisory" },
       { name: "Audit Advisory & Compliance Assurance", path: "/services/audit-assurance" },
+      { name: "Financial Reporting & Compliance", path: "/services/financial-reporting" },
+      { name: "Corporate Advisory", path: "/services/corporate-advisory" },
+      { name: "Enterprise Resource Planning (ERP)", path: "/services/erp" },
     ]
   },
   { name: "Careers", path: "/careers" },

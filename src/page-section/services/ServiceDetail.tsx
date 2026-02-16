@@ -1,12 +1,10 @@
 "use client";
 
 import Typography from "@/src/component/Typography";
-import Tag from "@/src/component/Tag";
 import Icons from "@/src/component/Icons";
 
 type ServiceDetailProps = {
   tag: string;
-  headline: string;
   description: string;
   features: string[];
   whyChooseItems?: {
@@ -17,7 +15,6 @@ type ServiceDetailProps = {
 
 export default function ServiceDetail({
   tag,
-  headline,
   description,
   features,
   whyChooseItems,
@@ -26,13 +23,8 @@ export default function ServiceDetail({
     <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
       {/* What's Included Section */}
       <div className="flex flex-col items-center text-center gap-[24px] mb-[64px]">
-        <Tag>
-          <Typography size={14} sizeMobile={12} weight={500}>
-            {tag}
-          </Typography>
-        </Tag>
-        <Typography as="div" size={40} sizeMobile={26} weight={700} lineHeight={48} lineHeightMobile={34} heading>
-          {headline}
+        <Typography as="div" size={40} sizeMobile={28} weight={700} lineHeight={48} lineHeightMobile={36} heading>
+          {tag}
         </Typography>
         <Typography size={16} lineHeight={24} className="max-w-[800px]">
           {description}
@@ -70,7 +62,7 @@ export default function ServiceDetail({
                 <Typography size={20} weight={600}>
                   {item.title}
                 </Typography>
-                <Typography size={14} lineHeight={20} color="#666666" noDarkMode darkColor="#D4D4D4">
+                <Typography size={16} sizeMobile={16} lineHeight={24} color="#666666" noDarkMode darkColor="#D4D4D4">
                   {item.description}
                 </Typography>
               </div>

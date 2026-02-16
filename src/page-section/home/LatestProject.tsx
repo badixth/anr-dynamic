@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Icons from "@/src/component/Icons";
-import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
 
-import Eclipse from '@/src/assets/images/lates-project-eclipse.png';
 import Portofolio1 from '@/src/assets/images/Portfolio-1.png';
 import Portofolio2 from '@/src/assets/images/Portfolio-2.png';
 import Portofolio3 from '@/src/assets/images/Portfolio-3.png';
@@ -13,12 +11,9 @@ export default function LatestProject() {
         <div className="bg-white dark:bg-[#070707] w-full px-[20px] md:px-[72px] py-[48px] md:py-[80px]">
             <div className="flex flex-col items-center text-center w-full gap-[24px]">
                 <div className="flex flex-col items-center gap-[24px]">
-                    <Tag>
-                        <Typography size={14} sizeMobile={12} weight={500}>Latest Projects</Typography>
-                    </Tag>
-                    <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff] font-heading">
-                        Showcasing Creativity, Inspiring <Image src={Eclipse} alt="Eclipse" className="inline w-10 md:w-20" /> Possibilities
-                    </div>
+                    <Typography as="div" size={40} sizeMobile={28} weight={700} lineHeight={48} lineHeightMobile={36} heading>
+                        Latest Projects
+                    </Typography>
                 </div>
                 <div className="flex gap-[10px] border-b border-[#070707] dark:border-[#fff] cursor-pointer">
                     <Typography size={16} weight={500}>SEE ALL PORTOFOLIO</Typography>

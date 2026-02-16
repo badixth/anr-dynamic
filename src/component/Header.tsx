@@ -49,7 +49,7 @@ export default function Header({
 
   return (
     <div
-      className={`fixed top-0 z-20 left-0 w-full h-[10dvh] px-[20px] md:px-[72px] md:py-[32px] flex justify-between items-center transition-colors duration-300
+      className={`fixed top-0 z-20 left-0 w-full h-[10dvh] px-[20px] md:px-[72px] py-[16px] md:py-[32px] flex justify-between items-center transition-colors duration-300
       ${hasScrolled ? "bg-[#070707]" : ""}
     `}
     >
@@ -58,7 +58,7 @@ export default function Header({
         <Image
           src={LogoImg}
           alt="ANR Dynamic Ventures"
-          className="w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px] h-auto"
+          className="w-[280px] sm:w-[280px] md:w-[280px] lg:w-[300px] h-auto"
           priority
         />
       </Link>

@@ -46,7 +46,6 @@ export default function ERPPage() {
       <Suspense fallback={<div>Loading...</div>}>
         <ServiceDetail
           tag="Key Services"
-          headline="Comprehensive ERP Solutions for Business Operations"
           description="From system selection to ongoing support, we deliver end-to-end ERP solutions that unify and optimise your business operations."
           features={[
             "ERP system selection and implementation",

@@ -1,6 +1,5 @@
 import { Suspense, lazy } from "react";
 import Typography from "@/src/component/Typography";
-import Tag from "@/src/component/Tag";
 import Button from "@/src/component/Button";
 import Link from "next/link";
 import HeroBackground from "@/src/component/HeroBackground";
@@ -134,18 +133,13 @@ export default function CareersPage() {
       {/* Why Work With ANR Section */}
       <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
         <div className="flex flex-col items-center text-center gap-[24px] mb-[64px]">
-          <Tag>
-            <Typography size={14} sizeMobile={12} weight={500}>
-              Why <span className="text-[#F2B611]">ANR</span>
-            </Typography>
-          </Tag>
           <Typography
             as="div"
-            size={48}
-            sizeMobile={32}
+            size={40}
+            sizeMobile={28}
             weight={700}
-            lineHeight={56}
-            lineHeightMobile={41.6}
+            lineHeight={48}
+            lineHeightMobile={36}
             heading
           >
             Why Work With <span className="text-[#F2B611]">ANR</span> Dynamic Ventures
@@ -168,8 +162,9 @@ export default function CareersPage() {
                 {item.title}
               </Typography>
               <Typography
-                size={14}
-                lineHeight={22}
+                size={16}
+                sizeMobile={16}
+                lineHeight={24}
                 color="#666666"
                 darkColor="#D4D4D4"
                 noDarkMode
@@ -187,21 +182,16 @@ export default function CareersPage() {
         className="bg-[#F5F5F5] dark:bg-[#0D0D0D] py-[48px] md:py-[80px] px-[16px] md:px-[72px]"
       >
         <div className="flex flex-col items-center text-center gap-[24px] mb-[64px]">
-          <Tag>
-            <Typography size={14} sizeMobile={12} weight={500}>
-              Open Positions
-            </Typography>
-          </Tag>
           <Typography
             as="div"
-            size={48}
-            sizeMobile={32}
+            size={40}
+            sizeMobile={28}
             weight={700}
-            lineHeight={56}
-            lineHeightMobile={41.6}
+            lineHeight={48}
+            lineHeightMobile={36}
             heading
           >
-            Current Career Opportunities
+            Open Positions
           </Typography>
           <Typography size={16} lineHeight={24} className="max-w-[800px]">
             Explore our current openings and find the right fit for your skills
@@ -243,8 +233,9 @@ export default function CareersPage() {
                 </Link>
               </div>
               <Typography
-                size={14}
-                lineHeight={22}
+                size={16}
+                sizeMobile={16}
+                lineHeight={24}
                 color="#666666"
                 darkColor="#D4D4D4"
                 noDarkMode
@@ -260,8 +251,9 @@ export default function CareersPage() {
             Don't see the right position?
           </Typography>
           <Typography
-            size={14}
-            lineHeight={22}
+            size={16}
+            sizeMobile={16}
+            lineHeight={24}
             color="#666666"
             darkColor="#D4D4D4"
             noDarkMode
@@ -280,18 +272,13 @@ export default function CareersPage() {
       {/* Application Process Section */}
       <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
         <div className="flex flex-col items-center text-center gap-[24px] mb-[64px]">
-          <Tag>
-            <Typography size={14} sizeMobile={12} weight={500}>
-              Application Process
-            </Typography>
-          </Tag>
           <Typography
             as="div"
-            size={48}
-            sizeMobile={32}
+            size={40}
+            sizeMobile={28}
             weight={700}
-            lineHeight={56}
-            lineHeightMobile={41.6}
+            lineHeight={48}
+            lineHeightMobile={36}
             heading
           >
             How to Apply
@@ -313,8 +300,9 @@ export default function CareersPage() {
                 {step.title}
               </Typography>
               <Typography
-                size={14}
-                lineHeight={22}
+                size={16}
+                sizeMobile={16}
+                lineHeight={24}
                 color="#666666"
                 darkColor="#D4D4D4"
                 noDarkMode

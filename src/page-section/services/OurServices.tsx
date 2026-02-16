@@ -5,7 +5,6 @@ import { useTheme } from "@/src/context/ThemeProvider";
 
 import Image from "next/image";
 import Link from "next/link";
-import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
 
 import Services1 from '@/src/assets/images/service-1.png';
@@ -69,24 +68,6 @@ export default function OurServices() {
 
     const services = [
         {
-            title: "Enterprise Resource Planning (ERP)",
-            image: Services5,
-            href: "/services/erp",
-            desc: "Our ERP solutions help businesses streamline operations, integrate key processes, and gain real-time visibility across finance, inventory, HR, and more - all in one unified platform.",
-        },
-        {
-            title: "Corporate Advisory Services",
-            image: Services4,
-            href: "/services/corporate-advisory",
-            desc: "Our Corporate Advisory services help businesses navigate complex decisions, optimise performance, and unlock growth opportunities.",
-        },
-        {
-            title: "Financial Reporting & Compliance",
-            image: Services2,
-            href: "/services/financial-reporting",
-            desc: "Our team ensures your business meets regulatory standards, mitigates risk, and maintains stakeholder confidence.",
-        },
-        {
             title: "Accounting Advisory",
             image: Services1,
             href: "/services/accounting-advisory",
@@ -98,6 +79,24 @@ export default function OurServices() {
             href: "/services/audit-assurance",
             desc: "Our team help organisations meet statutory requirements, enhance investor confidence, and maintain trust with stakeholders.",
         },
+        {
+            title: "Financial Reporting & Compliance",
+            image: Services2,
+            href: "/services/financial-reporting",
+            desc: "Our team ensures your business meets regulatory standards, mitigates risk, and maintains stakeholder confidence.",
+        },
+        {
+            title: "Corporate Advisory Services",
+            image: Services4,
+            href: "/services/corporate-advisory",
+            desc: "Our Corporate Advisory services help businesses navigate complex decisions, optimise performance, and unlock growth opportunities.",
+        },
+        {
+            title: "Enterprise Resource Planning (ERP)",
+            image: Services5,
+            href: "/services/erp",
+            desc: "Our ERP solutions help businesses streamline operations, integrate key processes, and gain real-time visibility across finance, inventory, HR, and more - all in one unified platform.",
+        },
     ];
 
     return (
@@ -105,13 +104,12 @@ export default function OurServices() {
             <div className="bg-[#070707] dark:bg-[#1D1D1D] rounded-[20px] py-[64px] px-[16px] md:p-[60px]">
                 <div className="w-full flex flex-col items-center text-center gap-[24px]">
                     <div className="flex flex-col items-center gap-[24px]">
-                        <Tag color="#fff">Our Services</Tag>
-                        <Typography as="div" noDarkMode size={40} sizeMobile={26} weight={700} lineHeight={48} lineHeightMobile={34} color="#fff" heading>
-                            Professional Services for Malaysian Business Compliance
+                        <Typography as="div" noDarkMode size={40} sizeMobile={28} weight={700} lineHeight={48} lineHeightMobile={36} color="#fff" heading>
+                            Our Services
                         </Typography>
                     </div>
                     <div className="flex flex-col items-center gap-[14px] max-w-[600px]">
-                        <Typography size={14} noDarkMode color="#fff">
+                        <Typography size={16} sizeMobile={16} noDarkMode color="#fff">
                             From financial record management to statutory audit and ERP implementation, we provide comprehensive solutions for every stage of your business journey.
                         </Typography>
                     </div>
@@ -143,8 +141,9 @@ export default function OurServices() {
                             <Image src={service.image} alt={service.title} className="w-full lg:w-[20rem] rounded-[20px] order-3 lg:order-2" />
                             <Typography
                                 as="div"
-                                size={14}
-                                lineHeight={20}
+                                size={16}
+                                sizeMobile={16}
+                                lineHeight={24}
                                 noDarkMode
                                 color="#fff"
                                 className="w-full order-2 lg:w-[30%] lg:order-3"

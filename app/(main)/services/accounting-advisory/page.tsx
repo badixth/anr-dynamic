@@ -46,7 +46,6 @@ export default function AccountingAdvisoryPage() {
       <Suspense fallback={<div>Loading...</div>}>
         <ServiceDetail
           tag="Key Services"
-          headline="Professional Accounting Solutions for Business Growth"
           description="From bookkeeping to cloud-based accounting, we provide comprehensive accounting services that keep your finances organised, compliant, and ready for growth."
           features={[
             "Full bookkeeping and accounting services",
