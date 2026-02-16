@@ -58,7 +58,7 @@ export default function Header({
         <Image
           src={LogoImg}
           alt="ANR Dynamic Ventures"
-          className="w-[200px] sm:w-[200px] md:w-[220px] lg:w-[220px] h-auto"
+          className="w-[250px] sm:w-[270px] md:w-[300px] lg:w-[320px] h-auto"
           priority
         />
       </Link>

@@ -37,8 +37,8 @@ export default function Approach() {
   return (
     <div className="bg-white dark:bg-[#070707] w-full px-[16px] md:px-[72px] py-[48px] md:py-[80px]">
       {/* Section Header */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end w-full gap-[16px]">
-        <div className="flex flex-col items-start gap-[24px] w-full lg:w-[50%]">
+      <div className="flex flex-col items-center text-center w-full gap-[24px]">
+        <div className="flex flex-col items-center gap-[24px]">
           <Tag>
             <Typography size={14} sizeMobile={12} weight={500}>
               Our Methodology
@@ -46,17 +46,17 @@ export default function Approach() {
           </Tag>
           <Typography
             as="div"
-            size={48}
-            sizeMobile={32}
+            size={40}
+            sizeMobile={26}
             weight={700}
-            lineHeight={56}
-            lineHeightMobile={41.6}
+            lineHeight={48}
+            lineHeightMobile={34}
             heading
           >
             How We Deliver Results
           </Typography>
         </div>
-        <div className="flex gap-[10px] w-full lg:w-[40%]">
+        <div className="max-w-[700px]">
           <Typography size={16} weight={500} lineHeight={24}>
             Our structured methodology ensures every compliance challenge is
             addressed systematically, with clear steps from initial diagnosis

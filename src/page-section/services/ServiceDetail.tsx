@@ -25,13 +25,13 @@ export default function ServiceDetail({
   return (
     <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
       {/* What's Included Section */}
-      <div className="flex flex-col items-start gap-[24px] mb-[64px]">
+      <div className="flex flex-col items-center text-center gap-[24px] mb-[64px]">
         <Tag>
           <Typography size={14} sizeMobile={12} weight={500}>
             {tag}
           </Typography>
         </Tag>
-        <Typography as="div" size={48} sizeMobile={32} weight={700} lineHeight={56} lineHeightMobile={41.6} heading>
+        <Typography as="div" size={40} sizeMobile={26} weight={700} lineHeight={48} lineHeightMobile={34} heading>
           {headline}
         </Typography>
         <Typography size={16} lineHeight={24} className="max-w-[800px]">

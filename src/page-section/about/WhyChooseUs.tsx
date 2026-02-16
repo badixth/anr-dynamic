@@ -13,11 +13,11 @@ export default function WhyChooseUs() {
         </Tag>
         <Typography
           as="div"
-          size={48}
-          sizeMobile={32}
+          size={40}
+          sizeMobile={26}
           weight={700}
-          lineHeight={56}
-          lineHeightMobile={41.6}
+          lineHeight={48}
+          lineHeightMobile={34}
           heading
         >
           As Your Strategic Partner

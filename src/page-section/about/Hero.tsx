@@ -55,54 +55,39 @@ export default function Hero() {
   }, []);
   return (
     <HeroBackground>
-      <div className="flex flex-col lg:flex-row justify-between items-start self-stretch ">
-        <div className="w-full order-2 lg:w-[70%] lg:order-1">
-          <Typography
-            as="div"
-            color="#fff"
-            size={72}
-            sizeTablet={52}
-            sizeMobile={40}
-            weight={600}
-            lineHeight={85}
-            lineHeightTablet={64}
-            lineHeightMobile={52}
-            letterSpacing={-2.16}
-            letterSpacingMobile={-1.2}
-            className="text-[72px]"
-            noDarkMode
-            heading
-          >
-            Professional Financial Advisory Built on Integrity & Expertise
-          </Typography>
-          <Typography
-            color="#fff"
-            size={18}
-            noDarkMode
-            className="mt-[24px] lg:w-[65%]"
-          >
-            We provide accurate, reliable, and actionable financial services
-            that empower Malaysian businesses to make confident decisions and
-            achieve long-term success through expert accounting, audit, and tax
-            advisory.
-          </Typography>
-          <Link href="/contact">
-            <Button variant="primary" className="mt-[32px]">
-              MEET OUR TEAM
-            </Button>
-          </Link>
-        </div>
-        {/* <div className="flex flex-col items-start lg:items-end gap-[12px] pt-[24px] order-1 lg:order-2">
-          <div className="flex items-center">
-            <Image src={Avatar1} alt="Avatar1" className="w-[32px]" />
-            <Image src={Avatar2} alt="Avatar2" className="w-[32px] ml-[-8px]" />
-            <Image src={Avatar3} alt="Avatar3" className="w-[32px] ml-[-8px]" />
-            <Image src={Avatar4} alt="Avatar4" className="w-[32px] ml-[-8px]" />
-          </div>
-          <Typography color="#fff" noDarkMode>
-            100+ Companies Served
-          </Typography>
-        </div> */}
+      <div className="w-full lg:w-[70%] lg:mx-auto flex flex-col items-center text-center self-stretch">
+        <Typography
+          as="div"
+          color="#fff"
+          size={72}
+          sizeTablet={52}
+          sizeMobile={40}
+          weight={600}
+          lineHeight={85}
+          lineHeightTablet={64}
+          lineHeightMobile={52}
+          letterSpacing={-2.16}
+          letterSpacingMobile={-1.2}
+          noDarkMode
+          heading
+        >
+          Professional Financial Advisory Built on Integrity & Expertise
+        </Typography>
+        <Typography
+          color="#fff"
+          size={18}
+          noDarkMode
+          className="mt-[24px] lg:w-[65%]"
+        >
+          We provide accurate, reliable, and actionable financial services that
+          empower Malaysian businesses to make confident decisions and achieve
+          long-term success through expert accounting, audit, and tax advisory.
+        </Typography>
+        <Link href="/contact">
+          <Button variant="primary" className="mt-[32px]">
+            MEET OUR TEAM
+          </Button>
+        </Link>
       </div>
       <div className="mt-[60px] py-[48px] md:py-[60px] flex flex-col items-center gap-[32px]">
         <Typography

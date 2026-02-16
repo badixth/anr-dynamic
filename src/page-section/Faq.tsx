@@ -16,16 +16,15 @@ export default function Faq({ items, headline, description }: FaqProps = {}) {
     }));
     return (
         <div className="bg-white dark:bg-[#070707] w-full px-[16px] md:px-[72px] py-[48px] md:py-[80px]">
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end w-full gap-[16px]">
-                <div className="flex flex-col items-start gap-[24px]">
+            <div className="flex flex-col items-center text-center w-full gap-[24px]">
+                <div className="flex flex-col items-center gap-[24px]">
                     <Tag>
                         <Typography size={14} sizeMobile={12} weight={500}>Frequently Asked Questions</Typography>
                     </Tag>
                     <div className="text-[32px] md:text-[48px] font-bold leading-[41.6px] md:leading-[56px] text-[#070707] dark:text-[#fff] font-heading">
                         {headline || (
                             <>
-                                Common Questions About <br />
-                                Our Advisory Services
+                                Common Questions About Our Advisory Services
                             </>
                         )}
                     </div>
@@ -34,8 +33,7 @@ export default function Faq({ items, headline, description }: FaqProps = {}) {
                     <Typography size={16} sizeMobile={14} weight={500} lineHeight={24}>
                         {description || (
                             <>
-                                Clear Answers to Compliance Issues, <br />
-                                Helping You Move Forward with Confidence
+                                Clear Answers to Compliance Issues, Helping You Move Forward with Confidence
                             </>
                         )}
                     </Typography>

@@ -27,18 +27,17 @@ export default function ServicePageHero({
 }: ServicePageHeroProps) {
   return (
     <HeroBackground>
-      <div className="flex flex-col lg:flex-row justify-between items-start self-stretch gap-[8px]">
-        <div className="w-full order-2 lg:w-[70%] lg:order-1">
+      <div className="w-full lg:w-[70%] lg:mx-auto flex flex-col items-center text-center self-stretch">
           <Typography
             as="div"
             color="#fff"
-            size={72}
-            sizeTablet={52}
-            sizeMobile={40}
+            size={64}
+            sizeTablet={48}
+            sizeMobile={32}
             weight={600}
-            lineHeight={85}
-            lineHeightTablet={64}
-            lineHeightMobile={52}
+            lineHeight={76}
+            lineHeightTablet={58}
+            lineHeightMobile={42}
             letterSpacing={-2.16}
             letterSpacingMobile={-1.2}
             noDarkMode
@@ -60,7 +59,7 @@ export default function ServicePageHero({
             noDarkMode
             color="#fff"
             size={18}
-            className="mt-[24px] w-full lg:w-[70%]"
+            className="mt-[24px] lg:w-[70%]"
           >
             {description}
           </Typography>
@@ -69,7 +68,6 @@ export default function ServicePageHero({
               {ctaText}
             </Button>
           </Link>
-        </div>
       </div>
     </HeroBackground>
   );

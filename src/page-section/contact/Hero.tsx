@@ -11,13 +11,13 @@ export default function Hero() {
           <Typography
             as="div"
             color="#fff"
-            size={72}
-            sizeTablet={52}
-            sizeMobile={40}
+            size={64}
+            sizeTablet={48}
+            sizeMobile={32}
             weight={600}
-            lineHeight={85}
-            lineHeightTablet={64}
-            lineHeightMobile={52}
+            lineHeight={76}
+            lineHeightTablet={58}
+            lineHeightMobile={42}
             letterSpacing={-2.16}
             letterSpacingMobile={-1.2}
             noDarkMode

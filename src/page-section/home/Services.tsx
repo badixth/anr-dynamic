@@ -105,24 +105,24 @@ export default function Services() {
   return (
     <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[8px] md:px-[12px] w-full">
       <div className="bg-[#070707] dark:bg-[#1D1D1D] rounded-[20px] py-[64px] px-[16px] md:p-[60px]">
-        <div className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-end self-stretch gap-[16px]">
-          <div className="flex flex-col w-1/2 items-start gap-[24px]">
+        <div className="w-full flex flex-col items-center text-center gap-[24px]">
+          <div className="flex flex-col items-center gap-[24px]">
             <Tag color="#fff">Our Services</Tag>
             <Typography
               as="div"
               color="#fff"
               noDarkMode
-              size={48}
-              sizeMobile={32}
+              size={40}
+              sizeMobile={26}
               weight={700}
-              lineHeight={56}
-              lineHeightMobile={41.6}
+              lineHeight={48}
+              lineHeightMobile={34}
               heading
             >
               Service We Provide
             </Typography>
           </div>
-          <div className="flex flex-col items-start gap-[48px] lg:gap-[14px] w-full lg:w-[35%]">
+          <div className="flex flex-col items-center gap-[14px]">
             <Typography size={14} noDarkMode color="#fff">
               From financial record management to statutory audit and ERP
               implementation, we provide comprehensive solutions for every stage
@@ -159,7 +159,7 @@ export default function Services() {
                   weight={600}
                   lineHeight={40}
                   noDarkMode
-                  color="#fff"
+                  color="#F2B611"
                   heading
                   className="w-full lg:w-[25%]"
                 >

@@ -5,8 +5,8 @@ import Button from "@/src/component/Button";
 export default function Form() {
   return (
     <div className="bg-white dark:bg-[#070707] flex justify-center items-center py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
-      <div className="w-full lg:w-[50%] flex flex-col items-start gap-[48px]">
-        <div className="flex flex-col items-start gap-[24px]">
+      <div className="w-full lg:w-[50%] flex flex-col items-center text-center gap-[48px]">
+        <div className="flex flex-col items-center gap-[24px]">
           <Typography size={32} weight={600} heading>
             Schedule a Consultation
           </Typography>

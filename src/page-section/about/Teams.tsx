@@ -9,24 +9,24 @@ import Team4 from "@/src/assets/images/team-4.png";
 import Team5 from "@/src/assets/images/team-5.png";
 
 const director = {
-  name: "AHMAD NAZRI BIN ABD RAZAK",
-  position: "Co-Founder and Director",
-  image: Team2,
+  name: "DR. JASSHA ABDOLLAH",
+  position: "Co-Founder and Board Advisor",
+  image: Team1,
   description:
-    "Established ANR Dynamic Ventures with a vision to deliver trusted financial advisory services. Specializes in navigating complex regulatory landscapes and building lasting partnerships with Malaysian businesses.",
+    "Brings over three decades of corporate advisory experience spanning Southeast Asia and Dubai, providing strategic leadership and regional expertise to drive business transformation and regulatory excellence.",
 };
 
 const teamMembers = [
   {
-    name: "DR. JASSHA ABDOLLAH",
-    position: "Co-Founder and Board Advisor",
-    image: Team1,
+    name: "AHMAD NAZRI BIN ABD RAZAK",
+    position: "Co-Founder and Director",
+    image: Team2,
     description:
-      "Brings over three decades of corporate advisory experience spanning Southeast Asia and Dubai, providing strategic leadership and regional expertise to drive business transformation and regulatory excellence.",
+      "Established ANR Dynamic Ventures with a vision to deliver trusted financial advisory services. Specializes in navigating complex regulatory landscapes and building lasting partnerships with Malaysian businesses.",
   },
   {
     name: "HJH UMI FADZLON BINTI SEHAT",
-    position: "Head of Corporate Planning",
+    position: "Head of Corporate Strategy",
     image: Team3,
     description:
       "Strategic leader with extensive corporate planning experience. Drives business development initiatives, shapes organizational strategy, and guides clients through complex corporate restructuring and growth challenges.",
@@ -51,8 +51,8 @@ export default function Teams() {
   return (
     <div className="bg-white dark:bg-[#070707] w-full px-[16px] md:px-[72px] py-[48px] md:py-[80px]">
       {/* Section Header */}
-      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-[16px] w-full">
-        <div className="flex flex-col items-start gap-[24px] w-full lg:w-[50%]">
+      <div className="flex flex-col items-center text-center gap-[24px] w-full">
+        <div className="flex flex-col items-center gap-[24px]">
           <Tag>
             <Typography size={14} sizeMobile={12} weight={500}>
               Leadership Team
@@ -60,17 +60,17 @@ export default function Teams() {
           </Tag>
           <Typography
             as="div"
-            size={48}
-            sizeMobile={32}
+            size={40}
+            sizeMobile={26}
             weight={700}
-            lineHeight={56}
-            lineHeightMobile={41.6}
+            lineHeight={48}
+            lineHeightMobile={34}
             heading
           >
             Meet Our Leadership
           </Typography>
         </div>
-        <div className="flex gap-[10px] w-full lg:w-[40%]">
+        <div className="max-w-[700px]">
           <Typography size={16} weight={500} lineHeight={24}>
             Our Team specialises in assisting companies facing challenges with
             regulatory authorities, compliance issues, and changing government
@@ -84,26 +84,26 @@ export default function Teams() {
       </div>
 
       {/* Featured Director Card */}
-      <div className="mt-[48px] md:mt-[64px] bg-[#0D0D0D] dark:bg-[#111111] rounded-[16px] overflow-hidden">
+      <div className="mt-[48px] md:mt-[64px] bg-[#0D0D0D] dark:bg-[#111111] border border-white/[0.06] rounded-[20px] overflow-hidden">
         <div className="flex flex-col lg:flex-row">
           {/* Image */}
-          <div className="relative w-full lg:w-[40%] aspect-[3/4] lg:aspect-auto lg:min-h-[480px] overflow-hidden">
+          <div className="relative w-full lg:w-[25%] aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
             <Image
               src={director.image}
               alt={director.name}
               fill
-              className="object-cover object-top"
+              className="object-cover object-[50%_15%]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/60 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-[#0D0D0D]/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/80 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-[#0D0D0D]/60" />
           </div>
 
           {/* Info */}
-          <div className="relative flex flex-col justify-center gap-[24px] p-[32px] md:p-[48px] lg:p-[64px] w-full lg:w-[60%]">
+          <div className="relative flex flex-col justify-center gap-[24px] p-[32px] md:p-[48px] lg:p-[64px] w-full lg:w-[75%]">
             <span className="absolute top-[16px] right-[24px] text-[120px] md:text-[200px] font-bold leading-none text-[#F2B611]/[0.04] select-none pointer-events-none font-heading">
               ANR
             </span>
             <div className="relative z-10 flex flex-col gap-[24px]">
-              <div className="inline-flex items-center gap-[8px] bg-gradient-to-r from-[#F2B611] to-[#D4A017] text-white text-[12px] md:text-[13px] font-semibold px-[14px] py-[8px] rounded-full w-fit uppercase tracking-wider">
+              <div className="inline-flex items-center w-fit bg-[#F2B611]/[0.15] border border-[#F2B611]/[0.3] text-[#F2B611] text-[11px] md:text-[12px] font-semibold px-[12px] py-[6px] rounded-full uppercase tracking-wider">
                 {director.position}
               </div>
               <Typography
@@ -141,45 +141,48 @@ export default function Teams() {
       </div>
 
       {/* Team Members Grid */}
-      <div className="mt-[32px] md:mt-[48px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[24px]">
+      <div className="mt-[32px] md:mt-[48px] grid grid-cols-2 lg:grid-cols-4 gap-[16px] md:gap-[24px]">
         {teamMembers.map((member, index) => (
           <div
             key={`team_${index}`}
-            className="bg-[#0D0D0D] dark:bg-[#111111] rounded-[16px] overflow-hidden group"
+            className="bg-[#0D0D0D] dark:bg-[#111111] border border-white/[0.06] rounded-[16px] overflow-hidden group hover:border-[#F2B611]/[0.2] transition-colors duration-300"
           >
             {/* Image */}
-            <div className="relative w-full aspect-[3/4] overflow-hidden">
+            <div className="relative w-full aspect-[4/5] overflow-hidden">
               <Image
                 src={member.image}
                 alt={member.name}
                 fill
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                className="object-cover object-[50%_15%] transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-[#0D0D0D]/20 to-transparent" />
               {/* Position badge overlaid on image */}
-              <div className="absolute bottom-[16px] left-[16px] right-[16px]">
-                <div className="inline-flex items-center gap-[4px] bg-[#F2B611]/[0.15] border border-[#F2B611]/[0.3] text-[#F2B611] text-[11px] font-semibold px-[10px] py-[5px] rounded-full uppercase tracking-wider">
+              <div className="absolute bottom-[12px] left-[12px] right-[12px] md:bottom-[16px] md:left-[16px] md:right-[16px]">
+                <div className="inline-flex items-center bg-[#F2B611]/[0.15] border border-[#F2B611]/[0.3] text-[#F2B611] text-[11px] md:text-[12px] font-semibold px-[12px] py-[6px] rounded-full uppercase tracking-wider">
                   {member.position}
                 </div>
               </div>
             </div>
 
             {/* Info */}
-            <div className="p-[20px] flex flex-col gap-[12px]">
+            <div className="p-[16px] md:p-[20px] flex flex-col gap-[8px] md:gap-[12px]">
               <Typography
-                size={18}
-                sizeMobile={16}
+                size={16}
+                sizeMobile={14}
                 weight={700}
                 color="#fff"
                 noDarkMode
-                lineHeight={24}
+                lineHeight={22}
+                lineHeightMobile={20}
               >
                 {member.name}
               </Typography>
               <Typography
                 size={13}
+                sizeMobile={12}
                 weight={400}
                 lineHeight={20}
+                lineHeightMobile={18}
                 color="#B4B4B4"
                 noDarkMode
               >
