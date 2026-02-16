@@ -31,7 +31,7 @@ export default function AboutUs() {
           color="#444444"
           darkColor="#CCCCCC"
         >
-          ANR Dynamic Ventures Sdn Bhd is a specialized accounting, audit, and
+          ANR Dynamic Ventures Sdn Bhd is a specialized accounting, audit and
           tax advisory firm dedicated to helping Malaysian businesses navigate
           complex regulatory requirements and resolve critical financial
           compliance matters with accuracy, integrity, and expert guidance.
