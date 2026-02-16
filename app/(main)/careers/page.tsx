@@ -136,7 +136,7 @@ export default function CareersPage() {
         <div className="flex flex-col items-center text-center gap-[24px] mb-[64px]">
           <Tag>
             <Typography size={14} sizeMobile={12} weight={500}>
-              Why ANR
+              Why <span className="text-[#F2B611]">ANR</span>
             </Typography>
           </Tag>
           <Typography
@@ -148,7 +148,7 @@ export default function CareersPage() {
             lineHeightMobile={41.6}
             heading
           >
-            Why Work With ANR Dynamic Ventures
+            Why Work With <span className="text-[#F2B611]">ANR</span> Dynamic Ventures
           </Typography>
           <Typography size={16} lineHeight={24} className="max-w-[800px]">
             Join a team that values expertise, integrity, and professional
@@ -298,8 +298,8 @@ export default function CareersPage() {
           </Typography>
           <Typography size={16} lineHeight={24} className="max-w-[800px]">
             Our hiring process is designed to be straightforward and respectful
-            of your time. Here's what to expect when you apply to join the ANR
-            team.
+            of your time. Here&apos;s what to expect when you apply to join the{" "}
+            <span className="text-[#F2B611]">ANR</span> team.
           </Typography>
         </div>
 
@@ -356,7 +356,7 @@ export default function CareersPage() {
           >
             Take the next step in your accounting career. Send your resume to
             careers@anrdynamic.com or contact us to learn more about current
-            opportunities at ANR Dynamic Ventures.
+            opportunities at <span className="text-[#F2B611]">ANR</span> Dynamic Ventures.
           </Typography>
           <div className="flex flex-col md:flex-row gap-[16px] mt-[16px]">
             <Link href="/contact">

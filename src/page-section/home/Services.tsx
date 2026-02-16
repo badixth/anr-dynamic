@@ -71,34 +71,34 @@ export default function Services() {
 
   const services = [
     {
+      title: "Enterprise Resource Planning (ERP)",
+      image: Services5,
+      desc: "Our ERP solutions help businesses streamline operations, integrate key processes, and gain real-time visibility across finance, inventory, HR, and more - all in one unified platform.",
+      link: "/services/erp",
+    },
+    {
+      title: "Corporate Advisory Services",
+      image: Services4,
+      desc: "Our Corporate Advisory services help businesses navigate complex decisions, optimise performance, and unlock growth opportunities.",
+      link: "/services/corporate-advisory",
+    },
+    {
+      title: "Financial Reporting & Compliance",
+      image: Services2,
+      desc: "Our team ensures your business meets regulatory standards, mitigates risk, and maintains stakeholder confidence.",
+      link: "/services/financial-reporting",
+    },
+    {
       title: "Accounting Advisory",
       image: Services1,
-      desc: "Comprehensive bookkeeping, payroll processing, financial reporting, management accounts, and cloud accounting implementation to maintain accurate financial records.",
+      desc: "Our team provide professional, cost-effective accounting solutions. We manage financial records, reporting, and compliance so you can focus on growth.",
       link: "/services/accounting-advisory",
     },
     {
-      title: "Tax Advisory",
-      image: Services2,
-      desc: "Tax planning, compliance filing, LHDN audit defense, E-Invoice registration, tax optimization strategies, and comprehensive correspondence with tax authorities.",
-      link: "/services/tax-advisory",
-    },
-    {
-      title: "Audit & Assurance",
+      title: "Audit Compliance & Assurance Services",
       image: Services3,
-      desc: "Statutory audit services, internal control evaluation, audit readiness preparation, and financial statement assurance meeting Malaysian regulatory standards.",
+      desc: "Our team help organisations meet statutory requirements, enhance investor confidence, and maintain trust with stakeholders.",
       link: "/services/audit-assurance",
-    },
-    {
-      title: "Corporate Advisory",
-      image: Services4,
-      desc: "Business strategy consulting, SSM registration and conversions, mergers & acquisitions support, restructuring, and risk management advisory.",
-      link: "/services/corporate-erp",
-    },
-    {
-      title: "ERP System Implementation",
-      image: Services5,
-      desc: "Comprehensive ERP system implementation, business process automation, system integration, and digital transformation consulting for operational efficiency.",
-      link: "/services/corporate-erp",
     },
   ];
 

@@ -4,14 +4,14 @@ import ClientLayout from "./ClientLayout";
 
 export const metadata: Metadata = {
   title: "ANR Dynamic Ventures",
-  description: "Professional Accounting, Tax & Corporate Advisory Services",
+  description: "Professional ERP, Corporate Advisory, Financial Reporting, Accounting & Audit Services",
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",
   },
   openGraph: {
     title: "ANR Dynamic Ventures",
-    description: "Professional Accounting, Tax & Corporate Advisory Services",
+    description: "Professional ERP, Corporate Advisory, Financial Reporting, Accounting & Audit Services",
     siteName: "ANR Dynamic Ventures",
     url: "https://anrdyventures.com",
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ANR Dynamic Ventures",
-    description: "Professional Accounting, Tax & Corporate Advisory Services",
+    description: "Professional ERP, Corporate Advisory, Financial Reporting, Accounting & Audit Services",
     images: ["/opengraph-image.png"],
   },
 };

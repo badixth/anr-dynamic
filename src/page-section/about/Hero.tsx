@@ -20,12 +20,36 @@ import Partner6 from "@/src/assets/images/Partners-6.png";
 import Link from "next/link";
 
 const images = [
-  { src: Partner1, alt: "Partner1" },
-  { src: Partner2, alt: "Partner2" },
-  { src: Partner3, alt: "Partner3" },
-  { src: Partner4, alt: "Partner4" },
-  { src: Partner5, alt: "Partner5" },
-  { src: Partner6, alt: "Partner6" },
+  {
+    src: Partner1,
+    alt: "Subaidah Holding Sdn. Bhd",
+    name: "Subaidah Holding Sdn. Bhd.",
+  },
+  {
+    src: Partner2,
+    alt: "Pug3gold Sdn. Bhd.",
+    name: "Pug3gold Sdn. Bhd.",
+  },
+  {
+    src: Partner3,
+    alt: "Thoyyib Global Berhad",
+    name: "Thoyyib Global Berhad",
+  },
+  {
+    src: Partner4,
+    alt: "Baqarah Farms Ventures",
+    name: "Baqarah Farms Ventures",
+  },
+  {
+    src: Partner5,
+    alt: "Fiarina Sdn. Bhd.",
+    name: "Fiarina Sdn. Bhd.",
+  },
+  {
+    src: Partner6,
+    alt: "TFX Islamic",
+    name: "TFX Islamic",
+  },
 ];
 
 export default function Hero() {
@@ -96,17 +120,27 @@ export default function Hero() {
           weight={500}
           className="text-center px-[40px]"
         >
-          Join over 100+ companies that trust ANR Dynamic Ventures
+          Join over 100+ companies that trust <span className="text-[#F2B611]">ANR</span> Dynamic Ventures
         </Typography>
         <div className="overflow-hidden w-full" ref={sliderRef}>
           <div className="flex items-center gap-20 slider-track">
             {[...images, ...images].map((image, index) => (
-              <Image
+              <div
                 key={index}
-                src={image.src}
-                alt={image.alt}
-                className="w-[30%] md:w-[20%] lg:w-[11%] flex-shrink-0"
-              />
+                className="flex flex-col items-center gap-[10px] flex-shrink-0 w-[30%] md:w-[20%] lg:w-[11%]"
+              >
+                <Image src={image.src} alt={image.alt} className="w-full" />
+                <Typography
+                  size={13}
+                  sizeMobile={11}
+                  weight={500}
+                  color="#999"
+                  noDarkMode
+                  className="whitespace-nowrap"
+                >
+                  {image.name}
+                </Typography>
+              </div>
             ))}
           </div>
         </div>

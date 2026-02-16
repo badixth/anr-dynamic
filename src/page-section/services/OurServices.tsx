@@ -69,34 +69,34 @@ export default function OurServices() {
 
     const services = [
         {
+            title: "Enterprise Resource Planning (ERP)",
+            image: Services5,
+            href: "/services/erp",
+            desc: "Our ERP solutions help businesses streamline operations, integrate key processes, and gain real-time visibility across finance, inventory, HR, and more - all in one unified platform.",
+        },
+        {
+            title: "Corporate Advisory Services",
+            image: Services4,
+            href: "/services/corporate-advisory",
+            desc: "Our Corporate Advisory services help businesses navigate complex decisions, optimise performance, and unlock growth opportunities.",
+        },
+        {
+            title: "Financial Reporting & Compliance",
+            image: Services2,
+            href: "/services/financial-reporting",
+            desc: "Our team ensures your business meets regulatory standards, mitigates risk, and maintains stakeholder confidence.",
+        },
+        {
             title: "Accounting Advisory",
             image: Services1,
             href: "/services/accounting-advisory",
-            desc: "Comprehensive bookkeeping, payroll processing, financial reporting, management accounts, and cloud accounting implementation to maintain accurate financial records.",
+            desc: "Our team provide professional, cost-effective accounting solutions. We manage financial records, reporting, and compliance so you can focus on growth.",
         },
         {
-            title: "Tax Advisory",
-            image: Services2,
-            href: "/services/tax-advisory",
-            desc: "Tax planning, compliance filing, LHDN audit defense, E-Invoice registration, tax optimization strategies, and comprehensive correspondence with tax authorities.",
-        },
-        {
-            title: "Audit & Assurance",
+            title: "Audit Compliance & Assurance Services",
             image: Services3,
             href: "/services/audit-assurance",
-            desc: "Statutory audit services, internal control evaluation, audit readiness preparation, and financial statement assurance meeting Malaysian regulatory standards.",
-        },
-        {
-            title: "Corporate Advisory",
-            image: Services4,
-            href: "/services/corporate-erp",
-            desc: "Business strategy consulting, SSM registration and conversions, mergers & acquisitions support, restructuring, and risk management advisory.",
-        },
-        {
-            title: "ERP System Implementation",
-            image: Services5,
-            href: "/services/corporate-erp",
-            desc: "Comprehensive ERP system implementation, business process automation, system integration, and digital transformation consulting for operational efficiency.",
+            desc: "Our team help organisations meet statutory requirements, enhance investor confidence, and maintain trust with stakeholders.",
         },
     ];
 

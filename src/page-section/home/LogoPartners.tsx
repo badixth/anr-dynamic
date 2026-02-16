@@ -11,15 +11,13 @@ import Partner2 from "@/src/assets/images/Partners-2.png"
 import Partner3 from "@/src/assets/images/Partners-3.png"
 import Partner4 from "@/src/assets/images/Partners-4.png"
 import Partner5 from "@/src/assets/images/Partners-5.png"
-import Partner6 from "@/src/assets/images/Partners-6.png"
 
 const images = [
-    { src: Partner1, alt: "Partner1" },
-    { src: Partner2, alt: "Partner2" },
-    { src: Partner3, alt: "Partner3" },
-    { src: Partner4, alt: "Partner4" },
-    { src: Partner5, alt: "Partner5" },
-    { src: Partner6, alt: "Partner6" },
+    { src: Partner1, alt: "Fiarina Sdn. Bhd.", name: "Fiarina Sdn. Bhd." },
+    { src: Partner2, alt: "Subaidah Holding Sdn. Bhd.", name: "Subaidah Holding Sdn. Bhd." },
+    { src: Partner3, alt: "TFX Islamic", name: "TFX Islamic" },
+    { src: Partner4, alt: "Thoyyib Global Berhad", name: "Thoyyib Global Berhad" },
+    { src: Partner5, alt: "Baqarah Farms Ventures", name: "Baqarah Farms Ventures" },
 ];
 
 export default function LogoPartners() {
@@ -52,12 +50,16 @@ export default function LogoPartners() {
             <div className="overflow-hidden w-full" ref={sliderRef}>
                 <div className="flex items-center gap-20 slider-track">
                     {[...images, ...images].map((image, index) => (
-                        <Image
-                            key={index}
-                            src={image.src}
-                            alt={image.alt}
-                            className="w-[35%] md:w-[14%] flex-shrink-0"
-                        />
+                        <div key={index} className="flex flex-col items-center gap-[10px] flex-shrink-0 w-[35%] md:w-[14%]">
+                            <Image
+                                src={image.src}
+                                alt={image.alt}
+                                className="w-full"
+                            />
+                            <Typography size={13} sizeMobile={11} weight={500} color="#888" noDarkMode darkColor="#777" className="whitespace-nowrap">
+                                {image.name}
+                            </Typography>
+                        </div>
                     ))}
                 </div>
             </div>

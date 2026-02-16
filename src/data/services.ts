@@ -1,80 +1,71 @@
 export const services = [
   {
-    id: "accounting-advisory",
-    title: "Accounting Advisory",
-    shortDescription: "Full-service bookkeeping, payroll management, financial reporting, and cloud accounting implementation to keep your finances organized and compliant.",
-    longDescription: "Comprehensive bookkeeping, payroll processing, financial reporting, management accounts, and cloud accounting implementation to maintain accurate financial records.",
-    image: "/images/services/accounting.jpg",
-    path: "/services/accounting-advisory",
+    id: "erp",
+    title: "Enterprise Resource Planning (ERP)",
+    shortDescription: "Our ERP solutions help businesses streamline operations, integrate key processes, and gain real-time visibility across finance, inventory, HR, and more - all in one unified platform.",
+    longDescription: "Integrated Systems to Unify and Optimise Business Operations",
+    image: "/images/services/erp.jpg",
+    path: "/services/erp",
     features: [
-      "Bookkeeping & Financial Record Management",
-      "Payroll Processing (EPF, SOCSO, EIS, PCB)",
-      "Financial Reporting (Management Accounts, P&L, Balance Sheet)",
-      "Cloud Accounting Implementation",
-      "GST/SST Compliance",
-      "Management Advisory (Budgeting, Forecasting)"
-    ]
-  },
-  {
-    id: "tax-advisory",
-    title: "Tax Advisory",
-    shortDescription: "Comprehensive tax planning, compliance filing, LHDN correspondence, E-Invoice registration, and audit defense to optimize tax positions and ensure regulatory compliance.",
-    longDescription: "Expert tax planning, compliance filing, and audit defense services to minimize tax liability while ensuring full LHDN compliance for Malaysian businesses.",
-    image: "/images/services/tax.jpg",
-    path: "/services/tax-advisory",
-    features: [
-      "Tax Compliance & Filing (Form C/E)",
-      "LHDN Audit Defense & Representation",
-      "Tax Planning & Optimization",
-      "E-Invoice Registration & Compliance",
-      "Transfer Pricing Documentation",
-      "Tax Due Diligence"
-    ]
-  },
-  {
-    id: "audit-assurance",
-    title: "Audit & Assurance",
-    shortDescription: "Statutory audit services, internal control evaluation, and audit readiness preparation to meet regulatory requirements and enhance financial transparency.",
-    longDescription: "Professional statutory audit services and internal control evaluation to meet regulatory requirements and enhance stakeholder confidence in your financial reporting.",
-    image: "/images/services/audit.jpg",
-    path: "/services/audit-assurance",
-    features: [
-      "Statutory Audit Services (MFRS compliance)",
-      "Audit Readiness Preparation",
-      "Internal Control Evaluation",
-      "Special Purpose Audits",
-      "Management Letter & Advisory",
-      "Due Diligence Audits"
+      "ERP system selection and implementation",
+      "Business process automation and integration",
+      "Financial and inventory management modules",
+      "Custom reporting and analytics dashboards",
+      "Training and ongoing support"
     ]
   },
   {
     id: "corporate-advisory",
-    title: "Corporate Advisory",
-    shortDescription: "Business strategy consulting, SSM registration and conversions, mergers & acquisitions support, restructuring, and risk management advisory.",
-    longDescription: "Strategic business consulting and SSM services to support business growth and corporate structure optimization.",
+    title: "Corporate Advisory Services",
+    shortDescription: "Our Corporate Advisory services help businesses navigate complex decisions, optimise performance, and unlock growth opportunities.",
+    longDescription: "Strategic Guidance to Drive Growth and Minimise Risk",
     image: "/images/services/corporate.jpg",
-    path: "/services/corporate-erp",
+    path: "/services/corporate-advisory",
     features: [
-      "SSM Registration & Business Formation",
-      "Business Restructuring",
-      "Mergers & Acquisitions Support",
-      "Risk Management",
-      "Corporate Secretarial Services"
+      "Business strategy and planning",
+      "Financial restructuring and optimisation",
+      "Mergers & acquisitions advisory",
+      "Risk management and compliance guidance"
     ]
   },
   {
-    id: "erp-implementation",
-    title: "ERP System Implementation",
-    shortDescription: "Comprehensive ERP system implementation, business process automation, system integration, and digital transformation consulting for operational efficiency.",
-    longDescription: "End-to-end ERP implementation and business process automation to transform your operations.",
-    image: "/images/services/erp.jpg",
-    path: "/services/corporate-erp",
+    id: "financial-reporting",
+    title: "Financial Reporting & Compliance",
+    shortDescription: "Our team ensures your business meets regulatory standards, mitigates risk, and maintains stakeholder confidence.",
+    longDescription: "Accurate Reporting to Ensure Compliance and Build Trust",
+    image: "/images/services/tax.jpg",
+    path: "/services/financial-reporting",
     features: [
-      "ERP System Selection & Planning",
-      "ERP Implementation & Configuration",
-      "Business Process Automation",
-      "Training & Change Management",
-      "Ongoing ERP Support"
+      "Statutory and management reporting",
+      "Regulatory compliance advisory",
+      "Tax reporting and filing",
+      "Audit preparation and support"
+    ]
+  },
+  {
+    id: "accounting-advisory",
+    title: "Accounting Advisory",
+    shortDescription: "Our team provide professional, cost-effective accounting solutions. We manage financial records, reporting, and compliance so you can focus on growth.",
+    longDescription: "Efficient Accounting Solutions to Streamline Operations",
+    image: "/images/services/accounting.jpg",
+    path: "/services/accounting-advisory",
+    features: [
+      "Full bookkeeping and accounting services",
+      "Payroll and tax compliance",
+      "Financial reporting and management accounts",
+      "Cloud-based accounting solutions"
+    ]
+  },
+  {
+    id: "audit-assurance",
+    title: "Audit Compliance & Assurance Services",
+    shortDescription: "Our team help organisations meet statutory requirements, enhance investor confidence, and maintain trust with stakeholders.",
+    longDescription: "Reliable Audit & Assurance for Accurate Financial Reporting",
+    image: "/images/services/audit.jpg",
+    path: "/services/audit-assurance",
+    features: [
+      "Audit issue resolution & advisory",
+      "Audit preparation support"
     ]
   }
 ];

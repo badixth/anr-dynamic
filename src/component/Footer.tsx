@@ -50,7 +50,7 @@ export default function Footer() {
               className="w-[200px] h-auto"
             />
             <div className="font-medium text-white leading-[24px]">
-              ANR Dynamic Ventures Sdn. Bhd. (1393044-X) <br />
+              <span className="text-[#F2B611]">ANR</span> Dynamic Ventures Sdn. Bhd. (1393044-X) <br />
               <span className="text-[#B4B4B4]">
                 Empowering businesses with strategic solutions, innovative
                 approaches, and comprehensive support for sustainable growth and
@@ -96,26 +96,20 @@ export default function Footer() {
             <div>
               <div className="text-[#B4B4B4] mb-[24px]">Services</div>
               <div className="flex flex-col items-start gap-[16px] text-white">
-                <Link
-                  href="/services/accounting-advisory"
-                  className="cursor-pointer"
-                >
-                  Accounting Advisory
+                <Link href="/services/erp" className="cursor-pointer">
+                  Enterprise Resource Planning (ERP)
                 </Link>
-                <Link href="/services/tax-advisory" className="cursor-pointer">
-                  Tax Advisory
-                </Link>
-                <Link
-                  href="/services/audit-assurance"
-                  className="cursor-pointer"
-                >
-                  Audit & Assurance
-                </Link>
-                <Link href="/services/corporate-erp" className="cursor-pointer">
+                <Link href="/services/corporate-advisory" className="cursor-pointer">
                   Corporate Advisory
                 </Link>
-                <Link href="/services/corporate-erp" className="cursor-pointer">
-                  ERP System Implementation
+                <Link href="/services/financial-reporting" className="cursor-pointer">
+                  Financial Reporting & Compliance
+                </Link>
+                <Link href="/services/accounting-advisory" className="cursor-pointer">
+                  Accounting Advisory
+                </Link>
+                <Link href="/services/audit-assurance" className="cursor-pointer">
+                  Audit Compliance & Assurance
                 </Link>
               </div>
             </div>
@@ -140,7 +134,7 @@ export default function Footer() {
           <div className="flex items-center gap-[8px]">
             <IcCopyRight className="w-5" />
             <div className="text-white font-medium">
-              2025 ANR Dynamic Ventures Sdn. Bhd. All rights reserved
+              2025 <span className="text-[#F2B611]">ANR</span> Dynamic Ventures Sdn. Bhd. All rights reserved
             </div>
           </div>
           <Link

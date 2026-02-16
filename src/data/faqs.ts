@@ -41,6 +41,7 @@ export const homeFaqs = [
 // All FAQ exports point to the same strategic FAQs for consistency
 export const servicesFaqs = homeFaqs;
 export const accountingFaqs = homeFaqs;
-export const taxFaqs = homeFaqs;
 export const auditFaqs = homeFaqs;
 export const corporateFaqs = homeFaqs;
+export const erpFaqs = homeFaqs;
+export const financialReportingFaqs = homeFaqs;

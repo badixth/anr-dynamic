@@ -10,31 +10,34 @@ import { accountingFaqs } from "@/src/data/faqs";
 export default function AccountingAdvisoryPage() {
   const whyChooseItems = [
     {
-      title: "Regulatory Expertise",
-      description: "Deep knowledge of Malaysian accounting standards, SST/GST compliance, and statutory reporting requirements to keep your business fully compliant."
+      title: "Reduce Costs",
+      description:
+        "Reduce operational costs and administrative burden with efficient, outsourced accounting solutions.",
     },
     {
-      title: "Proactive Communication",
-      description: "Regular financial updates, advisory calls, and strategic guidance to help you make informed business decisions with confidence."
+      title: "Accurate & Compliant",
+      description:
+        "Accurate, timely, and compliant reporting that meets Malaysian regulatory standards.",
     },
     {
-      title: "Scalable Solutions",
-      description: "Services that grow with your business, from startup bookkeeping to comprehensive CFO-level financial management and reporting."
-    }
+      title: "Professional Expertise",
+      description:
+        "Access to experienced accounting professionals without the cost of hiring in-house.",
+    },
   ];
 
-  const accordionData = accountingFaqs.map(faq => ({
+  const accordionData = accountingFaqs.map((faq) => ({
     title: faq.question,
-    content: faq.answer
+    content: faq.answer,
   }));
 
   return (
     <main>
       <Suspense fallback={<div>Loading...</div>}>
         <ServicePageHero
-          headline="Accounting Advisory Services"
-          tagline="Accurate Records. Compliant Reporting. Business Clarity."
-          description="Comprehensive bookkeeping, payroll, and financial reporting services to maintain accurate financial records and ensure regulatory compliance for Malaysian businesses."
+          headline="Accounting Advisory"
+          tagline="Efficient Accounting Solutions to Streamline Operations"
+          description="Our team provide professional, cost-effective accounting solutions. We manage financial records, reporting, and compliance so you can focus on growth."
           ctaText="DISCUSS YOUR ACCOUNTING NEEDS"
           ctaLink="/contact"
         />
@@ -42,23 +45,25 @@ export default function AccountingAdvisoryPage() {
 
       <Suspense fallback={<div>Loading...</div>}>
         <ServiceDetail
-          tag="What's Included"
-          headline="Complete Accounting Solutions for Business Compliance"
-          description="From daily bookkeeping to strategic financial advisory, our accounting services ensure your financial records are accurate, compliant, and provide the insights you need to drive business growth."
+          tag="Key Services"
+          headline="Professional Accounting Solutions for Business Growth"
+          description="From bookkeeping to cloud-based accounting, we provide comprehensive accounting services that keep your finances organised, compliant, and ready for growth."
           features={[
-            "Bookkeeping & Financial Record Management",
-            "Payroll Processing (EPF, SOCSO, EIS, PCB)",
-            "Financial Reporting (Management Accounts, P&L, Balance Sheet)",
-            "Cloud Accounting Implementation",
-            "GST/SST Compliance",
-            "Management Advisory (Budgeting, Forecasting)"
+            "Full bookkeeping and accounting services",
+            "Payroll and tax compliance",
+            "Financial reporting and management accounts",
+            "Cloud-based accounting solutions",
           ]}
           whyChooseItems={whyChooseItems}
         />
       </Suspense>
 
       <Suspense fallback={<div>Loading...</div>}>
-        <Faq items={accordionData} />
+        <Faq
+          items={accordionData}
+          headline="Accounting Advisory FAQs"
+          description="Common questions about bookkeeping, payroll, and accounting services"
+        />
       </Suspense>
 
       <Suspense fallback={<div>Loading...</div>}>

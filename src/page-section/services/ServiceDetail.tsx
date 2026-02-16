@@ -61,7 +61,7 @@ export default function ServiceDetail({
         <div>
           <div className="mb-[32px]">
             <Typography as="div" size={32} sizeMobile={28} weight={600} lineHeight={40} heading>
-              Why Choose ANR for {tag}
+              Why Choose <span className="text-[#F2B611]">ANR</span> for {tag}
             </Typography>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px]">

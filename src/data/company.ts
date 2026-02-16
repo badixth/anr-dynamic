@@ -1,6 +1,6 @@
 export const companyInfo = {
   name: "ANR Dynamic Ventures Sdn. Bhd.",
-  tagline: "Your Trusted Partner in Accounting, Audit & Regulatory Compliance and Tax Advisory",
+  tagline: "Your Trusted Partner in ERP, Corporate Advisory, Financial Reporting, Accounting & Audit Services",
 
   // Mission & Vision
   mission: "To provide accurate, reliable, and actionable financial services that empower businesses to make confident decisions and achieve long-term success.",
@@ -74,7 +74,7 @@ export const companyInfo = {
   whyChooseUs: [
     "Proven track record across diverse industries",
     "Trusted, certified, and client-focused professionals",
-    "Comprehensive advisory services: accounting, audit and tax",
+    "Comprehensive advisory services: ERP, corporate advisory, financial reporting, accounting, and audit",
     "Global & local insight: combining regional regulations with international best practices"
   ],
 

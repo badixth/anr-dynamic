@@ -79,9 +79,9 @@ export default function Hero() {
             size={18}
             className="mt-[24px] lg:w-[60%]"
           >
-            Expert accounting, tax, audit, and corporate advisory solutions
-            designed to resolve compliance challenges and support business
-            growth for Malaysian companies.
+            Expert ERP, corporate advisory, financial reporting, accounting, and
+            audit solutions designed to resolve compliance challenges and
+            support business growth for Malaysian companies.
           </Typography>
           <Link href="/contact">
             <Button variant="primary" className="mt-[32px]">

@@ -12,11 +12,11 @@ const navItems = [
     name: "Services",
     path: "/services",
     dropdown: [
+      { name: "Enterprise Resource Planning (ERP)", path: "/services/erp" },
+      { name: "Corporate Advisory", path: "/services/corporate-advisory" },
+      { name: "Financial Reporting & Compliance", path: "/services/financial-reporting" },
       { name: "Accounting Advisory", path: "/services/accounting-advisory" },
-      { name: "Tax Advisory", path: "/services/tax-advisory" },
-      { name: "Audit & Assurance", path: "/services/audit-assurance" },
-      { name: "Corporate Advisory", path: "/services/corporate-erp" },
-      { name: "ERP System Implementation", path: "/services/corporate-erp" },
+      { name: "Audit Compliance & Assurance", path: "/services/audit-assurance" },
     ]
   },
   { name: "Careers", path: "/careers" },
@@ -55,7 +55,7 @@ export default function Navigation() {
 
               {/* Dropdown Menu */}
               {openDropdown === item.name && (
-                <div className="absolute top-full left-0 pt-2 w-[280px] z-50">
+                <div className="absolute top-full left-0 pt-2 w-[320px] z-50">
                   <div className="bg-white dark:bg-[#1D1D1D] rounded-[8px] shadow-lg py-[8px] border border-[#E5E5E5] dark:border-[#333333]">
                     {item.dropdown.map((subItem, subIndex) => {
                       const isSubActive = pathname === subItem.path;

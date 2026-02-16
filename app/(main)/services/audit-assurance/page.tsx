@@ -10,31 +10,34 @@ import { auditFaqs } from "@/src/data/faqs";
 export default function AuditAssurancePage() {
   const whyChooseItems = [
     {
-      title: "Regulatory Expertise",
-      description: "Thorough understanding of Malaysian Financial Reporting Standards (MFRS) and Companies Act requirements for comprehensive statutory compliance."
+      title: "Regulatory-Compliant Reports",
+      description:
+        "Accurate, regulatory-compliant audit reports that meet Malaysian standards and enhance stakeholder confidence.",
     },
     {
-      title: "Efficient Process",
-      description: "Streamlined audit methodology with clear timelines, structured communication, and minimal disruption to your daily operations."
+      title: "Timely Insights",
+      description:
+        "Timely and actionable insights that help you strengthen internal controls and improve financial governance.",
     },
     {
-      title: "Clear Communication",
-      description: "Transparent reporting with practical recommendations and actionable insights to strengthen controls and improve financial transparency."
-    }
+      title: "Trusted Guidance",
+      description:
+        "Trusted professional guidance from experienced auditors committed to accuracy and integrity.",
+    },
   ];
 
-  const accordionData = auditFaqs.map(faq => ({
+  const accordionData = auditFaqs.map((faq) => ({
     title: faq.question,
-    content: faq.answer
+    content: faq.answer,
   }));
 
   return (
     <main>
       <Suspense fallback={<div>Loading...</div>}>
         <ServicePageHero
-          headline="Audit & Assurance Services"
-          tagline="Statutory Compliance. Financial Transparency. Audit Readiness."
-          description="Professional statutory audit services and internal control evaluation to meet regulatory requirements and enhance stakeholder confidence in your financial reporting."
+          headline="Audit Compliance & Assurance Services"
+          tagline="Reliable Audit & Assurance for Accurate Financial Reporting"
+          description="Our team help organisations meet statutory requirements, enhance investor confidence, and maintain trust with stakeholders."
           ctaText="DISCUSS YOUR AUDIT NEEDS"
           ctaLink="/contact"
         />
@@ -42,16 +45,12 @@ export default function AuditAssurancePage() {
 
       <Suspense fallback={<div>Loading...</div>}>
         <ServiceDetail
-          tag="What's Included"
-          headline="Professional Audit Services for Regulatory Compliance"
-          description="From statutory audit requirements to internal control evaluation, we deliver comprehensive assurance services that meet Malaysian regulatory standards and provide valuable insights for business improvement."
+          tag="Key Services"
+          headline="Professional Audit & Assurance for Regulatory Compliance"
+          description="We deliver reliable audit and assurance services that help your organisation meet statutory requirements and maintain trust with stakeholders."
           features={[
-            "Statutory Audit Services (MFRS compliance)",
-            "Audit Readiness Preparation",
-            "Internal Control Evaluation",
-            "Special Purpose Audits",
-            "Management Letter & Advisory",
-            "Due Diligence Audits"
+            "Audit issue resolution & advisory",
+            "Audit preparation support",
           ]}
           whyChooseItems={whyChooseItems}
         />
@@ -60,8 +59,8 @@ export default function AuditAssurancePage() {
       <Suspense fallback={<div>Loading...</div>}>
         <Faq
           items={accordionData}
-          headline="Audit & Assurance FAQs"
-          description="Common questions about statutory audits, internal controls, and audit readiness"
+          headline="Audit Compliance & Assurance FAQs"
+          description="Common questions about audit compliance, assurance services, and regulatory requirements"
         />
       </Suspense>
 

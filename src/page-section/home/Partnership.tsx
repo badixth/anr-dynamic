@@ -68,7 +68,7 @@ export default function Partnership() {
           lineHeightMobile={34}
           heading
         >
-          Why Partner With ANR Dynamic Ventures
+          Why Partner With <span className="text-[#F2B611]">ANR</span> Dynamic Ventures
         </Typography>
         <Typography size={16} lineHeight={24} className="max-w-[800px]">
           We don&apos;t just provide services—we build lasting partnerships
