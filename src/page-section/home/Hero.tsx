@@ -80,7 +80,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
           color="#fff"
           size={64}
           sizeTablet={48}
-          sizeMobile={40}
+          sizeMobile={48}
           weight={600}
           lineHeight={76}
           lineHeightTablet={58}
@@ -100,7 +100,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Business Advisory
+            Business <br className="md:hidden" /> Advisory
           </span>
         </Typography>
 
@@ -108,7 +108,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
           color="#E0E0E0"
           noDarkMode
           size={18}
-          weight={600}
+          weight={700}
           className="mt-[24px] lg:w-[45%] text-balance "
         >
           Your Trusted Partner in Accounting, Audit & Regulatory Compliance and
@@ -116,7 +116,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
           <br />
           <br />
           We help companies resolve issues with authorities,
-          <br className="hidden lg:block" />
+          <br className="hidden " />
           strengthen compliance, and move forward with confidence.
         </Typography>
 
