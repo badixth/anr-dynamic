@@ -2,6 +2,13 @@ import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
 import { companyInfo } from "@/src/data/company";
 
+import FinanceIcon from "@/src/assets/icons/isocons/finance-17.svg";
+import BarChartIcon from "@/src/assets/icons/isocons/bar-chart-13.svg";
+import AssuredWorkloadIcon from "@/src/assets/icons/isocons/assured-workload-11.svg";
+import EditorChoiceIcon from "@/src/assets/icons/isocons/editor-choice-7.svg";
+
+const focusIcons = [FinanceIcon, BarChartIcon, AssuredWorkloadIcon, EditorChoiceIcon];
+
 export default function CoreFocus() {
   return (
     <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
@@ -33,17 +40,28 @@ export default function CoreFocus() {
             key={idx}
             className="relative bg-[#0D0D0D] dark:bg-[#111111] border border-white/[0.06] p-[28px] md:p-[32px] rounded-[16px] flex items-start gap-[20px] overflow-hidden group hover:border-[#F2B611]/[0.2] transition-colors duration-300"
           >
-            {/* Decorative number */}
-            <span className="absolute top-[-8px] right-[12px] text-[80px] md:text-[100px] font-bold leading-none text-white/[0.03] select-none pointer-events-none font-heading">
-              {String(idx + 1).padStart(2, "0")}
-            </span>
+            {/* Decorative icon watermark */}
+            {(() => {
+              const WatermarkIcon = focusIcons[idx];
+              return (
+                <div
+                  className="absolute top-[8px] right-[8px] md:top-[12px] md:right-[12px] w-[80px] h-[80px] md:w-[100px] md:h-[100px] select-none pointer-events-none"
+                  style={{ filter: "grayscale(1) brightness(0.3)", opacity: 0.2 }}
+                >
+                  <WatermarkIcon className="w-full h-full" />
+                </div>
+              );
+            })()}
 
-            {/* Gold numbered indicator */}
-            <div className="relative z-10 flex-shrink-0 w-[36px] h-[36px] rounded-[10px] bg-[#F2B611]/[0.12] border border-[#F2B611]/[0.25] flex items-center justify-center">
-              <span className="text-[#F2B611] text-[14px] font-bold">
-                {String(idx + 1).padStart(2, "0")}
-              </span>
-            </div>
+            {/* Icon indicator */}
+            {(() => {
+              const Icon = focusIcons[idx];
+              return (
+                <div className="relative z-10 flex-shrink-0 w-[40px] h-[40px] flex items-center justify-center">
+                  <Icon className="w-[36px] h-[36px]" />
+                </div>
+              );
+            })()}
 
             <Typography
               size={16}

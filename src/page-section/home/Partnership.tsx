@@ -2,6 +2,12 @@ import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
 import Icons from "@/src/component/Icons";
 
+import PartnerExchangeIcon from "@/src/assets/icons/isocons/partner-exchange-6.svg";
+import MyLocationIcon from "@/src/assets/icons/isocons/my-location-21.svg";
+import DataTableIcon from "@/src/assets/icons/isocons/data-table-18.svg";
+
+const partnershipIcons = [PartnerExchangeIcon, MyLocationIcon, DataTableIcon];
+
 const partnerships = [
   {
     number: "01",
@@ -77,10 +83,18 @@ export default function Partnership() {
             key={idx}
             className="relative bg-[#0D0D0D] dark:bg-[#111111] border border-white/[0.06] rounded-[16px] p-[32px] md:p-[40px] flex flex-col gap-[24px] overflow-hidden group hover:border-[#F2B611]/[0.2] transition-colors duration-300"
           >
-            {/* Watermark number */}
-            <span className="absolute top-[20px] right-[24px] text-[120px] md:text-[160px] font-bold leading-none text-white/[0.02] select-none pointer-events-none font-heading">
-              {item.number}
-            </span>
+            {/* Watermark icon */}
+            {(() => {
+              const WatermarkIcon = partnershipIcons[idx];
+              return (
+                <div
+                  className="absolute top-[16px] right-[16px] md:top-[20px] md:right-[24px] w-[120px] h-[120px] md:w-[160px] md:h-[160px] select-none pointer-events-none"
+                  style={{ filter: "grayscale(1) brightness(0.3)", opacity: 0.2 }}
+                >
+                  <WatermarkIcon className="w-full h-full" />
+                </div>
+              );
+            })()}
 
             {/* Top accent line */}
             <div className="absolute top-0 left-[40px] w-[60px] h-[2px] bg-gradient-to-r from-[#F2B611] to-[#F2B611]/[0.1]" />

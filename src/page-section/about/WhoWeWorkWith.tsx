@@ -1,23 +1,27 @@
 import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
-import Icons from "@/src/component/Icons";
+
+import GroupsIcon from "@/src/assets/icons/isocons/groups-1.svg";
+import GavelIcon from "@/src/assets/icons/isocons/gavel-3.svg";
+import MountainFlagIcon from "@/src/assets/icons/isocons/mountain-flag-8.svg";
+import DomainIcon from "@/src/assets/icons/isocons/domain-19.svg";
 
 const clientTypes = [
   {
     label: "Family-Owned Businesses",
-    icon: "home" as const,
+    Icon: GroupsIcon,
   },
   {
     label: "Companies Undergoing Restructuring or Regulatory Review",
-    icon: "chart" as const,
+    Icon: GavelIcon,
   },
   {
     label: "SMEs and Growing Businesses",
-    icon: "briefcase" as const,
+    Icon: MountainFlagIcon,
   },
   {
     label: "Established Corporations",
-    icon: "building" as const,
+    Icon: DomainIcon,
   },
 ];
 
@@ -54,13 +58,8 @@ export default function WhoWeWorkWith() {
             key={idx}
             className="relative bg-[#0D0D0D] dark:bg-[#111111] border border-white/[0.06] p-[32px] rounded-[16px] text-center flex flex-col items-center justify-center gap-[16px] overflow-hidden group hover:border-[#F2B611]/[0.2] transition-colors duration-300"
           >
-            <div className="w-[56px] h-[56px] rounded-[14px] bg-[#F2B611]/[0.1] border border-[#F2B611]/[0.2] flex items-center justify-center">
-              <Icons
-                name={item.icon}
-                className="w-[26px] h-[26px]"
-                color="#F2B611"
-                noDarkMode
-              />
+            <div className="w-[64px] h-[64px] md:w-[72px] md:h-[72px] flex items-center justify-center">
+              <item.Icon className="w-[56px] h-[56px] md:w-[64px] md:h-[64px]" />
             </div>
             <Typography
               size={16}

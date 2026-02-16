@@ -1,6 +1,10 @@
 import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
-import Icons from "@/src/component/Icons";
+
+import LibraryIcon from "@/src/assets/icons/isocons/local-library-20.svg";
+import ActionKeyIcon from "@/src/assets/icons/isocons/action-key-0.svg";
+import LocationIcon from "@/src/assets/icons/isocons/my-location-21.svg";
+import PartnerIcon from "@/src/assets/icons/isocons/partner-exchange-6.svg";
 
 const approaches = [
   {
@@ -8,28 +12,28 @@ const approaches = [
     title: "Deep Understanding",
     description:
       "We take time to understand your business, industry, and goals.",
-    icon: "magnify" as const,
+    Icon: LibraryIcon,
   },
   {
     number: "02",
     title: "Tailored Solutions",
     description:
       "Every client receives solutions customised to their needs and compliance requirements.",
-    icon: "puzzle" as const,
+    Icon: ActionKeyIcon,
   },
   {
     number: "03",
     title: "Proactive Guidance",
     description:
       "We anticipate challenges, minimise risks, and provide actionable insights for growth.",
-    icon: "compass" as const,
+    Icon: LocationIcon,
   },
   {
     number: "04",
     title: "Sustained Support",
     description:
       "Our partnership doesn't end with a report; we provide continuous guidance to help your business thrive.",
-    icon: "handshake" as const,
+    Icon: PartnerIcon,
   },
 ];
 
@@ -80,13 +84,8 @@ export default function Approach() {
             <div className="relative z-10 flex flex-col gap-[20px]">
               {/* Icon + Number row */}
               <div className="flex items-center gap-[16px]">
-                <div className="w-[48px] h-[48px] rounded-[12px] bg-[#F2B611]/[0.1] border border-[#F2B611]/[0.2] flex items-center justify-center">
-                  <Icons
-                    name={item.icon}
-                    className="w-[22px] h-[22px]"
-                    color="#F2B611"
-                    noDarkMode
-                  />
+                <div className="w-[52px] h-[52px] md:w-[56px] md:h-[56px] flex items-center justify-center">
+                  <item.Icon className="w-[44px] h-[44px] md:w-[48px] md:h-[48px]" />
                 </div>
                 <span className="text-[#F2B611]/[0.4] text-[14px] font-bold tracking-widest">
                   STEP {item.number}

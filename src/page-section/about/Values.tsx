@@ -2,6 +2,13 @@ import Tag from "@/src/component/Tag";
 import Typography from "@/src/component/Typography";
 import { companyInfo } from "@/src/data/company";
 
+import ShieldPersonIcon from "@/src/assets/icons/isocons/shield-person-12.svg";
+import DiamondIcon from "@/src/assets/icons/isocons/diamond-4.svg";
+import PartnerExchangeIcon from "@/src/assets/icons/isocons/partner-exchange-6.svg";
+import MicrobiologyIcon from "@/src/assets/icons/isocons/microbiology-9.svg";
+
+const valueIcons = [ShieldPersonIcon, DiamondIcon, PartnerExchangeIcon, MicrobiologyIcon];
+
 export default function Values() {
   return (
     <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[16px] md:px-[72px]">
@@ -34,11 +41,14 @@ export default function Values() {
             key={idx}
             className="bg-[#F5F5F5] dark:bg-[#1D1D1D] p-[32px] rounded-[12px] flex flex-col items-start gap-[16px]"
           >
-            <div className="bg-[#F2B611] rounded-full w-[48px] h-[48px] flex items-center justify-center mb-[8px]">
-              <Typography size={24} weight={700} color="#fff" noDarkMode>
-                {value.title.charAt(0)}
-              </Typography>
-            </div>
+            {(() => {
+              const Icon = valueIcons[idx];
+              return (
+                <div className="w-[56px] h-[56px] flex items-center justify-center mb-[8px]">
+                  <Icon className="w-[48px] h-[48px]" />
+                </div>
+              );
+            })()}
             <Typography size={24} weight={600} heading>
               {value.title}
             </Typography>
