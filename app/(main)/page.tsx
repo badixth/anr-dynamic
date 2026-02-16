@@ -17,6 +17,9 @@ const Partnership = React.lazy(
   () => import("@/src/page-section/home/Partnership"),
 );
 const Faq = React.lazy(() => import("@/src/page-section/Faq"));
+const MissionVision = React.lazy(
+  () => import("@/src/page-section/about/MissionVision"),
+);
 const Testimonials = React.lazy(
   () => import("@/src/page-section/Testimonials"),
 );
@@ -43,6 +46,9 @@ export default function Home() {
       </Suspense>
       <Suspense fallback={null}>
         <AboutUs />
+      </Suspense>
+      <Suspense fallback={null}>
+        <MissionVision />
       </Suspense>
       <Suspense fallback={null}>
         <Services />
