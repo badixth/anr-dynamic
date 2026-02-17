@@ -29,7 +29,7 @@ export default function Values() {
         </Typography>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[24px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[24px] max-w-[1100px] mx-auto">
         {companyInfo.values.map((value, idx) => (
           <div
             key={idx}

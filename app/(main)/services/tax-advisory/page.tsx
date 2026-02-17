@@ -17,21 +17,25 @@ export default function TaxAdvisoryPage() {
       title: "Risk Advisory & Dispute Resolution",
       description:
         "Our services include advisory on withholding tax, stamp duty, RPGT, and other applicable tax obligations. Through proactive tax risk reviews, we identify potential compliance gaps before they lead to penalties. Where disputes arise, we prepare technical justifications, manage appeal submissions, and negotiate directly with tax officers to achieve the best possible outcome for our clients.",
+      icon: "shield-person",
     },
     {
       title: "Strategic Tax Planning & Filing",
       description:
         "We handle the preparation and submission of corporate and individual income tax returns, while providing strategic tax planning and structuring advice to legally minimise tax exposure, including business restructuring and incentive applications.",
+      icon: "finance",
     },
     {
       title: "Comprehensive Tax Compliance",
       description:
         "Our Tax Advisory Services cover comprehensive tax compliance and strategic planning to ensure businesses meet all regulatory requirements under Lembaga Hasil Dalam Negeri Malaysia (LHDN).",
+      icon: "diamond",
     },
     {
       title: "Audit & Investigation Representation",
       description:
         "We represent clients during tax audits, desk audits, and formal investigations initiated by LHDN, providing professional support and guidance throughout the process.",
+      icon: "gavel",
     },
   ];
 
@@ -88,6 +92,7 @@ export default function TaxAdvisoryPage() {
                 "Preparation of technical justifications, appeal submissions, and negotiation with tax officers.",
             },
           ]}
+          featureIcons={["data-table", "finance-mode", "assured-workload", "gavel", "shield-person", "workspace-premium"]}
           whyChooseItems={whyChooseItems}
         />
       </Suspense>

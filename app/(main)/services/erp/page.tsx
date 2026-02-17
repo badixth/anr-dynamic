@@ -13,16 +13,19 @@ export default function ERPPage() {
       title: "End-to-End Integration",
       description:
         "End-to-end integration of core business functions for seamless operations across your organisation.",
+      icon: "partner-exchange",
     },
     {
       title: "Improved Efficiency",
       description:
         "Improved efficiency, accuracy, and decision-making through real-time data visibility and automated processes.",
+      icon: "bar-chart",
     },
     {
       title: "Scalable Solutions",
       description:
         "Scalable solutions tailored to your business size and industry, growing with you as your needs evolve.",
+      icon: "mountain-flag",
     },
   ];
 
@@ -54,6 +57,7 @@ export default function ERPPage() {
             "Custom reporting and analytics dashboards",
             "Training and ongoing support",
           ]}
+          featureIcons={["action-key", "assured-workload", "finance", "grouped-bar-chart", "local-library"]}
           whyChooseItems={whyChooseItems}
         />
       </Suspense>

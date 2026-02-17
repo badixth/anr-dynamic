@@ -13,16 +13,19 @@ export default function CorporateAdvisoryPage() {
       title: "Customised Solutions",
       description:
         "Customised solutions aligned with your business goals for targeted and effective outcomes.",
+      icon: "action-key",
     },
     {
       title: "Market Expertise",
       description:
         "Insights backed by market knowledge and financial expertise to guide your strategic decisions.",
+      icon: "domain",
     },
     {
       title: "Long-Term Growth",
       description:
         "Focus on long-term growth and sustainable outcomes that position your business for lasting success.",
+      icon: "grouped-bar-chart",
     },
   ];
 
@@ -53,6 +56,7 @@ export default function CorporateAdvisoryPage() {
             "Mergers & acquisitions advisory",
             "Risk management and compliance guidance",
           ]}
+          featureIcons={["mountain-flag", "finance-mode", "partner-exchange", "shield-person"]}
           whyChooseItems={whyChooseItems}
         />
       </Suspense>

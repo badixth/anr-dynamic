@@ -19,7 +19,7 @@ export default function MissionVision() {
         </Typography>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[32px] md:gap-[48px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-[32px] md:gap-[48px] max-w-[1100px] mx-auto">
         {/* Mission */}
         <div className="relative bg-white dark:bg-[#1D1D1D] rounded-[16px] p-[32px] md:p-[48px] overflow-hidden">
           {/* <span className="absolute top-[16px] right-[24px] text-[120px] md:text-[160px] font-bold leading-none text-[#F2B611]/[0.06] dark:text-[#F2B611]/[0.08] select-none pointer-events-none font-heading">

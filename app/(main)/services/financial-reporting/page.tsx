@@ -13,16 +13,19 @@ export default function FinancialReportingPage() {
       title: "Timely & Accurate Reports",
       description:
         "Timely, accurate, and regulatory-compliant reports that meet Malaysian standards and stakeholder expectations.",
+      icon: "editor-choice",
     },
     {
       title: "Proactive Guidance",
       description:
         "Proactive guidance to prevent compliance issues before they arise, keeping your business ahead of regulatory changes.",
+      icon: "shield-person",
     },
     {
       title: "Actionable Insights",
       description:
         "Clear, actionable insights for decision-making that drive business performance and strategic clarity.",
+      icon: "finance-mode",
     },
   ];
 
@@ -53,6 +56,7 @@ export default function FinancialReportingPage() {
             "Tax reporting and filing",
             "Audit preparation and support",
           ]}
+          featureIcons={["bar-chart", "gavel", "data-table", "assured-workload"]}
           whyChooseItems={whyChooseItems}
         />
       </Suspense>

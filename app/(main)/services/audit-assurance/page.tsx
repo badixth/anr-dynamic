@@ -13,16 +13,19 @@ export default function AuditAssurancePage() {
       title: "Regulatory-Compliant Reports",
       description:
         "Accurate, regulatory-compliant audit reports that meet Malaysian standards and enhance stakeholder confidence.",
+      icon: "gavel",
     },
     {
       title: "Timely Insights",
       description:
         "Timely and actionable insights that help you strengthen internal controls and improve financial governance.",
+      icon: "bar-chart",
     },
     {
       title: "Trusted Guidance",
       description:
         "Trusted professional guidance from experienced auditors committed to accuracy and integrity.",
+      icon: "shield-person",
     },
   ];
 
@@ -51,6 +54,7 @@ export default function AuditAssurancePage() {
             "Audit issue resolution & advisory",
             "Audit preparation support",
           ]}
+          featureIcons={["assured-workload", "editor-choice"]}
           whyChooseItems={whyChooseItems}
         />
       </Suspense>

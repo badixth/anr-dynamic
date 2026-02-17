@@ -46,7 +46,7 @@ export default function WhoWeWorkWith() {
         </Typography>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px] md:gap-[24px] max-w-[1200px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px] md:gap-[24px] max-w-[1100px] mx-auto">
         {clientTypes.map((item, idx) => (
           <div
             key={idx}

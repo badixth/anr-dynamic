@@ -4,7 +4,7 @@ import Typography from "@/src/component/Typography";
 
 export default function AboutUs() {
   return (
-    <div className="bg-white dark:bg-[#070707] w-full px-[20px] md:px-[72px] py-[48px] md:py-[80px] flex flex-col items-center">
+    <div className="bg-white dark:bg-[#070707] w-full px-[16px] md:px-[72px] py-[48px] md:py-[80px] flex flex-col items-center">
       {/* Heading */}
       <Typography
         as="div"

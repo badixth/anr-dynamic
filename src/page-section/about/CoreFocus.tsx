@@ -28,7 +28,7 @@ export default function CoreFocus() {
         </Typography>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[24px] max-w-[1000px] mx-auto mb-[48px] md:mb-[64px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[24px] max-w-[1100px] mx-auto mb-[48px] md:mb-[64px]">
         {companyInfo.coreFocus.points.map((point, idx) => (
           <div
             key={idx}
@@ -73,7 +73,7 @@ export default function CoreFocus() {
       </div>
 
       {/* Tagline Quote */}
-      <div className="relative bg-[#0D0D0D] dark:bg-[#111111] border border-white/[0.06] py-[48px] md:py-[64px] px-[32px] md:px-[72px] rounded-[16px] text-center overflow-hidden">
+      <div className="relative bg-[#0D0D0D] dark:bg-[#111111] border border-white/[0.06] py-[48px] md:py-[64px] px-[32px] md:px-[72px] rounded-[16px] text-center overflow-hidden max-w-[1100px] mx-auto">
         {/* Opening quotation mark */}
         <span className="absolute top-[8px] left-[16px] md:top-[12px] md:left-[32px] text-[120px] md:text-[180px] leading-none text-[#F2B611]/[0.12] select-none pointer-events-none font-heading">
           &ldquo;

@@ -13,16 +13,19 @@ export default function AccountingAdvisoryPage() {
       title: "Reduce Costs",
       description:
         "Reduce operational costs and administrative burden with efficient, outsourced accounting solutions.",
+      icon: "donut-small",
     },
     {
       title: "Accurate & Compliant",
       description:
         "Accurate, timely, and compliant reporting that meets Malaysian regulatory standards.",
+      icon: "assured-workload",
     },
     {
       title: "Professional Expertise",
       description:
         "Access to experienced accounting professionals without the cost of hiring in-house.",
+      icon: "workspace-premium",
     },
   ];
 
@@ -53,6 +56,7 @@ export default function AccountingAdvisoryPage() {
             "Financial reporting and management accounts",
             "Cloud-based accounting solutions",
           ]}
+          featureIcons={["finance", "groups", "bar-chart", "data-table"]}
           whyChooseItems={whyChooseItems}
         />
       </Suspense>

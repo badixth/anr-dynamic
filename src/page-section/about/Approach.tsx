@@ -64,7 +64,7 @@ export default function Approach() {
       </div>
 
       {/* Process Flow */}
-      <div className="mt-[48px] md:mt-[64px]">
+      <div className="mt-[48px] md:mt-[64px] max-w-[1100px] mx-auto">
         {/* Desktop step indicators with connecting line */}
         <div className="hidden lg:grid grid-cols-4 gap-[20px] relative mb-[16px]">
           {/* Connecting line */}

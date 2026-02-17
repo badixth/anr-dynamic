@@ -25,7 +25,7 @@ export default function WhyChooseUs() {
         </Typography>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] max-w-[900px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] max-w-[1100px] mx-auto">
         {companyInfo.whyChooseUs.map((reason, idx) => (
           <div
             key={idx}
