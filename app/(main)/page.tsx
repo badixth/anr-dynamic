@@ -9,6 +9,7 @@ import { LenisContext } from "@/src/context/LenisContext";
 
 const Hero = React.lazy(() => import("@/src/page-section/home/Hero"));
 const AboutUs = React.lazy(() => import("@/src/page-section/about/AboutUs"));
+const Values = React.lazy(() => import("@/src/page-section/about/Values"));
 const LogoPartners = React.lazy(
   () => import("@/src/page-section/home/LogoPartners"),
 );
@@ -49,6 +50,9 @@ export default function Home() {
       </Suspense>
       <Suspense fallback={null}>
         <MissionVision />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Values />
       </Suspense>
       <Suspense fallback={null}>
         <Services />
