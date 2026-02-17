@@ -1,7 +1,7 @@
 export const testimonials = [
   {
     id: 2,
-    name: "En. Mohd Mizan Sabdin",
+    name: "En. Mohd Nizam Sabdin",
     role: "Finance Director",
     company: "Seri Put3Gold Sdn. Bhd.",
     message:
