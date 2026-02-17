@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useRef, useEffect, useCallback } from "react";
 import gsap from "gsap";
 import { useTheme } from "@/src/context/ThemeProvider";
@@ -7,159 +7,178 @@ import Image from "next/image";
 import Link from "next/link";
 import Typography from "@/src/component/Typography";
 
-import Services1 from '@/src/assets/images/service-1.png';
-import Services2 from '@/src/assets/images/service-2.png';
-import Services3 from '@/src/assets/images/service-3.png';
-import Services4 from '@/src/assets/images/service-4.png';
-import Services5 from '@/src/assets/images/service-5.png';
+import Services1 from "@/src/assets/images/service-1.png";
+import Services2 from "@/src/assets/images/service-2.png";
+import Services3 from "@/src/assets/images/service-3.png";
+import Services4 from "@/src/assets/images/service-4.png";
+import Services5 from "@/src/assets/images/service-5.png";
 
 export default function OurServices() {
-    const { theme } = useTheme();
-    const cardsRef = useRef<HTMLAnchorElement[]>([]);
-    const themeRef = useRef(theme);
+  const { theme } = useTheme();
+  const cardsRef = useRef<HTMLAnchorElement[]>([]);
+  const themeRef = useRef(theme);
 
-    useEffect(() => {
-        themeRef.current = theme;
-    }, [theme]);
+  useEffect(() => {
+    themeRef.current = theme;
+  }, [theme]);
 
-    const handleMouseEnter = useCallback((card: HTMLElement) => {
-        gsap.to(card, {
-            backgroundColor: themeRef.current === "light" ? "#1D1D1D" : "#393939",
-            padding: "24px 32px",
-            borderRadius: "12px",
-            duration: 0.5,
-            ease: "power2.out",
-        });
-    }, []);
+  const handleMouseEnter = useCallback((card: HTMLElement) => {
+    gsap.to(card, {
+      backgroundColor: themeRef.current === "light" ? "#1D1D1D" : "#393939",
+      padding: "24px 32px",
+      borderRadius: "12px",
+      duration: 0.5,
+      ease: "power2.out",
+    });
+  }, []);
 
-    const handleMouseLeave = useCallback((card: HTMLElement) => {
-        gsap.to(card, {
-            backgroundColor: "transparent",
-            padding: "0px",
-            borderRadius: "12px",
-            duration: 0.5,
-            ease: "power2.out",
-        });
-    }, []);
+  const handleMouseLeave = useCallback((card: HTMLElement) => {
+    gsap.to(card, {
+      backgroundColor: "transparent",
+      padding: "0px",
+      borderRadius: "12px",
+      duration: 0.5,
+      ease: "power2.out",
+    });
+  }, []);
 
-    useEffect(() => {
-        const cards = cardsRef.current.filter(Boolean);
-        const enterHandlers = new Map<HTMLElement, () => void>();
-        const leaveHandlers = new Map<HTMLElement, () => void>();
+  useEffect(() => {
+    const cards = cardsRef.current.filter(Boolean);
+    const enterHandlers = new Map<HTMLElement, () => void>();
+    const leaveHandlers = new Map<HTMLElement, () => void>();
 
-        cards.forEach((card) => {
-            const onEnter = () => handleMouseEnter(card);
-            const onLeave = () => handleMouseLeave(card);
-            enterHandlers.set(card, onEnter);
-            leaveHandlers.set(card, onLeave);
-            card.addEventListener("mouseenter", onEnter);
-            card.addEventListener("mouseleave", onLeave);
-        });
+    cards.forEach((card) => {
+      const onEnter = () => handleMouseEnter(card);
+      const onLeave = () => handleMouseLeave(card);
+      enterHandlers.set(card, onEnter);
+      leaveHandlers.set(card, onLeave);
+      card.addEventListener("mouseenter", onEnter);
+      card.addEventListener("mouseleave", onLeave);
+    });
 
-        return () => {
-            cards.forEach((card) => {
-                const onEnter = enterHandlers.get(card);
-                const onLeave = leaveHandlers.get(card);
-                if (onEnter) card.removeEventListener("mouseenter", onEnter);
-                if (onLeave) card.removeEventListener("mouseleave", onLeave);
-            });
-        };
-    }, [handleMouseEnter, handleMouseLeave]);
+    return () => {
+      cards.forEach((card) => {
+        const onEnter = enterHandlers.get(card);
+        const onLeave = leaveHandlers.get(card);
+        if (onEnter) card.removeEventListener("mouseenter", onEnter);
+        if (onLeave) card.removeEventListener("mouseleave", onLeave);
+      });
+    };
+  }, [handleMouseEnter, handleMouseLeave]);
 
-    const services = [
-        {
-            title: "Accounting Advisory",
-            image: Services1,
-            href: "/services/accounting-advisory",
-            desc: "Our team provide professional, cost-effective accounting solutions. We manage financial records, reporting, and compliance so you can focus on growth.",
-        },
-        {
-            title: "Audit Advisory & Compliance Assurance",
-            image: Services3,
-            href: "/services/audit-assurance",
-            desc: "Our team help organisations meet statutory requirements, enhance investor confidence, and maintain trust with stakeholders.",
-        },
-        {
-            title: "Financial Reporting & Compliance",
-            image: Services2,
-            href: "/services/financial-reporting",
-            desc: "Our team ensures your business meets regulatory standards, mitigates risk, and maintains stakeholder confidence.",
-        },
-        {
-            title: "Corporate Advisory Services",
-            image: Services4,
-            href: "/services/corporate-advisory",
-            desc: "Our Corporate Advisory services help businesses navigate complex decisions, optimise performance, and unlock growth opportunities.",
-        },
-        {
-            title: "Enterprise Resource Planning (ERP)",
-            image: Services5,
-            href: "/services/erp",
-            desc: "Our ERP solutions help businesses streamline operations, integrate key processes, and gain real-time visibility across finance, inventory, HR, and more - all in one unified platform.",
-        },
-        {
-            title: "Tax Advisory",
-            image: Services2,
-            href: "/services/tax-advisory",
-            desc: "Our tax advisory services are designed to help businesses remain fully compliant while optimising their tax position within the framework of Malaysian law.",
-        },
-    ];
+  const services = [
+    {
+      title: "Accounting Advisory",
+      image: Services1,
+      href: "/services/accounting-advisory",
+      desc: "Our team provide professional, cost-effective accounting solutions. We manage financial records, reporting, and compliance so you can focus on growth.",
+    },
+    {
+      title: "Audit Advisory & Compliance Assurance",
+      image: Services3,
+      href: "/services/audit-assurance",
+      desc: "Our team help organisations meet statutory requirements, enhance investor confidence, and maintain trust with stakeholders.",
+    },
+    {
+      title: "Financial Reporting & Compliance",
+      image: Services2,
+      href: "/services/financial-reporting",
+      desc: "Our team ensures your business meets regulatory standards, mitigates risk, and maintains stakeholder confidence.",
+    },
+    {
+      title: "Corporate Advisory Services",
+      image: Services4,
+      href: "/services/corporate-advisory",
+      desc: "Our Corporate Advisory services help businesses navigate complex decisions, optimise performance, and unlock growth opportunities.",
+    },
+    {
+      title: "Enterprise Resource Planning (ERP)",
+      image: Services5,
+      href: "/services/erp",
+      desc: "Our ERP solutions help businesses streamline operations, integrate key processes, and gain real-time visibility across finance, inventory, HR, and more - all in one unified platform.",
+    },
+    {
+      title: "Tax Advisory",
+      image: Services2,
+      href: "/services/tax-advisory",
+      desc: "Our tax advisory services are designed to help businesses remain fully compliant while optimising their tax position within the framework of Malaysian law.",
+    },
+  ];
 
-    return (
-        <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[8px] md:px-[12px] w-full">
-            <div className="bg-[#070707] dark:bg-[#1D1D1D] rounded-[20px] py-[64px] px-[16px] md:p-[60px]">
-                <div className="w-full flex flex-col items-center text-center gap-[24px]">
-                    <div className="flex flex-col items-center gap-[24px]">
-                        <Typography as="div" noDarkMode size={40} sizeMobile={28} weight={700} lineHeight={48} lineHeightMobile={36} color="#fff" heading>
-                            Our Services
-                        </Typography>
-                    </div>
-                    <div className="flex flex-col items-center gap-[14px] max-w-[600px]">
-                        <Typography size={16} sizeMobile={16} noDarkMode color="#fff">
-                            From financial record management to statutory audit and ERP implementation, we provide comprehensive solutions for every stage of your business journey.
-                        </Typography>
-                    </div>
-                </div>
-                <div className="flex flex-col items-start gap-[51px] mt-[48px] md:mt-[64px]">
-                    {services.map((service, idx) => (
-                        <Link
-                            key={idx}
-                            href={service.href}
-                            ref={(el) => {
-                                if (el) cardsRef.current[idx] = el;
-                            }}
-                            className="flex flex-col lg:flex-row items-center justify-between w-full gap-[24px] cursor-pointer"
-                            style={{ padding: 0, backgroundColor: "transparent", borderRadius: "12px" }}
-                        >
-                            <Typography
-                                as="div"
-                                size={32}
-                                sizeMobile={28}
-                                weight={600}
-                                lineHeight={40}
-                                noDarkMode
-                                color="#F2B611"
-                                heading
-                                className="w-full lg:w-[25%]"
-                            >
-                                {service.title}
-                            </Typography>
-                            <Image src={service.image} alt={service.title} className="w-full lg:w-[20rem] rounded-[20px] order-3 lg:order-2" />
-                            <Typography
-                                as="div"
-                                size={16}
-                                sizeMobile={16}
-                                lineHeight={24}
-                                noDarkMode
-                                color="#fff"
-                                className="w-full order-2 lg:w-[30%] lg:order-3"
-                            >
-                                {service.desc}
-                            </Typography>
-                        </Link>
-                    ))}
-                </div>
-            </div>
+  return (
+    <div className="bg-white dark:bg-[#070707] py-[48px] md:py-[80px] px-[8px] md:px-[12px] w-full">
+      <div className="bg-[#070707] dark:bg-[#1D1D1D] rounded-[20px] py-[64px] px-[16px] md:p-[60px]">
+        <div className="w-full flex flex-col items-center text-center gap-[24px]">
+          <div className="flex flex-col items-center gap-[24px]">
+            <Typography
+              as="div"
+              noDarkMode
+              size={40}
+              sizeMobile={28}
+              weight={700}
+              lineHeight={48}
+              lineHeightMobile={36}
+              heading
+            >
+              Our Services
+            </Typography>
+          </div>
+          <div className="flex flex-col items-center gap-[14px] max-w-[600px]">
+            <Typography size={16} sizeMobile={16} noDarkMode color="#fff">
+              From financial record management to statutory audit and ERP
+              implementation, we provide comprehensive solutions for every stage
+              of your business journey.
+            </Typography>
+          </div>
         </div>
-    )
+        <div className="flex flex-col items-start gap-[51px] mt-[48px] md:mt-[64px]">
+          {services.map((service, idx) => (
+            <Link
+              key={idx}
+              href={service.href}
+              ref={(el) => {
+                if (el) cardsRef.current[idx] = el;
+              }}
+              className="flex flex-col lg:flex-row items-center justify-between w-full gap-[24px] cursor-pointer"
+              style={{
+                padding: 0,
+                backgroundColor: "transparent",
+                borderRadius: "12px",
+              }}
+            >
+              <Typography
+                as="div"
+                size={32}
+                sizeMobile={28}
+                weight={600}
+                lineHeight={40}
+                noDarkMode
+                color="#F2B611"
+                heading
+                className="w-full lg:w-[25%]"
+              >
+                {service.title}
+              </Typography>
+              <Image
+                src={service.image}
+                alt={service.title}
+                className="w-full lg:w-[20rem] rounded-[20px] order-3 lg:order-2"
+              />
+              <Typography
+                as="div"
+                size={16}
+                sizeMobile={16}
+                lineHeight={24}
+                noDarkMode
+                color="#fff"
+                className="w-full order-2 lg:w-[30%] lg:order-3"
+              >
+                {service.desc}
+              </Typography>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
