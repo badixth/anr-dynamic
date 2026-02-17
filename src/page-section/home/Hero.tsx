@@ -77,8 +77,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
       <div className="w-full lg:w-[70%] lg:mx-auto flex flex-col items-center text-center self-stretch">
         <Typography
           as="div"
-          // color="#fff"
-          size={64}
+          size={80}
           sizeTablet={56}
           sizeMobile={50}
           weight={600}
@@ -91,7 +90,8 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
           heading
         >
           Leading
-          <br className="md:hidden" /> Full-Suite
+          <br />
+          Full-Suite
           <br />
           <span
             className="bg-gradient-to-r from-[#FFD700] via-[#FFC700] to-[#FFB300] bg-clip-text text-transparent"
@@ -100,7 +100,9 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Business <br className="md:hidden" /> Advisory
+            Business
+            <br />
+            Advisory
           </span>
         </Typography>
 
