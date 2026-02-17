@@ -58,7 +58,7 @@ export default function Hero() {
       <div className="w-full lg:w-[70%] lg:mx-auto flex flex-col items-center text-center self-stretch">
         <Typography
           as="div"
-          color="#fff"
+          // color="#fff"
           size={64}
           sizeTablet={48}
           sizeMobile={32}

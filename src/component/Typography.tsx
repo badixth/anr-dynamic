@@ -83,6 +83,11 @@ const Typography: React.FC<TypographyProps> = ({
   const width = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
   const { theme } = useTheme();
 
+  // Heading defaults to gold brand color when no explicit color is set
+  const isHeadingDefault = heading && color === "#070707";
+  const resolvedColor = isHeadingDefault ? "#F2B611" : color;
+  const effectiveNoDarkMode = noDarkMode || isHeadingDefault;
+
   const fontSize = pickResponsiveValue(size, sizeTablet, sizeMobile, width);
   const fontWeight = pickResponsiveValue(weight, weightTablet, weightMobile, width);
   const lh = pickResponsiveValue(lineHeight, lineHeightTablet, lineHeightMobile, width);
@@ -93,8 +98,8 @@ const Typography: React.FC<TypographyProps> = ({
   {
     className: clsx(
       "text-balance",
-      !noDarkMode && "dark:text-white",
-      color === "#070707" ? "text-[#070707]" : "",
+      !effectiveNoDarkMode && "dark:text-white",
+      resolvedColor === "#070707" ? "text-[#070707]" : "",
       heading && "font-heading",
       className
     ),
@@ -103,8 +108,8 @@ const Typography: React.FC<TypographyProps> = ({
       fontWeight: fontWeight,
       lineHeight: lh ? `${lh}px` : undefined,
       letterSpacing: ls ? `${ls}px` : undefined,
-      ...(noDarkMode && color
-        ? { color: theme === "dark" && darkColor ? darkColor : color }
+      ...(effectiveNoDarkMode && resolvedColor
+        ? { color: theme === "dark" && darkColor ? darkColor : resolvedColor }
         : {}),
     },
     ...props,

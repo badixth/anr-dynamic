@@ -77,7 +77,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
       <div className="w-full lg:w-[70%] lg:mx-auto flex flex-col items-center text-center self-stretch">
         <Typography
           as="div"
-          color="#fff"
+          // color="#fff"
           size={64}
           sizeTablet={56}
           sizeMobile={50}

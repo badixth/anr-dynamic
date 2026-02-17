@@ -28,35 +28,38 @@ export default function Testimonials() {
   const dragDeltaRef = useRef(0);
 
   // direction: -1 = going left (next), 1 = going right (prev), 0 = auto-loop default
-  const animateToIndex = useCallback((newIndex: number, direction: number = -1) => {
-    if (isAnimatingRef.current) return;
-    isAnimatingRef.current = true;
+  const animateToIndex = useCallback(
+    (newIndex: number, direction: number = -1) => {
+      if (isAnimatingRef.current) return;
+      isAnimatingRef.current = true;
 
-    const slideOut = direction * 80;  // drag left → exit left (-80), drag right → exit right (+80)
-    const slideIn = direction * -80;  // new content enters from the opposite side
+      const slideOut = direction * 80; // drag left → exit left (-80), drag right → exit right (+80)
+      const slideIn = direction * -80; // new content enters from the opposite side
 
-    const tl = gsap.timeline();
-    tl.to(contentRef.current, {
-      opacity: 0,
-      x: slideOut,
-      duration: 0.3,
-      ease: "power2.in",
-      onComplete: () => {
-        indexRef.current = newIndex;
-        setCurrentIndex(newIndex);
-        gsap.set(contentRef.current, { x: slideIn, opacity: 0 });
-        tl.to(contentRef.current, {
-          opacity: 1,
-          x: 0,
-          duration: 0.35,
-          ease: "power2.out",
-          onComplete: () => {
-            isAnimatingRef.current = false;
-          },
-        });
-      },
-    });
-  }, []);
+      const tl = gsap.timeline();
+      tl.to(contentRef.current, {
+        opacity: 0,
+        x: slideOut,
+        duration: 0.3,
+        ease: "power2.in",
+        onComplete: () => {
+          indexRef.current = newIndex;
+          setCurrentIndex(newIndex);
+          gsap.set(contentRef.current, { x: slideIn, opacity: 0 });
+          tl.to(contentRef.current, {
+            opacity: 1,
+            x: 0,
+            duration: 0.35,
+            ease: "power2.out",
+            onComplete: () => {
+              isAnimatingRef.current = false;
+            },
+          });
+        },
+      });
+    },
+    [],
+  );
 
   const clearTimers = useCallback(() => {
     if (timerRef.current) {
@@ -82,9 +85,7 @@ export default function Testimonials() {
 
     timerRef.current = setInterval(() => {
       const nextIdx =
-        indexRef.current === testimonials.length - 1
-          ? 0
-          : indexRef.current + 1;
+        indexRef.current === testimonials.length - 1 ? 0 : indexRef.current + 1;
       animateToIndex(nextIdx, -1);
       setProgress(0);
     }, AUTO_CYCLE_MS);
@@ -101,17 +102,13 @@ export default function Testimonials() {
 
   const prev = useCallback(() => {
     const newIdx =
-      indexRef.current === 0
-        ? testimonials.length - 1
-        : indexRef.current - 1;
+      indexRef.current === 0 ? testimonials.length - 1 : indexRef.current - 1;
     goTo(newIdx, 1);
   }, [goTo]);
 
   const next = useCallback(() => {
     const newIdx =
-      indexRef.current === testimonials.length - 1
-        ? 0
-        : indexRef.current + 1;
+      indexRef.current === testimonials.length - 1 ? 0 : indexRef.current + 1;
     goTo(newIdx, -1);
   }, [goTo]);
 
@@ -326,6 +323,8 @@ export default function Testimonials() {
                 lineHeightTablet={34}
                 lineHeightMobile={30}
                 heading
+                color="#ffffff"
+                noDarkMode
               >
                 {current.message}
               </Typography>

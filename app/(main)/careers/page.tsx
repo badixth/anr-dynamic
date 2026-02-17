@@ -104,7 +104,7 @@ export default function CareersPage() {
           </Typography>
           <Typography
             noDarkMode
-            color="#D4D4D4"
+            color="#F2B611"
             size={20}
             sizeMobile={16}
             weight={600}
@@ -220,7 +220,7 @@ export default function CareersPage() {
                     {job.title}
                   </Typography>
                   <div className="flex flex-wrap gap-[12px]">
-                    <span className="bg-[#F2B611] text-white px-[12px] py-[4px] rounded-[6px] text-sm font-medium">
+                    <span className="bg-[#F2B611]/[0.15] border border-[#F2B611]/[0.3]  text-white px-[12px] py-[4px] rounded-[6px] text-sm font-medium">
                       {job.experience}
                     </span>
                     <span className="bg-[#E8E8E8] dark:bg-[#2D2D2D] px-[12px] py-[4px] rounded-[6px] text-sm font-medium text-[#070707] dark:text-[#fff]">
