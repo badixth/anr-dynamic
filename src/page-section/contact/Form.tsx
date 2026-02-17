@@ -15,7 +15,7 @@ export default function Form() {
             assessment and recommend the best path forward.
           </Typography>
         </div>
-        <div className="w-full flex flex-col gap-[24px]">
+        <div className="w-full flex flex-col gap-[24px] text-left">
           <div className="w-full flex gap-[16px]">
             <Input
               type="text"
