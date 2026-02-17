@@ -6,6 +6,10 @@ import { TextPlugin } from "gsap/TextPlugin";
 import { useGSAP } from "@gsap/react";
 import React, { useRef, Suspense, useContext } from "react";
 import { LenisContext } from "@/src/context/LenisContext";
+import Approach from "@/src/page-section/about/Approach";
+import CoreFocus from "@/src/page-section/about/CoreFocus";
+import WhyChooseUs from "@/src/page-section/about/WhyChooseUs";
+import WhoWeWorkWith from "@/src/page-section/about/WhoWeWorkWith";
 
 const Hero = React.lazy(() => import("@/src/page-section/home/Hero"));
 const AboutUs = React.lazy(() => import("@/src/page-section/about/AboutUs"));
@@ -60,6 +64,20 @@ export default function Home() {
       <Suspense fallback={null}>
         <Partnership />
       </Suspense>
+      <Suspense fallback={null}>
+        <CoreFocus />
+      </Suspense>
+
+      <Suspense fallback={null}>
+        <Approach />
+      </Suspense>
+      <Suspense fallback={null}>
+        <WhyChooseUs />
+      </Suspense>
+      <Suspense fallback={null}>
+        <WhoWeWorkWith />
+      </Suspense>
+
       <Suspense fallback={null}>
         <Faq />
       </Suspense>
