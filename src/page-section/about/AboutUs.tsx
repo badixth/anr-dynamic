@@ -28,8 +28,10 @@ export default function AboutUs() {
           lineHeight={32}
           lineHeightMobile={28}
           weight={400}
-          color="#444444"
-          darkColor="#CCCCCC"
+          color="#F2B611"
+          darkColor="#F2B611"
+          noDarkMode
+          weight={700}
         >
           ANR Dynamic Ventures Sdn Bhd is a specialized accounting, audit and
           tax advisory firm dedicated to helping Malaysian businesses navigate
