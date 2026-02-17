@@ -52,11 +52,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/services/tax-advisory",
-        destination: "/services/financial-reporting",
-        permanent: true,
-      },
-      {
         source: "/services/corporate-erp",
         destination: "/services/corporate-advisory",
         permanent: true,

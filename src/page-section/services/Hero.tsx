@@ -56,38 +56,39 @@ export default function Hero() {
   return (
     <HeroBackground>
       <div className="w-full lg:w-[70%] lg:mx-auto flex flex-col items-center text-center self-stretch">
-          <Typography
-            as="div"
-            color="#fff"
-            size={64}
-            sizeTablet={48}
-            sizeMobile={32}
-            weight={600}
-            lineHeight={76}
-            lineHeightTablet={58}
-            lineHeightMobile={42}
-            letterSpacing={-2.16}
-            letterSpacingMobile={-1.2}
-            noDarkMode
-            heading
-          >
-            Comprehensive Financial & Regulatory Compliance Services
-          </Typography>
-          <Typography
-            noDarkMode
-            color="#fff"
-            size={18}
-            className="mt-[24px] lg:w-[60%]"
-          >
-            Expert ERP, corporate advisory, financial reporting, accounting, and
-            audit solutions designed to resolve compliance challenges and
-            support business growth for Malaysian companies.
-          </Typography>
-          <Link href="/contact">
-            <Button variant="primary" className="mt-[32px]">
-              DISCUSS YOUR NEEDS
-            </Button>
-          </Link>
+        <Typography
+          as="div"
+          color="#fff"
+          size={64}
+          sizeTablet={48}
+          sizeMobile={32}
+          weight={600}
+          lineHeight={76}
+          lineHeightTablet={58}
+          lineHeightMobile={42}
+          letterSpacing={-2.16}
+          letterSpacingMobile={-1.2}
+          noDarkMode
+          heading
+        >
+          Comprehensive Financial & Regulatory Compliance Services
+        </Typography>
+        <Typography
+          noDarkMode
+          color="#fff"
+          size={18}
+          weight={700}
+          className="mt-[24px] lg:w-[60%]"
+        >
+          Expert ERP, corporate advisory, financial reporting, accounting, and
+          audit solutions designed to resolve compliance challenges and support
+          business growth for Malaysian companies.
+        </Typography>
+        <Link href="/contact">
+          <Button variant="primary" className="mt-[32px]">
+            DISCUSS YOUR NEEDS
+          </Button>
+        </Link>
       </div>
       <div className="mt-[72px] md:mt-[100px] py-[48px] md:py-[60px] flex flex-col items-center gap-[32px]">
         <Typography

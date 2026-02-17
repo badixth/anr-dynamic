@@ -13,6 +13,7 @@ const navItems = [
   { name: "Financial Reporting & Compliance", path: "/services/financial-reporting", indent: true },
   { name: "Corporate Advisory", path: "/services/corporate-advisory", indent: true },
   { name: "Enterprise Resource Planning (ERP)", path: "/services/erp", indent: true },
+  { name: "Tax Advisory", path: "/services/tax-advisory", indent: true },
   { name: "Careers", path: "/careers" },
   { name: "Contact", path: "/contact" },
 ];

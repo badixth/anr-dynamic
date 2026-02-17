@@ -97,6 +97,12 @@ export default function OurServices() {
             href: "/services/erp",
             desc: "Our ERP solutions help businesses streamline operations, integrate key processes, and gain real-time visibility across finance, inventory, HR, and more - all in one unified platform.",
         },
+        {
+            title: "Tax Advisory",
+            image: Services2,
+            href: "/services/tax-advisory",
+            desc: "Our tax advisory services are designed to help businesses remain fully compliant while optimising their tax position within the framework of Malaysian law.",
+        },
     ];
 
     return (

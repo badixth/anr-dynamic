@@ -67,5 +67,21 @@ export const services = [
       "Custom reporting and analytics dashboards",
       "Training and ongoing support"
     ]
+  },
+  {
+    id: "tax-advisory",
+    title: "Tax Advisory",
+    shortDescription: "Our tax advisory services are designed to help businesses remain fully compliant while optimising their tax position within the framework of Malaysian law.",
+    longDescription: "Strategic Tax Solutions to Protect and Optimise Your Business",
+    image: "/images/services/tax.jpg",
+    path: "/services/tax-advisory",
+    features: [
+      "Tax Compliance & Filing",
+      "Tax Planning & Structuring",
+      "Tax Audit & Investigation Support",
+      "Withholding Tax & Indirect Tax Advisory",
+      "Tax Risk Review",
+      "Appeals & Dispute Resolution"
+    ]
   }
 ];

@@ -111,6 +111,9 @@ export default function Footer() {
                 <Link href="/services/erp" className="cursor-pointer">
                   Enterprise Resource Planning (ERP)
                 </Link>
+                <Link href="/services/tax-advisory" className="cursor-pointer">
+                  Tax Advisory
+                </Link>
               </div>
             </div>
 

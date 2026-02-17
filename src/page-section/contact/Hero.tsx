@@ -25,7 +25,13 @@ export default function Hero() {
           >
             Contact Us Today
           </Typography>
-          <Typography color="#fff" noDarkMode size={18} className="md:w-[80%]">
+          <Typography
+            color="#fff"
+            noDarkMode
+            size={18}
+            weight={700}
+            className="md:w-[80%]"
+          >
             Ready to get your business to the next level? Get in touch with our
             team for a consultation.
           </Typography>

@@ -100,6 +100,7 @@ export default function Hero() {
         <Typography
           color="#fff"
           size={18}
+          weight={700}
           noDarkMode
           className="mt-[24px] lg:w-[65%] text-balance"
         >
@@ -120,7 +121,8 @@ export default function Hero() {
           weight={500}
           className="text-center px-[40px]"
         >
-          Join over 100+ companies that trust <span className="text-[#F2B611]">ANR</span> Dynamic Ventures
+          Join over 100+ companies that trust{" "}
+          <span className="text-[#F2B611]">ANR</span> Dynamic Ventures
         </Typography>
         <div className="overflow-hidden w-full" ref={sliderRef}>
           <div className="flex items-center gap-20 slider-track">
