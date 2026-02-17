@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Button from "./Button";
+import Typography from "./Typography";
 
 import LogoImg from "@/src/assets/images/Logo.png";
 import Image from "next/image";
@@ -26,9 +27,17 @@ export default function Footer() {
         {/* CTA Section */}
         <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between w-full md:pr-[80px] gap-[32px]">
           <div className="flex flex-col gap-[16px] w-full lg:w-[60%]">
-            <div className="text-[#fff] text-[32px] md:text-[40px] font-semibold leading-[41px] md:leading-[48px]">
+            <Typography
+              as="div"
+              size={40}
+              sizeMobile={32}
+              weight={600}
+              lineHeight={48}
+              lineHeightMobile={41}
+              heading
+            >
               Connect With Our Experts Today!
-            </div>
+            </Typography>
             <div className="text-[#fff] text-[16px] text-balance">
               From Accounting Support to Strategic Corporate Advice, our
               services are designed to help your business thrive. Let our
@@ -50,7 +59,8 @@ export default function Footer() {
               className="w-[200px] h-auto"
             />
             <div className="font-medium text-white leading-[24px]">
-              <span className="text-[#F2B611]">ANR</span> Dynamic Ventures Sdn. Bhd. (1393044-X) <br />
+              <span className="text-[#F2B611]">ANR</span> Dynamic Ventures Sdn.
+              Bhd. (1393044-X) <br />
               <span className="text-[#B4B4B4]">
                 Empowering businesses with strategic solutions, innovative
                 approaches, and comprehensive support for sustainable growth and
@@ -96,19 +106,31 @@ export default function Footer() {
             <div>
               <div className="text-[#B4B4B4] mb-[24px]">Services</div>
               <div className="flex flex-col items-start gap-[16px] text-white">
-                <Link href="/services/accounting-advisory" className="cursor-pointer">
+                <Link
+                  href="/services/accounting-advisory"
+                  className="cursor-pointer"
+                >
                   Accounting Advisory
                 </Link>
-                <Link href="/services/audit-assurance" className="cursor-pointer">
+                <Link
+                  href="/services/audit-assurance"
+                  className="cursor-pointer"
+                >
                   Audit Advisory & Compliance Assurance
                 </Link>
                 <Link href="/services/tax-advisory" className="cursor-pointer">
                   Tax Advisory
                 </Link>
-                <Link href="/services/financial-reporting" className="cursor-pointer">
+                <Link
+                  href="/services/financial-reporting"
+                  className="cursor-pointer"
+                >
                   Financial Reporting & Compliance
                 </Link>
-                <Link href="/services/corporate-advisory" className="cursor-pointer">
+                <Link
+                  href="/services/corporate-advisory"
+                  className="cursor-pointer"
+                >
                   Corporate Advisory
                 </Link>
                 <Link href="/services/erp" className="cursor-pointer">
@@ -137,7 +159,8 @@ export default function Footer() {
           <div className="flex items-center gap-[8px]">
             <IcCopyRight className="w-5" />
             <div className="text-white font-medium">
-              2025 <span className="text-[#F2B611]">ANR</span> Dynamic Ventures Sdn. Bhd. All rights reserved
+              2025 <span className="text-[#F2B611]">ANR</span> Dynamic Ventures
+              Sdn. Bhd. All rights reserved
             </div>
           </div>
           <Link
