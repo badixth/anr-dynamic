@@ -114,7 +114,6 @@ export default function Services() {
           <div className="flex flex-col items-center gap-[24px]">
             <Typography
               as="div"
-              color="#fff"
               noDarkMode
               size={40}
               sizeMobile={28}

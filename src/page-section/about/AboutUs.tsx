@@ -12,7 +12,8 @@ export default function AboutUs() {
         sizeMobile={28}
         weight={700}
         lineHeight={48}
-        lineHeightMobile={36}
+        lineHeightMo
+        color="#fff"
         heading
         className="mb-[40px] md:mb-[56px]"
       >
@@ -23,15 +24,15 @@ export default function AboutUs() {
       <div className="w-full max-w-[900px] flex flex-col gap-[28px] md:gap-[36px] text-center text-balance">
         {/* Paragraph 1 */}
         <Typography
-          size={18}
-          sizeMobile={16}
-          lineHeight={32}
-          lineHeightMobile={28}
+          size={28}
+          sizeMobile={20}
+          lineHeight={38}
+          lineHeightMobile={30}
           weight={400}
           color="#F2B611"
-          darkColor="#F2B611"
           noDarkMode
           weight={700}
+          heading
         >
           ANR Dynamic Ventures Sdn Bhd is a specialized accounting, audit and
           tax advisory firm dedicated to helping Malaysian businesses navigate
@@ -51,11 +52,8 @@ export default function AboutUs() {
         >
           We leverage our proprietary in-house software to deliver efficient,
           reliable solutions that not only address compliance issues promptly
-          but also provide cost savings of approximately{" "}
-          <span className="text-[#F2B611] font-bold text-[20px] md:text-[22px]">
-            10–20%
-          </span>{" "}
-          compared to prevailing market fees.
+          but also provide cost savings of approximately 10–20% compared to
+          prevailing market fees.
         </Typography>
 
         {/* Paragraph 3 — advisory services */}
