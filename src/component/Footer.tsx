@@ -102,6 +102,9 @@ export default function Footer() {
                 <Link href="/services/audit-assurance" className="cursor-pointer">
                   Audit Advisory & Compliance Assurance
                 </Link>
+                <Link href="/services/tax-advisory" className="cursor-pointer">
+                  Tax Advisory
+                </Link>
                 <Link href="/services/financial-reporting" className="cursor-pointer">
                   Financial Reporting & Compliance
                 </Link>
@@ -110,9 +113,6 @@ export default function Footer() {
                 </Link>
                 <Link href="/services/erp" className="cursor-pointer">
                   Enterprise Resource Planning (ERP)
-                </Link>
-                <Link href="/services/tax-advisory" className="cursor-pointer">
-                  Tax Advisory
                 </Link>
               </div>
             </div>

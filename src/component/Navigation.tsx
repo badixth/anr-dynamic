@@ -14,10 +14,10 @@ const navItems = [
     dropdown: [
       { name: "Accounting Advisory", path: "/services/accounting-advisory" },
       { name: "Audit Advisory & Compliance Assurance", path: "/services/audit-assurance" },
+      { name: "Tax Advisory", path: "/services/tax-advisory" },
       { name: "Financial Reporting & Compliance", path: "/services/financial-reporting" },
       { name: "Corporate Advisory", path: "/services/corporate-advisory" },
       { name: "Enterprise Resource Planning (ERP)", path: "/services/erp" },
-      { name: "Tax Advisory", path: "/services/tax-advisory" },
     ]
   },
   { name: "Careers", path: "/careers" },

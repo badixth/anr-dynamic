@@ -82,6 +82,12 @@ export default function Services() {
       link: "/services/audit-assurance",
     },
     {
+      title: "Tax Advisory",
+      image: Services2,
+      desc: "Our tax advisory services are designed to help businesses remain fully compliant while optimising their tax position within the framework of Malaysian law.",
+      link: "/services/tax-advisory",
+    },
+    {
       title: "Financial Reporting & Compliance",
       image: Services2,
       desc: "Our team ensures your business meets regulatory standards, mitigates risk, and maintains stakeholder confidence.",
@@ -98,12 +104,6 @@ export default function Services() {
       image: Services5,
       desc: "Our ERP solutions help businesses streamline operations, integrate key processes, and gain real-time visibility across finance, inventory, HR, and more - all in one unified platform.",
       link: "/services/erp",
-    },
-    {
-      title: "Tax Advisory",
-      image: Services2,
-      desc: "Our tax advisory services are designed to help businesses remain fully compliant while optimising their tax position within the framework of Malaysian law.",
-      link: "/services/tax-advisory",
     },
   ];
 
