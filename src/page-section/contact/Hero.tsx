@@ -10,7 +10,6 @@ export default function Hero() {
         <div className="w-full flex flex-col items-start lg:items-center gap-[24px]">
           <Typography
             as="div"
-            color="#fff"
             size={64}
             sizeTablet={48}
             sizeMobile={32}
