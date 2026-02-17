@@ -12,7 +12,7 @@ export default function AboutUs() {
         sizeMobile={28}
         weight={700}
         lineHeight={48}
-        lineHeightMo
+        lineHeightMobile={36}
         color="#fff"
         heading
         className="mb-[40px] md:mb-[56px]"
@@ -28,7 +28,6 @@ export default function AboutUs() {
           sizeMobile={20}
           lineHeight={38}
           lineHeightMobile={30}
-          weight={400}
           color="#F2B611"
           noDarkMode
           weight={700}
