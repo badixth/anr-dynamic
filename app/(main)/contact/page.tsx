@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 
 const Hero = React.lazy(() => import("@/src/page-section/contact/Hero"));
-const Form = React.lazy(() => import("@/src/page-section/contact/Form"));
+const ContactSection = React.lazy(() => import("@/src/page-section/contact/ContactSection"));
 const Testimonials = React.lazy(() => import("@/src/page-section/Testimonials"));
 
 export default function Contact() {
@@ -11,7 +11,7 @@ export default function Contact() {
                 <Hero />
             </Suspense>
             <Suspense fallback={null}>
-                <Form />
+                <ContactSection />
             </Suspense>
             <Suspense fallback={null}>
                 <Testimonials />

@@ -1,7 +1,11 @@
 import { Suspense, lazy } from "react";
 
-const ServicePageHero = lazy(() => import("@/src/page-section/services/ServicePageHero"));
-const ServiceDetail = lazy(() => import("@/src/page-section/services/ServiceDetail"));
+const ServicePageHero = lazy(
+  () => import("@/src/page-section/services/ServicePageHero"),
+);
+const ServiceDetail = lazy(
+  () => import("@/src/page-section/services/ServiceDetail"),
+);
 const Faq = lazy(() => import("@/src/page-section/Faq"));
 const Testimonials = lazy(() => import("@/src/page-section/Testimonials"));
 
@@ -51,12 +55,17 @@ export default function CorporateAdvisoryPage() {
           tag="Key Services"
           description="From business strategy to financial restructuring, we provide expert guidance to help your business navigate complex decisions and unlock growth."
           features={[
-            "Business strategy and planning",
+            "Business proposals and valuation",
             "Financial restructuring and optimisation",
-            "Mergers & acquisitions advisory",
+            "Mergers & acquisitions",
             "Risk management and compliance guidance",
           ]}
-          featureIcons={["mountain-flag", "finance-mode", "partner-exchange", "shield-person"]}
+          featureIcons={[
+            "mountain-flag",
+            "finance-mode",
+            "partner-exchange",
+            "shield-person",
+          ]}
           whyChooseItems={whyChooseItems}
         />
       </Suspense>

@@ -27,7 +27,7 @@ const partnerImages = [
     alt: "Subaidah Holding Sdn. Bhd.",
     name: "Subaidah Holding Sdn. Bhd.",
   },
-  { src: Partner2, alt: "Pug3gold Sdn. Bhd.", name: "Pug3gold Sdn. Bhd." },
+  { src: Partner2, alt: "Put3Gold Sdn. Bhd.", name: "Put3Gold Sdn. Bhd." },
   {
     src: Partner3,
     alt: "Thoyyib Global Berhad",
@@ -139,8 +139,7 @@ export default function Hero({ onScrollToTestimonials }: HeroProps) {
           weight={400}
           className="text-center px-[40px]"
         >
-          Join over 100+ companies that trust{" "}
-          <span className="text-[#F2B611]">ANR</span> Dynamic Ventures
+          Join over 100+ companies that trust ANR Dynamic Ventures
         </Typography>
         <div className="overflow-hidden w-full" ref={sliderRef}>
           <div className="flex items-center gap-20 slider-track">

@@ -27,8 +27,8 @@ const images = [
   },
   {
     src: Partner2,
-    alt: "Pug3gold Sdn. Bhd.",
-    name: "Pug3gold Sdn. Bhd.",
+    alt: "Put3Gold Sdn. Bhd.",
+    name: "Put3Gold Sdn. Bhd.",
   },
   {
     src: Partner3,
@@ -121,8 +121,7 @@ export default function Hero() {
           weight={500}
           className="text-center px-[40px]"
         >
-          Join over 100+ companies that trust{" "}
-          <span className="text-[#F2B611]">ANR</span> Dynamic Ventures
+          Join over 100+ companies that trust ANR Dynamic Ventures
         </Typography>
         <div className="overflow-hidden w-full" ref={sliderRef}>
           <div className="flex items-center gap-20 slider-track">
