@@ -6,6 +6,7 @@ import Team2 from "@/src/assets/images/team-2.png";
 import Team3 from "@/src/assets/images/team-3.png";
 import Team4 from "@/src/assets/images/team-4.png";
 import Team5 from "@/src/assets/images/team-5.png";
+import Team6 from "@/src/assets/images/team-6.png";
 
 const director = {
   name: "DR. JASSHA ABDOLLAH",
@@ -37,6 +38,13 @@ const teamMembers = [
     image: Team4,
     description:
       "Experienced principal partner providing strategic leadership and expert advisory services to drive business excellence through technology and financial strategy.",
+  },
+  {
+    name: "DANIAL MANSOR",
+    position: "Head of Creative & Digital",
+    image: Team6,
+    description:
+      "Visionary creative leader with over a decade of multidisciplinary design experience. Spearheads digital transformation and brand strategy, guiding clients through impactful visual narratives, robust web development, and immersive experiential engagements.",
   },
   {
     name: "MUMINA ABDULLAH",
@@ -181,21 +189,35 @@ export default function Teams() {
         </div>
 
         {/* Connector: Tier 2 → Tier 3 (branching) */}
-        <div className="flex flex-col items-center w-full max-w-[700px]">
+        <div className="flex flex-col items-center w-full">
           {/* Vertical stem */}
           <div className="w-[2px] h-[16px] md:h-[32px] bg-gradient-to-b from-[#F2B611]/[0.4] to-[#F2B611]/[0.2]" />
-          {/* Horizontal branch bar */}
-          <div className="hidden md:block w-[70%] h-[2px] bg-[#F2B611]/[0.2]" />
-          {/* Vertical drops to each card */}
-          <div className="hidden md:flex w-[70%] justify-between">
-            <div className="w-[2px] h-[24px] bg-[#F2B611]/[0.15]" />
-            <div className="w-[2px] h-[24px] bg-[#F2B611]/[0.15]" />
-            <div className="w-[2px] h-[24px] bg-[#F2B611]/[0.15]" />
+          {/* 4-col branch: lg+ — bar + drops in separate layers so absolute % is reliable */}
+          <div className="hidden lg:block w-full">
+            <div className="relative">
+              <div className="absolute top-0 left-[12.5%] right-[12.5%] h-[2px] bg-[#F2B611]/[0.2]" />
+              <div className="flex w-full">
+                <div className="flex-1 flex justify-center"><div className="w-[2px] h-[24px] bg-[#F2B611]/[0.15]" /></div>
+                <div className="flex-1 flex justify-center"><div className="w-[2px] h-[24px] bg-[#F2B611]/[0.15]" /></div>
+                <div className="flex-1 flex justify-center"><div className="w-[2px] h-[24px] bg-[#F2B611]/[0.15]" /></div>
+                <div className="flex-1 flex justify-center"><div className="w-[2px] h-[24px] bg-[#F2B611]/[0.15]" /></div>
+              </div>
+            </div>
+          </div>
+          {/* 2-col branch: sm→lg (top row of the 2×2 layout) */}
+          <div className="hidden sm:block lg:hidden w-full">
+            <div className="relative">
+              <div className="absolute top-0 left-[25%] right-[25%] h-[2px] bg-[#F2B611]/[0.2]" />
+              <div className="flex w-full">
+                <div className="flex-1 flex justify-center"><div className="w-[2px] h-[24px] bg-[#F2B611]/[0.15]" /></div>
+                <div className="flex-1 flex justify-center"><div className="w-[2px] h-[24px] bg-[#F2B611]/[0.15]" /></div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Tier 3: Team Members */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-[16px] md:gap-[20px]">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[16px] md:gap-[20px]">
           {teamMembers.map((member, index) => (
             <div
               key={`team_${index}`}

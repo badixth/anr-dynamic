@@ -46,3 +46,5 @@ export const corporateFaqs = homeFaqs;
 export const erpFaqs = homeFaqs;
 export const financialReportingFaqs = homeFaqs;
 export const taxFaqs = homeFaqs;
+export const creativeFaqs = homeFaqs;
+export const experientialFaqs = homeFaqs;

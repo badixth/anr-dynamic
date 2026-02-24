@@ -18,6 +18,8 @@ const navItems = [
       { name: "Financial Reporting & Compliance", path: "/services/financial-reporting" },
       { name: "Corporate Advisory", path: "/services/corporate-advisory" },
       { name: "Enterprise Resource Planning (ERP)", path: "/services/erp" },
+      { name: "Creative & Digital Solutions", path: "/services/creative-digital" },
+      { name: "Experiential Engagements", path: "/services/experiential-engagements" },
     ]
   },
   { name: "Careers", path: "/careers" },

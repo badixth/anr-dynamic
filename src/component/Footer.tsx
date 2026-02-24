@@ -136,6 +136,12 @@ export default function Footer() {
                 <Link href="/services/erp" className="cursor-pointer">
                   Enterprise Resource Planning (ERP)
                 </Link>
+                <Link href="/services/creative-digital" className="cursor-pointer">
+                  Creative & Digital Solutions
+                </Link>
+                <Link href="/services/experiential-engagements" className="cursor-pointer">
+                  Experiential Engagements
+                </Link>
               </div>
             </div>
 

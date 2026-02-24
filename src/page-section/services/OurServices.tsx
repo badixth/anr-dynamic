@@ -103,6 +103,18 @@ export default function OurServices() {
       href: "/services/erp",
       desc: "Our ERP solutions help businesses streamline operations, integrate key processes, and gain real-time visibility across finance, inventory, HR, and more - all in one unified platform.",
     },
+    {
+      title: "Creative & Digital Solutions",
+      image: Services4,
+      href: "/services/creative-digital",
+      desc: "End-to-end digital transformation and brand building. Corporate web & app development, digital marketing, and multimedia strategies to modernise your operations.",
+    },
+    {
+      title: "Experiential Engagements",
+      image: Services5,
+      href: "/services/experiential-engagements",
+      desc: "Curated corporate events, brand activations, and immersive offline experiences that forge meaningful, lasting connections with your stakeholders.",
+    },
   ];
 
   return (
